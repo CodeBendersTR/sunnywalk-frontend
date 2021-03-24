@@ -35,5 +35,5 @@
 
 .AutoCompleteText li:hover{
     text-decoration: underline;
-    background-color: grey;
+    background-color: lightgray;
 }
