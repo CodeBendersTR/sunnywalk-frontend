@@ -25,7 +25,8 @@ export default class Profile extends React.Component{
                     <li>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</li>
                 </ul>
                 <ul>User name <input></input></ul> 
-                <ul>Location <AutoCompleteText items={UkCities}/>
+                <ul>Location 
+                        <AutoCompleteText items={UkCities}/>
                 </ul>
                 <ul>notification settings</ul>
                 <ul>Automatically update walks</ul>
