@@ -16,3 +16,8 @@ body{
     font-size: 14px;
     color: rgba(0,0,0,0.73);
 }
+
+.AutoCompleteText ul {
+    list-style-type: none;
+    text-align: left;
+}
