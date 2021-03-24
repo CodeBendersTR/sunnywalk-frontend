@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Menu } from "..";
 import {Link} from "react-router-dom";
-//import Button from 'muicss/lib/react/button';
+import Button from '@material-ui/core/Button';
 
 //const logo = require('/public/logo.jpg');
 
@@ -17,22 +17,19 @@ function Home() {
               <div>
                 <ul>
                   <li>
-                    <p></p>
                     <displaytime>00:00:00</displaytime>
-                    <button className="notify-user">Notify</button>
-                    <button>Log Feedback</button>
+                    <Button variant="contained" className="notify-user button">Notify</Button>
+                    <Button variant="contained">Log Feedback</Button>
                   </li>
                   <li>
-                    <p></p>
                     <displaytime>00:00:00</displaytime>
-                    <button>Notify</button>
-                    <button>Log Feedback</button>
+                    <Button variant="contained" className="button">Notify</Button>
+                    <Button variant="contained">Log Feedback</Button>
                   </li>
                   <li>
-                    <p></p>
                     <displaytime>00:00:00</displaytime>
-                    <button>Notify</button>
-                    <button>Log Feedback</button>
+                    <Button variant="contained" className="button">Notify</Button>
+                    <Button variant="contained">Log Feedback</Button>
                   </li>
                 </ul>
               </div>
