@@ -1,3 +1,12 @@
 .Profile {
     text-align: center;
 }
+.Profile-Component{
+    margin: 150px auto 0 auto;
+    width: 600px;
+}
+
+body{
+    margin-top: 50px;
+    margin-left: 50px;
+}
