@@ -1,6 +1,7 @@
 import "./Profile.css";
 import { Menu } from "..";
 import React from "react";
+import AutoCompleteText from '../../components/AutoCompleteText'
 
 export default class Profile extends React.Component{
     constructor(props){
@@ -32,7 +33,7 @@ export default class Profile extends React.Component{
 
             <button onClick={()=>this.toggleIsHidden()}>toggle</button>
             {this.state.isHidden && this.props.text}
-            
+            <AutoCompleteText />
     
             </Menu>
     
