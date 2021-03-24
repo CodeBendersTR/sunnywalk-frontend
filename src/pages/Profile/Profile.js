@@ -1,8 +1,7 @@
 import "./Profile.css";
 import { Menu } from "..";
 import React from "react";
-import AutoCompleteText from '../../components/AutoCompleteText'
-import UkCities from '../../components/UKCities'
+import {AutoCompleteText, UkCities} from '../../components';
 
 export default class Profile extends React.Component{
     constructor(props){
