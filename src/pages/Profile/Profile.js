@@ -24,17 +24,15 @@ export default class Profile extends React.Component{
                 <ul>
                     <li>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</li>
                 </ul>
-                <ul>User name</ul> 
-                <ul>Location</ul>
+                <ul>User name <input></input></ul> 
+                <ul>Location <AutoCompleteText items={UkCities}/>
+                </ul>
                 <ul>notification settings</ul>
                 <ul>Automatically update walks</ul>
                 <ul>Weather preference</ul>
                 <ul>Route type</ul>
-                <button onClick={()=>this.toggleIsHidden()}>toggle</button>
                 {this.state.isHidden && this.props.text}
-                <div className="Profile-Component">
-                    <AutoCompleteText items={UkCities}/>
-                </div>
+                
             </Menu>
             );
     }

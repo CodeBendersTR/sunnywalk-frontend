@@ -20,7 +20,7 @@ function App() {
                         <Home />
                     </Route>
                     <Route exact path="/profile">
-                        <Profile text="dynamic Text"/>
+                        <Profile/>
                     </Route>
 
                     {/* The last routing is for "Not found"; new pages must be added before this line*/}
