@@ -12,9 +12,10 @@ export default class AutoCompleteText extends React.Component{
         //Javascript object. When created have a empty suggestions array.
         this.state = {
             suggestions: [],
+            text:'',
         };
     }
-    //when the text in the box has changed get its value 
+    //when the text in the box has changed get its value and filter it with the suggestions list.
     onTextChanged = (e) =>{
         const value = e.target.value;
         let suggestions = [];
@@ -25,8 +26,18 @@ export default class AutoCompleteText extends React.Component{
             suggestions = this.items.sort().filter(v => regex.test(v));
         }
         //return updated suggestions.
-        this.setState(()=> ({suggestions}));
+        this.setState(()=> ({suggestions, text: value}));
     }
+
+    //Enables selection of the suggestions
+    suggestionSelected(value){
+        //update state with value updating the text. Then wipe the suggestions array as something would have been suggested.
+        this.setState(() => ({
+            text: value,
+            suggestions: [],
+        }))
+    }
+    //shows us suggested places
     renderSuggestions(){
         const{suggestions} = this.state;
         //if theres no input show nothing.
@@ -35,14 +46,15 @@ export default class AutoCompleteText extends React.Component{
         }
         return(
             <ul>
-                {suggestions.map((item) => <li>{item}</li>)}
+                {suggestions.map((item) => <li onClick={() => this.suggestionSelected(item)}>{item}</li>)}
             </ul>
         )
     }
     render(){
+        const {text} = this.state;
         return(
             <div>
-                <input onChange={this.onTextChanged} type="text" />
+                <input value={text} onChange={this.onTextChanged} type="text" />
                 {this.renderSuggestions()}
             </div>
         )
