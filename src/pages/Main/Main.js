@@ -6,7 +6,7 @@ import { 	AddCards,
 } from '../../components';
 import { 	Button, 
 			Box, 
-			Container,  
+			Container, 
 } from '@material-ui/core';
 {/*import images from './images'*/}
 
@@ -27,25 +27,26 @@ function Main() {
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-
+		
 
 
 
 		<h1>This is the Main Page</h1>
-		<Box justifyContent="flex-end"> 
-			<div style={{ width: '100%' }}>
-			<Button variant="outlined" color="disabled">
+		<Box JustifyContent="flex-end"> 
+		<div style={{ width: '100%' }}>
+			<Button variant="outlined" color="disabled" href="./Home.js">
 					User
 			</Button>
-			</div>
-			<Button variant="outlined" color="disabled">
+		</div>
+		
+			<Button variant="outlined" color="disabled" href="./Register.js">
   					Register
 			</Button>	
 
 			<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
 			<meta name="description" content="" />
 			<meta name="keywords" content="" />
-		<Box></Box>
+	</Box>
 		
 		{/* Main Heading */}
 		<Container maxWidth>
