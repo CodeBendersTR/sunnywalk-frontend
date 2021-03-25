@@ -1,5 +1,6 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { LoginForm } from "../../components";
 
 function Login() {
     return (
@@ -12,6 +13,8 @@ function Login() {
             <Link exact to="/home">
                 Home
             </Link>
+
+            <LoginForm />
         </div>
     );
 }
