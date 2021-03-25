@@ -1,8 +1,16 @@
 import "./Main.css";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-{/*import Lightbox from "react-awesome-lightbox";*/}
-{/*import "react-awesome-lightbox/build/style.css";*/}
+import React from 'react';
+import { 	AddCards,
+			JustifyContent,
+} from '../../components';
+import { 	Button, 
+			Box, 
+			Container,  
+} from '@material-ui/core';
+{/*import images from './images'*/}
+
+
 
 function Main() {
     return (
@@ -20,39 +28,36 @@ function Main() {
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 
+
+
+
 		<h1>This is the Main Page</h1>
-            <Link exact to="/login">
-				<Button variant="outline-warning">Login</Button>{' '}
-			</Link>
-			<Link exact to="/home">
-				<Button variant="outline-warning">Home</Button>{' '}
-            </Link>
-			<Link exact to="/profile">
-				<Button variant="outline-warning">Profile</Button>{' '}
-            </Link>
+		<Box justifyContent="flex-end"> 
+			<div style={{ width: '100%' }}>
+			<Button variant="outlined" color="disabled">
+					User
+			</Button>
+			</div>
+			<Button variant="outlined" color="disabled">
+  					Register
+			</Button>	
 
 			<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
 			<meta name="description" content="" />
 			<meta name="keywords" content="" />
-
-			{/* Have jpeg fill screen behind below Banner */}
-
-			{/*<Lightbox image="images/pic01.jpg" title="Image Description" />*/}
-
-
+		<Box></Box>
+		
+		{/* Main Heading */}
+		<Container maxWidth>
 			{/* Banner */}
-			<section id="banner">
-				<div className="inner">
-					<h2>This is Sunny Walk</h2>
-					<p>Sunshine is only a walk away</p>
-				</div>
-			</section>
+				<section id="banner">
+					<div class="inner">
+						<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+						<h2>This is Sunny Walk</h2>
+					</div>
+				</section>
+		</Container>
 
-			<section id="banner">
-				<div className="inner">
-					<h5>Created by Team CodeBenders</h5>
-				</div>
-			</section>
 
 			{/* One */}
 			<section id="one" className="wrapper style1">
@@ -60,6 +65,19 @@ function Main() {
 					<h2>Sunny Walks at your fingertips</h2>
 					<p>Find the best time to take a daily walk in order to maximise intake of sunshine.</p>
 				</header>
+					
+				<AddCards/><AddCards/><AddCards/>
+				
+			
+
+
+				
+					
+				
+				
+				
+				
+				
 				<div className="container">
 					<div className="row">
 						<div className="4u">
@@ -97,7 +115,7 @@ function Main() {
 					<div className="row">
 						<div className="6u">
 							<section className="special">
-								<a href="#" className="image fit"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" className="image fit"><img src="images/pic01.jpg" alt="" /></a>
 								<h3>Sunny Walk at your fingertips</h3>
 								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
 								<ul className="actions">
