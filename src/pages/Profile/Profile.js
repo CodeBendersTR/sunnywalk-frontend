@@ -6,8 +6,6 @@ import {Select, MenuItem, FormControl, InputLabel, makeStyles} from "@material-u
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles(theme =>({FormControl:{minWidth: 100}}));
-
 export default class Profile extends React.Component{
     constructor(props){
             super(props);
@@ -16,11 +14,6 @@ export default class Profile extends React.Component{
             }
     }
 
-    toggleIsHidden(){
-            this.setState((currentState) => ({
-                    isHidden: !currentState.isHidden, 
-            }));
-    }
     render(){
             return(        
             <Menu>
