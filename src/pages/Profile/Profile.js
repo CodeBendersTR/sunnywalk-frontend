@@ -1,9 +1,12 @@
 import "./Profile.css";
 import { Menu } from "..";
-import React, {useState} from "react";
+import React from "react";
 import {AutoCompleteText, UkCities} from '../../components';
-import {Select, MenuItem, makeStyles} from "@material-ui/core"
+import {Select, MenuItem, FormControl, InputLabel, makeStyles} from "@material-ui/core"
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
+const useStyles = makeStyles(theme =>({FormControl:{minWidth: 100}}));
 
 export default class Profile extends React.Component{
     constructor(props){
@@ -19,21 +22,25 @@ export default class Profile extends React.Component{
             }));
     }
     render(){
-const [value,setValue] = useState("");
-const handleChange = e => setValue(e.target.value);
             return(        
             <Menu>
                 <h1>This is the Profile Page</h1>
                 <ul>
                     <li>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</li>
                 </ul>
-                <ul>User name <input></input></ul> 
-                <ul>Change Password <input></input></ul> 
+                <ul>Change Password 
+                <TextField
+                id="outlined-password-input"
+                label="Password"
+                type="password"
+                autoComplete="current-password"
+                variant="outlined"
+                /></ul> 
                 <ul>Preferred location 
                         <AutoCompleteText items={UkCities}/>
                 </ul>
                 <ul>notification settings  
-                        <Select onChange={this.handleChange}>
+                        <Select>
                                 <MenuItem value={"Email"}>Email</MenuItem>
                                 <MenuItem value={"Web Notification"}>Web notification</MenuItem>
                         </Select>
@@ -53,9 +60,8 @@ const handleChange = e => setValue(e.target.value);
                                 <MenuItem value={"Windy"}>Windy</MenuItem>
                         </Select>
                 </ul>
-                <p>you have secected </p>
                 {this.state.isHidden && this.props.text}
-                
+                <Button variant="contained">confirm</Button>
             </Menu>
             );
     }
