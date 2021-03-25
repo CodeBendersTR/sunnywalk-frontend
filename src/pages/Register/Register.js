@@ -1,4 +1,7 @@
 import "./Register.css";
+
+import { RegisterForm } from '../../components';
+
 import { Link } from "react-router-dom";
 
 function Register() {
@@ -8,6 +11,8 @@ function Register() {
             <Link exact to="/home">
                 Home
             </Link>
+
+            <RegisterForm />
         </div>
     );
 }
