@@ -2,29 +2,47 @@ import "./Main.css";
 import React from 'react';
 import { Link } from "react-router-dom";
 import { 	CardDisplay,
-			JustifyContent,
-
+			// HeaderMain,
+			// MainFeature
 } from '../../components';
 import { 	Button, 
 			Box, 
-			Container, 
+			Container,
+			// Header, 
+			// MainFeaturedPost
 } from '@material-ui/core';
-{/*import images from './images'*/}
+
 
 
 function Main() {
 	return (
 		<div>
-		
 
-		<h1>This is Sunny Walk</h1>
+
+			{/* <div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<h1 class="display-4, text-center">This is Sunny Walk</h1>
+				</div>
+	<		/div> */}
+
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">	
+				<h1 class="display-4 text-center">I'm Sunny Walk</h1>
+				<hr class="my-4"></hr>
+				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				</div>
+			</div>
+
+
+
+
 		<Box my={1} px={3}>  
 		<div style={{ width: '100%' }}>
-			<Button variant="outlined" color="disabled"  href="./Home.js">
+			<Button variant="outlined" color="primary" Link exact to="/home">
 					Log In
 			</Button>
 			
-			<Button variant="outlined" color="disabled"  href="./Home.js">
+			<Button variant="outlined" color="primary" Link exact to="./Register">
 					Sign Up
 			</Button>	
 		</div>
@@ -39,8 +57,8 @@ function Main() {
 		<Container maxWidth>
 			{/* Banner */}
 				<section id="banner">
-					<div class="inner">
-						<a href="#" class="image fit"><img src="images/pic06.banner.jpg" alt="" /></a>
+					<div className="inner">
+						<a href="#" className="image fit"><img src="images/pic06.banner3.jpg" alt="" /></a>
 						<h2></h2>
 					</div>
 				</section>
@@ -77,15 +95,15 @@ function Main() {
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-cog major"></i>
-								<h3>Strengthens your immune system</h3><Link to={{ pathname: "https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health" }} target="_blank" />
-								<p>Check it out, vitamin D comes in handy in helping ward off COVID-19</p>
+								<Link to={{ pathname: "https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health" }} target="_blank"></Link><h3>Strengthens your immune system</h3>
+								<p>Check it out, vitamin D comes in handy in helping ward off COVID-19.</p>
 							</section>
 						</div>
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-cog major"></i>
 								<h3>And it's FREE!</h3>
-								<p>Sunshine and the app too</p>
+								<p>Sunshine and the app too.</p>
 							</section>
 						</div>
 					</div>
@@ -95,16 +113,16 @@ function Main() {
 		{/* Two */}
 			<section id="two" className="wrapper style2">
 				<header className="major">
-					<h2>Enjoy the sunshine</h2>
-					<p>Whether on a solo walk or with others, the paths are limitless</p>
+					<h2>Soak up the sun</h2>
+					<p>Whether on a solo walk or with others, the paths are limitless.</p>
 				</header>
 				<div className="container">
 					<div className="row">
 						<div className="6u">
 							<section className="special">
-							<a href="#" className="image fit"><img src="images/pic05.funwheelchair.jpg" alt="" /></a>
-								<h3>Enjoy the sunshine</h3>
-								<p>Whether on a solo walk or with others, the paths are limitless</p>
+							<a href="#" className="image fit"><img src="images/pic10.cityfamily.jpg" alt="" /></a>
+								<h3>You are my sunshine</h3>
+								<p>Because we can explore the outdoors together again.</p>
 								<ul className="actions">
 									
 								</ul>
@@ -118,9 +136,9 @@ function Main() {
 					<div className="row">
 						<div className="6u">
 							<section className="special">
-								<a href="#" className="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>Enjoy the sunshine</h3>
-								<p>Whether on a solo walk or with others, the paths are limitless</p>
+								<a href="#" className="image fit"><img src="images/pic05.funwheelchair.jpg" alt="" /></a>
+								<h3>Chasing the sun</h3>
+								<p>Whether on a solo journey or with others, the paths and modes are limitless.</p>
 								<ul className="actions">
 									
 								</ul>
@@ -131,20 +149,22 @@ function Main() {
 			</section>
 
 		{/* Three */}
-			<section id="three" className="wrapper style1">
+			<section id="three" className="wrapper style3">
 				<div className="container">
 					<div className="row">
 						<div className="8u">
 							<section>
-								<a href="#" className="image fit"><img src="images/pic10.cityfamily.jpg" alt="" /></a>
-								<h2>Mollis ut adipiscing</h2>
-								<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
+								<a href="#" className="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<h2>Sunshine everywhere</h2>
+								<p>Create and discover new routes wherever you are. Save your favorites for your next adventure.</p>
 							</section>
 						</div>
 						<div className="4u">
 							<section>
-								<h3>Magna massa blandit</h3>
-								<p>Feugiat amet accumsan ante aliquet feugiat accumsan. Ante blandit accumsan eu amet tortor non lorem felis semper. Interdum adipiscing orci feugiat penatibus adipiscing col cubilia lorem ipsum dolor sit amet feugiat consequat.</p>
+								<h3>Take on a new challenge</h3>
+								<p>After a year of the pandemic, where would you like to explore? Find a new destination and head out into the sun.</p>
+								<p></p>
+								<a href="https://www.webmd.com/beauty/features/sun-safety-sunscreen-and-sun-protection#1" className="image fit"><p>Do remember to enjoy responsibly and don't forget your sun cream.</p></a>
 								<ul className="actions">
 								</ul>
 							</section>
@@ -156,5 +176,6 @@ function Main() {
 		</div>
 	);
 }
+
 
 export default Main;
