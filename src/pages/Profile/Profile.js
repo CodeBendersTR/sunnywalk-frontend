@@ -17,11 +17,11 @@ export default class Profile extends React.Component{
     render(){
             return(        
             <Menu>
-                <h1>This is the Profile Page</h1>
-                <ul>
+                <h1 className="Profile">This is the Profile Page</h1>
+                <ul className="Profile">
                     <li>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</li>
                 </ul>
-                <ul>Change Password 
+                <ul className="Profile">Change Password 
                 <TextField
                 id="outlined-password-input"
                 label="Password"
@@ -29,22 +29,22 @@ export default class Profile extends React.Component{
                 autoComplete="current-password"
                 variant="outlined"
                 /></ul> 
-                <ul>Preferred location 
+                <ul className="Profile">Preferred location 
                         <AutoCompleteText items={UkCities}/>
                 </ul>
-                <ul>notification settings  
+                <ul className="Profile">notification settings  
                         <Select>
                                 <MenuItem value={"Email"}>Email</MenuItem>
                                 <MenuItem value={"Web Notification"}>Web notification</MenuItem>
                         </Select>
                 </ul>
-                <ul>Automatically update walks
+                <ul className="Profile">Automatically update walks
                         <Select>
                                 <MenuItem value={"Yes"}>Yes</MenuItem>
                                 <MenuItem value={"No"}>No</MenuItem>
                         </Select>
                 </ul>
-                <ul>Weather preference
+                <ul className="Profile">Weather preference
                         <Select>
                                 <MenuItem value={"Sunny"}>Sunny</MenuItem>
                                 <MenuItem value={"Cloudy"}>Cloudy</MenuItem>
