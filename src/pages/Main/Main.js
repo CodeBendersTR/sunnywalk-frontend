@@ -17,30 +17,31 @@ function Main() {
 		<div>
 		
 
-		<h1>This is the Main Page</h1>
-		<Box JustifyContent="flex-end">  
+		<h1>This is Sunny Walk</h1>
+		<Box my={1} px={3}>  
 		<div style={{ width: '100%' }}>
-			<Button variant="outlined" color="disabled" href="./Home.js">
-					User
+			<Button variant="outlined" color="disabled"  href="./Home.js">
+					Log In
 			</Button>
-		</div>
-		
-			<Button variant="outlined" color="disabled" href="./Register.js">
-					Register
+			
+			<Button variant="outlined" color="disabled"  href="./Home.js">
+					Sign Up
 			</Button>	
+		</div>
+		</Box>
 
-			<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
-			<meta name="description" content="" />
-			<meta name="keywords" content="" />
-	</Box>
+					{/* <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
+					<meta name="description" content="" />
+					<meta name="keywords" content="" /> */}
+		
 		
 	{/* Main Heading */}
 		<Container maxWidth>
 			{/* Banner */}
 				<section id="banner">
 					<div class="inner">
-						<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-						<h2>This is Sunny Walk</h2>
+						<a href="#" class="image fit"><img src="images/pic06.banner.jpg" alt="" /></a>
+						<h2></h2>
 					</div>
 				</section>
 		</Container>
@@ -49,8 +50,8 @@ function Main() {
 		{/* One */}
 			<section id="one" className="wrapper style1">
 				<header className="major">
-					<h2>Sunny Walks at your fingertips</h2>
-					<p>Find the best time to take a daily walk in order to maximise intake of sunshine.</p>
+					<h3>Sunny Walks are at your fingertips</h3>
+					<p>Find the best time to take a daily walk, enjoy the outdoors and soak up the sun.</p>
 				</header>
 		
 			{/* Card Display */}			
@@ -62,22 +63,29 @@ function Main() {
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-area-chart major"></i>
-								<h3>Weather Forecast</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<h3>Sunshine Enhances mood</h3><Link to={{ pathname: "https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" }} target="_blank" />
+								<p>Now that's sunshine on your shoulders!</p>
 							</section>
 						</div>
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-refresh major"></i>
-								<h3>Optimize your Sunshine</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<h3>Reduces stress, improves sleep</h3><Link to={{ pathname: "https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" }} target="_blank" />
+								<p>Who knew?</p>
 							</section>
 						</div>
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-cog major"></i>
-								<h3>Your Walk Reminder</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<h3>Strengthens your immune system</h3><Link to={{ pathname: "https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health" }} target="_blank" />
+								<p>Check it out, vitamin D comes in handy in helping ward off COVID-19</p>
+							</section>
+						</div>
+						<div className="4u">
+							<section className="special box">
+								<i className="icon fa-cog major"></i>
+								<h3>And it's FREE!</h3>
+								<p>Sunshine and the app too</p>
 							</section>
 						</div>
 					</div>
@@ -87,26 +95,32 @@ function Main() {
 		{/* Two */}
 			<section id="two" className="wrapper style2">
 				<header className="major">
-					<h2>Commodo accumsan aliquam</h2>
-					<p>Amet nisi nunc lorem accumsan</p>
+					<h2>Enjoy the sunshine</h2>
+					<p>Whether on a solo walk or with others, the paths are limitless</p>
 				</header>
 				<div className="container">
 					<div className="row">
 						<div className="6u">
 							<section className="special">
-							<a href="#" className="image fit"><img src="images/pic01.jpg" alt="" /></a>
-								<h3>Sunny Walk at your fingertips</h3>
-								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
+							<a href="#" className="image fit"><img src="images/pic05.funwheelchair.jpg" alt="" /></a>
+								<h3>Enjoy the sunshine</h3>
+								<p>Whether on a solo walk or with others, the paths are limitless</p>
 								<ul className="actions">
 									
 								</ul>
 							</section>
 						</div>
+					</div>
+				</div>	
+			</section>		
+			<section id="three" className="wrapper style1">
+				<div className="container">
+					<div className="row">
 						<div className="6u">
 							<section className="special">
 								<a href="#" className="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>Neque ornare adipiscing</h3>
-								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
+								<h3>Enjoy the sunshine</h3>
+								<p>Whether on a solo walk or with others, the paths are limitless</p>
 								<ul className="actions">
 									
 								</ul>
@@ -122,7 +136,7 @@ function Main() {
 					<div className="row">
 						<div className="8u">
 							<section>
-								<a href="#" className="image fit"><img src="images/pic03.jpg" alt="" /></a>
+								<a href="#" className="image fit"><img src="images/pic10.cityfamily.jpg" alt="" /></a>
 								<h2>Mollis ut adipiscing</h2>
 								<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
 							</section>

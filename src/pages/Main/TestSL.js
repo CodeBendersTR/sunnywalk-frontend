@@ -16,21 +16,6 @@ import { 	Button,
 function Main() {
     return (
         <div>
-    //     {/* <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
-		// <meta name="description" content="" />
-		// <meta name="keywords" content="" />
-		// <script src="js/jquery.min.js"></script>
-		// <script src="js/skel.min.js"></script>
-		// <script src="js/skel-layers.min.js"></script>
-		// <script src="js/init.js"></script>
-		// <noscript>
-		// 	<link rel="stylesheet" href="css/skel.css" />
-		// 	<link rel="stylesheet" href="css/style.css" />
-		// 	<link rel="stylesheet" href="css/style-xlarge.css" />
-		// </noscript> */}
-		
-
-
 
 		<h1>This is the Main Page</h1>
 		<Box JustifyContent="flex-end"> 
@@ -69,16 +54,6 @@ function Main() {
 				</header>
 					
 				<CardDisplay/>
-				
-			
-
-
-				
-					
-				
-				
-				
-				
 				
 				<div className="container">
 					<div className="row">
