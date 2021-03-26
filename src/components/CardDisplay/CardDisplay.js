@@ -1,62 +1,53 @@
-import React from "react";
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, CardColumns } from "react-bootstrap";
+import { Card, CardColumns } from "react-bootstrap";		
+			
 
-{*/ This isn't working! */}
+	// Bootstrap Card Columns Side by Side
+	function CardDisplay() {
+	return (
+		<CardColumns>
+		<Card>
+			<Card.Img variant="top" src="images/pic01.jpg" />
+			<Card.Body>
+			<Card.Title>Card title </Card.Title>
+			<Card.Text>
+				Card Text This card has supporting text below as a natural lead-in
+				to additional content.{" "}
+			</Card.Text>
+			</Card.Body>
+		</Card>
 
-function CardDisplay() {
-  return (
-    <CardColumns>
-      <Card>
-        <Card.Img variant="top" src="http://askavy.com/demo/img/img-card.jpg" />
-        <Card.Body>
-          <Card.Title>Card title </Card.Title>
-          <Card.Text>
-            Card Text This card has supporting text below as a natural lead-in
-            to additional content.{" "}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 10 mins ago</small>
-        </Card.Footer>
-      </Card>
+		<Card>
+			<Card.Img variant="top" src="images/pic02.jpg" />
+			<Card.Body>
+			<Card.Title>Card title</Card.Title>
+			<Card.Text>
+				Card Text his card has supporting text below as a natural lead-in to
+				additional content.{" "}
+			</Card.Text>
+			</Card.Body>
+		</Card>
 
-      <Card>
-        <Card.Img variant="top" src="http://askavy.com/demo/img/img-card.jpg" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            Card Text his card has supporting text below as a natural lead-in to
-            additional content.{" "}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 10 mins ago</small>
-        </Card.Footer>
-      </Card>
+		<Card>
+			<Card.Img variant="top" src="images/pic03.jpg" />
+			<Card.Body>
+			<Card.Title>Card title</Card.Title>
+			<Card.Text>
+				Card Text his card has supporting text below as a natural lead-in to
+				additional content.{" "}
+			</Card.Text>
+			</Card.Body>
+		</Card>
+		</CardColumns>
+	);
+	}
+	function App() {
+	return (
+		<div>
+		<CardDisplay />
+		</div>
+	);
+	}
 
-      <Card>
-        <Card.Img variant="top" src="http://askavy.com/demo/img/img-card.jpg" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            Card Text his card has supporting text below as a natural lead-in to
-            additional content.{" "}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 11 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardColumns>
-  );
-}
-function TestCard() {
-  return (
-    <div>
-      <CardDisplay />
-    </div>
-  );
-}
-
-export default TestCard;
+	export default App;

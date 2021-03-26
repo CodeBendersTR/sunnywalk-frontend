@@ -1,24 +1,39 @@
 import "./Main.css";
 import React from 'react';
 import { Link } from "react-router-dom";
-import { 	CardDisplay,
+import { 	AddCards,
+          	CardDisplay,
 			JustifyContent,
-
 } from '../../components';
 import { 	Button, 
 			Box, 
 			Container, 
 } from '@material-ui/core';
-{/*import images from './images'*/}
+// {/*import images from './images'*/}
+
 
 
 function Main() {
-	return (
-		<div>
+    return (
+        <div>
+    //     {/* <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
+		// <meta name="description" content="" />
+		// <meta name="keywords" content="" />
+		// <script src="js/jquery.min.js"></script>
+		// <script src="js/skel.min.js"></script>
+		// <script src="js/skel-layers.min.js"></script>
+		// <script src="js/init.js"></script>
+		// <noscript>
+		// 	<link rel="stylesheet" href="css/skel.css" />
+		// 	<link rel="stylesheet" href="css/style.css" />
+		// 	<link rel="stylesheet" href="css/style-xlarge.css" />
+		// </noscript> */}
 		
 
+
+
 		<h1>This is the Main Page</h1>
-		<Box JustifyContent="flex-end">  
+		<Box JustifyContent="flex-end"> 
 		<div style={{ width: '100%' }}>
 			<Button variant="outlined" color="disabled" href="./Home.js">
 					User
@@ -26,7 +41,7 @@ function Main() {
 		</div>
 		
 			<Button variant="outlined" color="disabled" href="./Register.js">
-					Register
+  					Register
 			</Button>	
 
 			<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
@@ -34,7 +49,7 @@ function Main() {
 			<meta name="keywords" content="" />
 	</Box>
 		
-	{/* Main Heading */}
+		{/* Main Heading */}
 		<Container maxWidth>
 			{/* Banner */}
 				<section id="banner">
@@ -46,17 +61,25 @@ function Main() {
 		</Container>
 
 
-		{/* One */}
+			{/* One */}
 			<section id="one" className="wrapper style1">
 				<header className="major">
 					<h2>Sunny Walks at your fingertips</h2>
 					<p>Find the best time to take a daily walk in order to maximise intake of sunshine.</p>
 				</header>
-		
-			{/* Card Display */}			
+					
 				<CardDisplay/>
 				
-			{/* Three Points of Interest */}
+			
+
+
+				
+					
+				
+				
+				
+				
+				
 				<div className="container">
 					<div className="row">
 						<div className="4u">
@@ -84,7 +107,7 @@ function Main() {
 				</div>
 			</section>
 
-		{/* Two */}
+			{/* Two */}
 			<section id="two" className="wrapper style2">
 				<header className="major">
 					<h2>Commodo accumsan aliquam</h2>
@@ -139,8 +162,8 @@ function Main() {
 					</div>
 				</div>
 			</section>
-		</div>
-	);
+        </div>
+    );
 }
 
 export default Main;
