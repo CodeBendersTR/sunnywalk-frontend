@@ -1,21 +1,20 @@
-import "./LoginForm.css"
+import "./LoginForm.css";
 
 import {
+    Button,
     Container,
     CssBaseline,
-    Typography,
-    TextField,
-    FormControlLabel,
-    Checkbox,
-    Button,
     Grid,
     Link,
+    TextField,
+    Typography,
 } from "@material-ui/core";
 
 function SignIn() {
     return (
-        <Container compnent="main" maxWidth="xs">
+        <Container className="container" component="main" maxWidth="xs">
             <CssBaseline />
+
             <div className="paper">
                 <Typography component="h1" variant="h5">
                     Log in
@@ -25,13 +24,13 @@ function SignIn() {
                     <TextField
                         variant="outlined"
                         margin="normal"
-                        required
-                        fullWidth
                         id="email"
                         label="Email Address"
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        fullWidth
+                        required
                     />
 
                     <TextField
@@ -44,11 +43,6 @@ function SignIn() {
                         type="password"
                         id="password"
                         autoComplete="current-password"
-                    />
-
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
                     />
 
                     <Button
@@ -68,8 +62,8 @@ function SignIn() {
                             </Link>
                         </Grid>
                         <Grid item xs>
-                            <Link href="#" variant="body2">
-                                {"Don't you have an account? Sign Up!"}
+                            <Link href="/register" variant="body2">
+                                No account yet? Register
                             </Link>
                         </Grid>
                     </Grid>

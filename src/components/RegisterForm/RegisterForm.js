@@ -1,4 +1,4 @@
-import './RegisterForm.css';
+import "./RegisterForm.css";
 
 import {
     Button,
@@ -7,12 +7,12 @@ import {
     Grid,
     Link,
     TextField,
-    Typography
+    Typography,
 } from "@material-ui/core";
 
 function RegisterForm() {
     return (
-        <Container component="main" maxWidth="xs">
+        <Container className="container" component="main" maxWidth="xs">
             <CssBaseline />
 
             <div className="paper">
@@ -21,56 +21,50 @@ function RegisterForm() {
                 </Typography>
 
                 <form className="form" noValidate>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                variant="outlined"
-                                autoComplete="fname"
-                                name="firstName"
-                                id="firstName"
-                                label="First Name"
-                                required
-                                fullWidth
-                                autoFocus
-                            />
-                        </Grid>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        autoComplete="fname"
+                        name="firstName"
+                        id="firstName"
+                        label="First Name"
+                        required
+                        fullWidth
+                        autoFocus
+                    />
 
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                variant="outlined"
-                                autoComplete="lname"
-                                name="lastName"
-                                id="lastName"
-                                label="Last Name"
-                                required
-                                fullWidth
-                            />
-                        </Grid>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        autoComplete="lname"
+                        name="lastName"
+                        id="lastName"
+                        label="Last Name"
+                        required
+                        fullWidth
+                    />
 
-                        <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                autoComplete="email"
-                                name="email"
-                                id="email"
-                                label="Email Address"
-                                required
-                                fullWidth
-                            />
-                        </Grid>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        autoComplete="email"
+                        name="email"
+                        id="email"
+                        label="Email Address"
+                        required
+                        fullWidth
+                    />
 
-                        <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                autoComplete="current-password"
-                                name="password"
-                                id="password"
-                                label="Pasword"
-                                required
-                                fullWidth
-                            />
-                        </Grid>
-                    </Grid>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        autoComplete="current-password"
+                        name="password"
+                        id="password"
+                        label="Pasword"
+                        required
+                        fullWidth
+                    />
 
                     <Button
                         type="submit"
@@ -84,7 +78,7 @@ function RegisterForm() {
 
                     <Grid container justify="flex-end">
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href="/login" variant="body2">
                                 Already have an account? Log In
                             </Link>
                         </Grid>
