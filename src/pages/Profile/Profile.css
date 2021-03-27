@@ -1,3 +1,4 @@
+
 .Profile {
     text-align: center;
 }
@@ -5,8 +6,4 @@
 .Profile-Component{
     margin: 150px auto 0 auto;
     width: 600px;
-}
-
-.selectTest{
-    margin: 0 20px;
 }

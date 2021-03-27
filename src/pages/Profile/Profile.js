@@ -19,10 +19,11 @@ export default class Profile extends React.Component{
             <Menu>
                 <h1 className="Profile">This is the Profile Page</h1>
                 <ul className="Profile">
-                    <li>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</li>
+                    <ul>Welcome to your edit profile page, please fill in and confirm any edits you would like to do.</ul>
                 </ul>
-                <ul className="Profile">Change Password 
-                <TextField
+                <ul className="selectTest Profile ">Change Password 
+                <TextField 
+                style={{margin:"0px 20px",minWidth:"80px"}}
                 id="outlined-password-input"
                 label="Password"
                 type="password"
@@ -33,19 +34,19 @@ export default class Profile extends React.Component{
                         <AutoCompleteText items={UkCities}/>
                 </ul>
                 <ul className="Profile">notification settings  
-                        <Select>
+                        <Select style={{margin:"0px 20px",minWidth:"80px"}}>
                                 <MenuItem value={"Email"}>Email</MenuItem>
                                 <MenuItem value={"Web Notification"}>Web notification</MenuItem>
                         </Select>
                 </ul>
                 <ul className="Profile">Automatically update walks
-                        <Select>
+                        <Select style={{margin:"0px 20px",minWidth:"80px"}}>
                                 <MenuItem value={"Yes"}>Yes</MenuItem>
                                 <MenuItem value={"No"}>No</MenuItem>
                         </Select>
                 </ul>
                 <ul className="Profile">Weather preference
-                        <Select>
+                        <Select style={{margin:"0px 20px",minWidth:"80px"}}>
                                 <MenuItem value={"Sunny"}>Sunny</MenuItem>
                                 <MenuItem value={"Cloudy"}>Cloudy</MenuItem>
                                 <MenuItem value={"Raining"}>Raining</MenuItem>
@@ -53,9 +54,19 @@ export default class Profile extends React.Component{
                                 <MenuItem value={"Windy"}>Windy</MenuItem>
                         </Select>
                 </ul>
-                {this.state.isHidden && this.props.text}
+                <ul className="Profile">
                 <Button variant="contained">confirm</Button>
+                </ul>
+                
+                
+                {this.state.isHidden && this.props.text}
+
+
+
+
+                
             </Menu>
+            
             );
     }
 }
