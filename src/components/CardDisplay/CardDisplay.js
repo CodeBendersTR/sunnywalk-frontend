@@ -8,17 +8,17 @@ import { Card, CardColumns } from "react-bootstrap";
 	return (
 		<CardColumns>
 		<Card>
-			<Card.Img variant="top" src="images/pic04.jpg" />
+			<Card.Img variant="top" src="images/pic04.jpg" crop="fill" alt=""  />
 			<Card.Body>
 			<Card.Title>Check Weather Forecast & Daylight Hours </Card.Title>
 			<Card.Text>
-				Here comes the sun...confirm weather and sunshine hours to walk during peak preferences{" "}
+				Here comes the sun...confirm weather and sunshine hours to walk during peak preferences     {" "}
 			</Card.Text>
 			</Card.Body>
 		</Card>
 
 		<Card>
-			<Card.Img variant="top" src="images/pic11.citysmiles.jpg" />
+			<Card.Img variant="top" src="images/pic11.citysmiles.jpg" crop="fill" />
 			<Card.Body>
 			<Card.Title>Map Your Route</Card.Title>
 			<Card.Text>
@@ -28,7 +28,7 @@ import { Card, CardColumns } from "react-bootstrap";
 		</Card>
 
 		<Card>
-			<Card.Img variant="top" src="images/pic03.jpg" />
+			<Card.Img variant="top" src="images/pic03.jpg" crop="fill"  />
 			<Card.Body>
 			<Card.Title>Rate Your Walks</Card.Title>
 			<Card.Text>
