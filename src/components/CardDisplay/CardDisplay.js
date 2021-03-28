@@ -8,7 +8,7 @@ import { Card, CardColumns } from "react-bootstrap";
 	return (
 		<CardColumns>
 		<Card>
-			<Card.Img variant="top" src="images/pic04.jpg" crop="fill" alt=""  />
+			<Card.Img variant="top" src="images/pic04.sm.jpg" crop="fill" alt=""  />
 			<Card.Body>
 			<Card.Title>Check Weather Forecast & Daylight Hours </Card.Title>
 			<Card.Text>
@@ -18,7 +18,7 @@ import { Card, CardColumns } from "react-bootstrap";
 		</Card>
 
 		<Card>
-			<Card.Img variant="top" src="images/pic11.citysmiles.jpg" crop="fill" />
+			<Card.Img variant="top" src="images/pic11.citysmiles.sm.jpg" crop="fill" />
 			<Card.Body>
 			<Card.Title>Map Your Route</Card.Title>
 			<Card.Text>
@@ -28,11 +28,11 @@ import { Card, CardColumns } from "react-bootstrap";
 		</Card>
 
 		<Card>
-			<Card.Img variant="top" src="images/pic03.jpg" crop="fill"  />
+			<Card.Img variant="top" src="images/pic03.sm.jpg" crop="fill"  />
 			<Card.Body>
 			<Card.Title>Rate Your Walks</Card.Title>
 			<Card.Text>
-				Was your walk "You are my sunshine" or more like "Ain't no sunshine"...rate your walks so you can repeat the great ones {" "}
+				Was your walk "You are my sunshine" or more like "Ain't no sunshine"...rate your walks and repeat the great ones...again and again. {" "}
 			</Card.Text>
 			</Card.Body>
 		</Card>
