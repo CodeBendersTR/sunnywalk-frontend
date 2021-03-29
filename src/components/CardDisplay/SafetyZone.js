@@ -1,23 +1,10 @@
 import React from 'react';
-import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, CardColumns } from "react-bootstrap";		
 			
 
 	// Bootstrap Card Columns Side by Side
 	function CardDisplay() {
-
-    // Setting up a hook
-    // const [ kpi, setKpi] = useState([
-
-    //   { id: 1, Img: 'images/pic04.sm.jpg', Title: "Check the Weather Forecast & Daylight Hours", Text: 'Here comes the sun...confirm weather and sunshine hours to walk during peak preferences.', key: true },
-    //   { id: 1, Img: 'images/pic11.citysmiles.sm.jpg', Title: "Map Your Route", Text: 'Walking on sunshine...map your preferences to hit favourite spots whether a playground, dog or skate park or something completely new.', key: true },
-    //   { id: 2, Img: 'images/pic03.sm.jpg', Title: "Rate Your Walks", Text: 'Was your walk "You are my sunshine" or more like "Aint no sunshine"...rate your walks and repeat the great ones...again and again.', key: true },
-
-    // ])
-
-    // const notKey = kpi.filter (kpi => !key.kpi);
-    // const key = kpi.filter (kpi => key.kpi);
 
     return (
       <CardColumns>
