@@ -82,21 +82,21 @@ function Main() {
 							<section className="special box">
 								<i className="icon fa-area-chart major"></i>
 									<h3>Sunshine Enhances mood</h3>
-									<a href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" className="image fit"><p>Now that's sunshine on your shoulders!</p></a>
+									<a href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" className="image fit" style={{ color: '#985b9c' }}><p>Now that's sunshine on your shoulders!</p></a>
 							</section>
 						</div>
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-refresh major"></i>
 									<h3>Reduces stress, improves sleep</h3>
-									<a href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" className="image fit"><p>Who knew?</p></a>
+									<a href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature" className="image fit"style={{ color: '#985b9c' }}><p>Who knew?</p></a>
 							</section>
 						</div>
 						<div className="4u">
 							<section className="special box">
 								<i className="icon fa-cog major"></i>
 									<h3>Strengthens your immune system</h3>
-									<a href="https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health" className="image fit" margin-top='0' ><p>Check it out, vitamin D comes in handy in helping your body ward off coronavirus (COVID-19).</p></a>
+									<a href="https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health" className="image fit" margin-top='0'style={{ color: '#985b9c' }}><p>Check it out, vitamin D comes in handy in helping your body ward off coronavirus (COVID-19).</p></a>
 							</section>
 						</div>
 						<div className="4u">
