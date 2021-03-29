@@ -201,6 +201,21 @@ function Main() {
                     </div>
                 </div>
             </section>
+
+            {/* <!-- Footer --> */}
+            <footer id="footer">
+                <div class="container">
+                    <div class="row double">
+                        <ul class="copyright">
+                            <p>
+                                &copy; Untitled. All rights reserved. Images:{" "}
+                                <a href="http://unsplash.com">Unsplash</a>
+								<p> Can you spot the 11 song titles?</p>
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }

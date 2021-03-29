@@ -253,3 +253,8 @@
     .\-6u { margin-left: 50% }
     .\-4u { margin-left: 33.3333333333% }
 
+    footer {
+        text-align: right;
+        padding: 0.5em 0 0.5em 2em;
+
+        }
