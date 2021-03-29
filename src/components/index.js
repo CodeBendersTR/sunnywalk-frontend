@@ -3,7 +3,7 @@
 
 export {default as AddCards} from './AddCards/AddCards';
 export {default as CardDisplay} from './CardDisplay/CardDisplay';
-// export {default as HeaderMain} from './HeaderMain/HeaderMain';
+export {default as MainHeader} from './MainHeader/MainHeader';
 // export {default as JustifyContent} from './JustifyContent/JustifyContent';
 // export {default as MainFeaturedPost} from './MainFeature/MainFeature';
 
