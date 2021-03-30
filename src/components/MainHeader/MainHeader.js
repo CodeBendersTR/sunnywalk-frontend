@@ -21,8 +21,8 @@ function MainHeader() {
                     <Button
                         variant="outlined"
                         className="primary"
-                        href="../Home"
-                        alt="Home button, blue"
+                        href="../Profile"
+                        alt="Profile button, blue"
                         my={1}
                         px={2}
                     >
