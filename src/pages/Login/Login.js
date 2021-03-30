@@ -1,8 +1,19 @@
 import "./Login.css";
-import { LoginForm } from "../../components";
+import { Link } from "react-router-dom";
 
 function Login() {
-    return <LoginForm />;
+    return (
+        <div>
+            <h1>This is the Login Page</h1>
+            <Link exact to="/register">
+                Register
+            </Link>
+            <br />
+            <Link exact to="/home">
+                Home
+            </Link>
+        </div>
+    );
 }
 
 export default Login;
