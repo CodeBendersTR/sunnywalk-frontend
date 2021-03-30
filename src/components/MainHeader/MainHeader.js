@@ -21,16 +21,16 @@ function MainHeader() {
                     <Button
                         variant="outlined"
                         className="primary"
-                        href="../Profile"
-                        alt="Profile button, blue"
+                        href="../Login"
+                        alt="Login button, blue"
                         my={1}
                         px={2}
                     >
                         Log In
                     </Button>
                     <Button
-                        variant=""
-                        color="link"
+                        variant="text"
+                        color="primary"
                         href="../Register"
                         alt="Register button, blue"
                         my={1}
