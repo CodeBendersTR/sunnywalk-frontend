@@ -55,7 +55,7 @@ function Main() {
                 <section id="one" className="wrapper">
                     <header className="major">
                         <nav className="navbar navbar-light bg-light text-color: #966602">
-                            <h3 style={{ color: "#985b9c" }}> Power of the Sun </h3>
+                            <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
                             <p>
                                 Soak in the benefits of exposing your skin to a sensible amount of
                                 natural sunlight.
@@ -133,6 +133,9 @@ function Main() {
                                     <img
                                         src="images/pic10.cityfamily.jpg"
                                         alt="Woman and child of color, smiling sweetly at camera, woman wearing leather clothes kneeling with gender neutral child hugging her shoulders, backdrop of center city, brick street"
+                                        responsive
+                                        gravity="faces"
+                                        accessibility="colorblind"
                                     />
                                 </div>
                                 <h3>You are my sunshine</h3>
@@ -155,7 +158,10 @@ function Main() {
                                 <div className="image fit">
                                     <img
                                         src="images/pic05.funwheelchair.jpg"
-                                        alt="distant picture of person pushing another in wheelchair against architectual building and waterfront"
+                                        alt="Person pushing another in wheelchair against architectual building and waterfront"
+                                        responsive
+                                        gravity="faces"
+                                        accessibility="colorblind"
                                     />
                                 </div>
                                 <h3>Chasing the sun</h3>
@@ -180,6 +186,9 @@ function Main() {
                                     <img
                                         src="images/pic02.jpg"
                                         alt="Woman of colour wearing backpack walking solo against industrial style city wall"
+                                        responsive
+                                        gravity="faces"
+                                        accessibility="colorblind"
                                     />
                                 </div>
                                 <h2>Sunshine everywhere</h2>
@@ -204,13 +213,13 @@ function Main() {
 
             {/* <!-- Footer --> */}
             <footer id="footer">
-                <div class="container">
-                    <div class="row double">
-                        <ul class="copyright">
+                <div className="container">
+                    <div className="row double">
+                        <ul className="copyright">
                             <p>
                                 &copy; Untitled. All rights reserved. Images:{" "}
                                 <a href="http://unsplash.com">Unsplash</a>
-								<p> Can you spot the 11 song titles?</p>
+                                <p> Can you spot the 11 song titles?</p>
                             </p>
                         </ul>
                     </div>
