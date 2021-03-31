@@ -1,3 +1,10 @@
 .Home {
     text-align: center;
 }
+
+.text_align{
+  display:flex;
+  justify-content: space-around;
+}
+
+
