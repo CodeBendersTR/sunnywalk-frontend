@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    //backgroundColor: "#9ea130",
-    backgroundColor: "#8d359c",
+    backgroundColor: "#e8b633",
+    marginTop: 50,
+    //backgroundColor: "#8d359c",
     //;#722c7d,#a73eb8
   },
   menuButton: {
@@ -37,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "lightgrey"
+    backgroundColor: "lightgrey",
+    marginTop: 50,
   },
   content: {
     flexGrow: 1,
