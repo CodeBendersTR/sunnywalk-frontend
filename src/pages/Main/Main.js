@@ -66,7 +66,7 @@ function Main() {
                 </section>
 
                 {/* Three Text Points of Interest with links */}
-                <div className="container-main">
+                <div className="container">
                     <div className="row">
                         <div className="4u">
                             <section className="special box">
@@ -125,7 +125,7 @@ function Main() {
 
             {/* Section Two with Centered Image */}
             <section id="two" className="wrapper style2">
-                <div className="container-main">
+                <div className="container">
                     <div className="row">
                         <div className="6u">
                             <section className="special">
@@ -151,7 +151,7 @@ function Main() {
             </section>
             {/* Section Three with Centered Image */}
             <section id="three" className="wrapper style1">
-                <div className="container-main">
+                <div className="container">
                     <div className="row">
                         <div className="6u">
                             <section className="special">
@@ -178,7 +178,7 @@ function Main() {
 
             {/* Section Four with one Image and two Points of Text */}
             <section id="three" className="wrapper style3">
-                <div className="container-main">
+                <div className="container">
                     <div className="row">
                         <div className="8u">
                             <section>
@@ -213,7 +213,7 @@ function Main() {
 
             {/* <!-- Footer --> */}
             <footer id="footer">
-                <div className="container-main">
+                <div className="container">
                     <div className="row double">
                         <ul className="copyright">
                             <p>
