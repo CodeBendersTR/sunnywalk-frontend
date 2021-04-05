@@ -61,7 +61,7 @@ function RegisterForm() {
                         autoComplete="current-password"
                         name="password"
                         id="password"
-                        label="Pasword"
+                        label="Password"
                         required
                         fullWidth
                     />
