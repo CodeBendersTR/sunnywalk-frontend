@@ -82,6 +82,8 @@ function ResponsiveDrawer(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  const today = new Date();
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
   return (
     <div className={classes.root}>
@@ -139,9 +141,9 @@ function ResponsiveDrawer(props) {
             Today's best times for a sunny walk
           </h4>
           <ul>
-            <DisplayTime />
-            <DisplayTime />
-            <DisplayTime />
+            <DisplayTime dispTime={ time } />
+            <DisplayTime dispTime={ time }/>
+            <DisplayTime dispTime={ time }/>
           </ul>
         <Typography paragraph>
 
