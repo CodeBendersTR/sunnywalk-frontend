@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Menu } from "..";
-import AddResponsiveDrawer from "../../components/AddResponsiveDrawer/AddResponsiveDrawer";
+import {AddResponsiveDrawer} from "../../components";
 
 function Home() {
     return (

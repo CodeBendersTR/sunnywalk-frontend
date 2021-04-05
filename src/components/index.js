@@ -7,3 +7,4 @@ export { default as LoginForm } from "./LoginForm/LoginForm";
 export { default as RegisterForm } from "./RegisterForm/RegisterForm";
 export { NotificationPreferenceSelect, WeatherPreferenceSelect } from "./MultiSelect/MultiSelect";
 export { default as SingleSelects } from "./MultiSelect/SingleSelect";
+export { default as AddResponsiveDrawer } from "./AddResponsiveDrawer/AddResponsiveDrawer";
