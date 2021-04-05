@@ -9,28 +9,28 @@ test("Check the login text renders", () => {
     expect(input).toBeInTheDocument();
 });
 
-test("Check if the Forgot password renders", () => {
+test("Check if the First Name renders", () => {
     render(<RegisterForm />);
     const input = screen.getByText("First Name");
     expect(input).toBeInTheDocument();
 });
 
 
-test("Check if the Forgot password renders", () => {
+test("Check if the Last Name renders", () => {
     render(<RegisterForm />);
     const input = screen.getByText("Last Name");
     expect(input).toBeInTheDocument();
 });
 
 
-test("Check if the Forgot password renders", () => {
+test("Check if the Email Address renders", () => {
     render(<RegisterForm />);
     const input = screen.getByText("Email Address");
     expect(input).toBeInTheDocument();
 });
 
 
-test("Check if the Forgot password renders", () => {
+test("Check if the password renders", () => {
     render(<RegisterForm />);
     const input = screen.getByText("Password");
     expect(input).toBeInTheDocument();
