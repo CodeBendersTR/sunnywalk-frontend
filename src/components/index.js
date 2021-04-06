@@ -7,5 +7,7 @@ export { default as AutoCompleteText } from './AutoCompleteText/AutoCompleteText
 export { default as UkCities } from './AutoCompleteText/UKCities';
 export { default as LoginForm } from "./LoginForm/LoginForm";
 export { default as RegisterForm } from "./RegisterForm/RegisterForm";
+export { default as HomeHeader } from "./HomeHeader/HomeHeader";
+export { default as LoginHeader } from "./LoginHeader/LoginHeader";
 export { NotificationPreferenceSelect, WeatherPreferenceSelect } from "./MultiSelect/MultiSelect";
 export { default as SingleSelects } from "./MultiSelect/SingleSelect";

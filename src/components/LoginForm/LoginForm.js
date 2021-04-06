@@ -1,5 +1,6 @@
 import "./LoginForm.css";
 
+
 import {
     Button,
     Container,
@@ -16,6 +17,7 @@ function SignIn() {
             <CssBaseline />
 
             <div className="paper">
+
                 <Typography component="h1" variant="h5">
                     Log in
                 </Typography>
@@ -49,8 +51,9 @@ function SignIn() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        color="primary"
+                        color= 'default'
                         className="submit"
+                        href="../home"
                     >
                         Log In
                     </Button>

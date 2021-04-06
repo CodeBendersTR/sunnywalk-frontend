@@ -21,14 +21,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function DisplayTime() {
+function dispButton(){
+  window.alert ("Hello there!!");
+}
+
+function DisplayTime(props) {
   const classes = useStyles();
 
   return (
     <li className="list-style">
-      <p>01-01-2021 00:00:00
-        <Button variant="contained" size="small" className={classes.margin}>Notify</Button>
-        <Button variant="contained" size="small" className={classes.margin}>Log Feedback</Button>
+      <p>{ props.dispTime }
+        <Button onClick={dispButton} variant="contained" size="small" className={classes.margin}>Notify</Button>
+        <Button onClick={dispButton} variant="contained" size="small" className={classes.margin}>Log Feedback</Button>
       </p>
     </li>
   );
