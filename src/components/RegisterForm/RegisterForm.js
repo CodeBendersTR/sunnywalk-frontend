@@ -12,7 +12,7 @@ import {
 
 function RegisterForm() {
     return (
-        <Container className="container" component="main" maxWidth="xs">
+        <Container className="register-form-container" component="main" maxWidth="xs">
             <CssBaseline />
 
             <div className="paper">
