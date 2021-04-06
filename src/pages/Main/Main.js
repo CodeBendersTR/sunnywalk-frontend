@@ -37,7 +37,7 @@ function Main() {
             <section id="one" className="wrapper">
                 <header className="major">
                     <nav className="navbar navbar-light bg-light">
-                        <div class="flex-container">
+                        <div className="flex-container">
                             <h3 style={{ color: "#985b9c" }}>Sunny Walks at your fingertips</h3>
                             <p>
                                 Find the best time to take a daily walk, enjoy the sun outdoors and
@@ -57,13 +57,14 @@ function Main() {
                 <section id="one" className="wrapper">
                     <header className="major">
                         <nav className="navbar navbar-light bg-light text-color: #966602">
-                        <div class="flex-container">
-                            <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
-                                <p>Soak in the benefits of exposing your skin to a sensible amount of
-                                natural sunlight.
+                            <div className="flex-container">
+                                <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
+                                <p>
+                                    Soak in the benefits of exposing your skin to a sensible amount of
+                                    natural sunlight.
                                 </p>
+                            </div>
                             <span className="navbar-brand mb-0 h1"></span>
-                        </div>
                         </nav>
                     </header>
                 </section>

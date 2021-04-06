@@ -1,8 +1,14 @@
 import "./Register.css";
-import { RegisterForm } from "../../components";
+import { RegisterForm, RegisterHeader, ResponsiveDrawerReg } from "../../components";
 
 function Register() {
-    return <RegisterForm />;
+    return (
+        <div>
+            <RegisterHeader />
+                <ResponsiveDrawerReg />
+                <RegisterForm />
+        </div>
+    );
 }
 
 export default Register;
