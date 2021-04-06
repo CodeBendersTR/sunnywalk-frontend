@@ -20,7 +20,7 @@ function Main() {
                                 src="images/pic06.banner3.jpg"
                                 alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
                                 dpr="auto"
-                                responsive
+                                responsive="true"
                                 gravity="faces"
                                 accessibility="colorblind"
                                 quality="auto"
@@ -37,11 +37,13 @@ function Main() {
             <section id="one" className="wrapper">
                 <header className="major">
                     <nav className="navbar navbar-light bg-light">
-                        <h3 style={{ color: "#985b9c" }}>Sunny Walks at your fingertips</h3>
-                        <p>
-                            Find the best time to take a daily walk, enjoy the sun outdoors and
-                            pursue your happiness.
-                        </p>
+                        <div className="flex-container">
+                            <h3 style={{ color: "#985b9c" }}>Sunny Walks at your fingertips</h3>
+                            <p>
+                                Find the best time to take a daily walk, enjoy the sun outdoors and
+                                pursue your happiness.
+                            </p>
+                        </div>
                         <span className="navbar-brand mb-0 h1"></span>
                     </nav>
                 </header>
@@ -55,11 +57,13 @@ function Main() {
                 <section id="one" className="wrapper">
                     <header className="major">
                         <nav className="navbar navbar-light bg-light text-color: #966602">
-                            <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
-                            <p>
-                                Soak in the benefits of exposing your skin to a sensible amount of
-                                natural sunlight.
-                            </p>
+                            <div className="flex-container">
+                                <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
+                                <p>
+                                    Soak in the benefits of exposing your skin to a sensible amount of
+                                    natural sunlight.
+                                </p>
+                            </div>
                             <span className="navbar-brand mb-0 h1"></span>
                         </nav>
                     </header>
@@ -133,7 +137,7 @@ function Main() {
                                     <img
                                         src="images/pic10.cityfamily.jpg"
                                         alt="Woman and child of color, smiling sweetly at camera, woman wearing leather clothes kneeling with gender neutral child hugging her shoulders, backdrop of center city, brick street"
-                                        responsive
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
@@ -159,7 +163,7 @@ function Main() {
                                     <img
                                         src="images/pic05.funwheelchair.jpg"
                                         alt="Person pushing another in wheelchair against architectual building and waterfront"
-                                        responsive
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
@@ -186,12 +190,12 @@ function Main() {
                                     <img
                                         src="images/pic02.jpg"
                                         alt="Woman of colour wearing backpack walking solo against industrial style city wall"
-                                        responsive
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
                                 </div>
-                                <h2>Sunshine everywhere</h2>
+                                <h3>Sunshine everywhere</h3>
                                 <p>
                                     Create and discover new routes. Your next adventure begins now.
                                 </p>
@@ -217,9 +221,8 @@ function Main() {
                     <div className="row double">
                         <ul className="copyright">
                             <p>
-                                &copy; Untitled. All rights reserved. Images:{" "}
-                                <a href="http://unsplash.com">Unsplash</a>
-                                <p> Can you spot the 11 song titles?</p>
+                                &copy; CodeBenders Sunny Walk. All rights reserved.
+                                <br /> Can you spot the 11 song titles?
                             </p>
                         </ul>
                     </div>

@@ -17,7 +17,7 @@ function RegisterForm() {
 
             <div className="paper">
                 <Typography component="h1" variant="h5">
-                    Register
+                    Sign In
                 </Typography>
 
                 <form className="form" noValidate>
@@ -69,11 +69,11 @@ function RegisterForm() {
                     <Button
                         type="submit"
                         variant="contained"
-                        color="primary"
+                        color="inherit"
                         className="submit"
                         fullWidth
                     >
-                        Register
+                        Sign In
                     </Button>
 
                     <Grid container justify="flex-end">
