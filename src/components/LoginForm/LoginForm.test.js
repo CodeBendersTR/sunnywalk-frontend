@@ -3,7 +3,6 @@ import { LoginForm } from "../../components";
 import "@testing-library/jest-dom/extend-expect";
 
 
-
 test("Check the login text renders", () => {
     render(<LoginForm />);
     const input = screen.getByText("Log in");

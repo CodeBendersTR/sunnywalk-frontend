@@ -9,6 +9,7 @@ test("Check the login text renders", () => {
     expect(input).toBeInTheDocument();
 });
 
+
 test("Check if the First Name renders", () => {
     render(<RegisterForm />);
     const input = screen.getByText("First Name");

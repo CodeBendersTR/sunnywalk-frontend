@@ -8,6 +8,7 @@ test("Check weather select main text shows", () => {
     expect(input).toBeInTheDocument();
 });
 
+
 test("Check notification select main text shows", () => {
     render(<NotificationPreferenceSelect />);
     const input = screen.getByText("Notification");
