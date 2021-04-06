@@ -1,17 +1,15 @@
 import React from "react";
 import "./Home.css";
-import { Menu } from "..";
+//import { Menu } from "..";
 import AddResponsiveDrawer from "../../components/AddResponsiveDrawer/AddResponsiveDrawer";
+import { HomeHeader } from "../../components";
 
 function Home() {
     return (
-        <Menu>
-            <header>
+            <div>
+              <HomeHeader />
               <AddResponsiveDrawer/>
-            </header>
-            <main>
-            </main>
-        </Menu>
+            </div>
     );
 }
 

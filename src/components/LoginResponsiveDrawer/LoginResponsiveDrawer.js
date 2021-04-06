@@ -1,9 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import DisplayTime from "../DisplayTime/DisplayTime";
 import {AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography} from '@material-ui/core';
+  makeStyles, useTheme, Toolbar, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
@@ -60,24 +59,12 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-        <List>
-          {/*<ListItem button component={Link} to="/profile">
+      <List>
+        {/*<ListItem button component={Link} to="/profile">
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
               <ListItemText primary="Profile"></ListItemText>
             </ListItem>*/}
-            <ListItem button component={Link} to="/profile">
-              <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
-              <ListItemText primary="My favourite walks"></ListItemText>
-            </ListItem>
-            <ListItem button component={Link} to="/profile">
-              <ListItemIcon>{<MapIcon />}</ListItemIcon>
-              <ListItemText primary="Map"></ListItemText>
-            </ListItem>
-            <ListItem button component={Link} to="/main">
-              <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-              <ListItemText primary="Logout"></ListItemText>
-            </ListItem>
-        </List>
+      </List>
     </div>
   );
 
@@ -100,7 +87,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Welcome UserName
+            Welcome to Login Page
           </Typography>
         </Toolbar>
       </AppBar>
@@ -137,14 +124,7 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-          <h4>
-            Today's best times for a sunny walk
-          </h4>
-          <ul>
-            <DisplayTime dispTime={ time } />
-            <DisplayTime dispTime={ time }/>
-            <DisplayTime dispTime={ time }/>
-          </ul>
+
         <Typography paragraph>
 
         </Typography>
