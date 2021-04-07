@@ -171,16 +171,6 @@
             color: #c5c7c8;
         }
 
-        /* /* .wrapper.style4 {    THIS DOES NOT WORK!
-            background-image: url("./pic06.banner3.jpg");
-            height: 100%;
-            background-position: center;
-            background-repeat: no repeat;
-            background-size: cover;
-            throwIfNamespace: false;
-            color: #c5c7c8; */
-        /* } */
-
             .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6, .wrapper.style3 h2, .wrapper.style3 h3 {
                 color: #ffffff;
             }
@@ -238,11 +228,6 @@
             width: 100%;
 
         }
-
-        /* main-container {
-            margin-left: auto;
-            margin-right: auto;
-        } */
 
 /* Grid */
 
