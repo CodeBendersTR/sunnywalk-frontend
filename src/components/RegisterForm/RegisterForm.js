@@ -79,6 +79,7 @@ function RegisterForm() {
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Link href="/login" variant="body2">
+                                <br />
                                 Already have an account? Log In
                             </Link>
                         </Grid>
