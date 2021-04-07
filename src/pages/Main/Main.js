@@ -1,9 +1,10 @@
 import "./Main.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardDisplay, MainHeader } from "../../components";
+import { CardDisplay, MainHeader, ImageLoad } from "../../components";
 // import { images } from '../../images'; const { width, height } = Image.resolveAssetSource(myImage) // this doesn't work
 import { Container } from "@material-ui/core";
+
 
 function Main() {
     return (
@@ -17,8 +18,10 @@ function Main() {
                     <div className="inner">
                         <div className="image center">
                             <img
-                                src="images/pic06.banner3.jpg"
+                                src="images/pic06.banner3-large.jpg" srcSet="images/pic06.banner3-small.jpg 480w, images/pic06.banner3-large.jpg 1080w" 
                                 alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
+                                placeholder="images/pic06.banner3.placeholder.jpg"
+                                rel="preload"
                                 dpr="auto"
                                 responsive="true"
                                 gravity="faces"
@@ -27,6 +30,8 @@ function Main() {
                                 fetchformat="auto"
                                 height="100%"
                                 width="100%"
+                                border-radius="6px"
+                                display="block"
                             />
                         </div>
                     </div>
@@ -134,9 +139,10 @@ function Main() {
                         <div className="6u">
                             <section className="special">
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic10.cityfamily.jpg"
                                         alt="Woman and child of color, smiling sweetly at camera, woman wearing leather clothes kneeling with gender neutral child hugging her shoulders, backdrop of center city, brick street"
+                                        placeholder="images/pic10.cityfamily.placeholder.jpg"
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
@@ -160,9 +166,10 @@ function Main() {
                         <div className="6u">
                             <section className="special">
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic05.funwheelchair.jpg"
                                         alt="Person pushing another in wheelchair against architectual building and waterfront"
+                                        placeholder="images/pic05.funwheelchair.placeholder.jpg"
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
@@ -187,9 +194,10 @@ function Main() {
                         <div className="8u">
                             <section>
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic02.jpg"
                                         alt="Woman of colour wearing backpack walking solo against industrial style city wall"
+                                        placeholder="images/pic02.placeholder.jpg"
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
