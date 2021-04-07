@@ -14,3 +14,4 @@ export { default as SingleSelects } from "./MultiSelect/SingleSelect";
 export { default as RegisterHeader } from "./RegisterHeader/RegisterHeader";
 export { default as ResponsiveDrawerReg } from "./ResponsiveDrawerReg/ResponsiveDrawerReg";
 export { default as ImageLoad } from "./ImageLoad/ImageLoad";
+export { default as ProfileForm } from "./ProfileForm/ProfileForm";

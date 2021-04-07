@@ -1,0 +1,46 @@
+
+body {
+	background: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #555f66;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 16pt !important;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+    color: #555f66;
+    font-size: 10pt !important;
+}
+
+.Profile {
+    text-align: center;
+    color: #555f66;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.Profile-Component{
+    margin: 150px auto 0 auto;
+    width: 600px;
+}
+
+.profile-form-container {
+    position: absolute;
+    top: 75%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+ul {
+    text-align: right;
+    background-position: 100%;
+    padding-right: 2px;
+}
