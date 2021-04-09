@@ -12,6 +12,7 @@ export { default as LoginHeader } from "./LoginHeader/LoginHeader";
 export { NotificationPreferenceSelect, WeatherPreferenceSelect } from "./MultiSelect/MultiSelect";
 export { default as SingleSelects } from "./MultiSelect/SingleSelect";
 export { default as RegisterHeader } from "./RegisterHeader/RegisterHeader";
-export { default as ResponsiveDrawerReg } from "./ResponsiveDrawerReg/ResponsiveDrawerReg";
+export { default as UniversalDrawer } from "./UniversalDrawer/UniversalDrawer";
 export { default as ImageLoad } from "./ImageLoad/ImageLoad";
 export { default as ProfileForm } from "./ProfileForm/ProfileForm";
+export { default as AddResponsiveDrawer } from "./AddResponsiveDrawer/AddResponsiveDrawer";

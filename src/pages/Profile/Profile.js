@@ -4,14 +4,14 @@ import React from "react";
 import {
     ProfileForm,
     RegisterHeader,
-    ResponsiveDrawerReg,
+    UniversalDrawer,
 } from "../../components";
 
 function Profile() {
     return (
         <div>
             <RegisterHeader />
-                <ResponsiveDrawerReg />
+                < UniversalDrawer Greeting="Profile Page" />
                 <ProfileForm />
         </div>
     );

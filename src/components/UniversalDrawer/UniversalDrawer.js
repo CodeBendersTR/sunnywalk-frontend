@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3),
     },
 }));
-function ResponsiveDrawerReg(props) {
+function UniversalDrawer(props) {
     const { window } = props;
     const classes = useStyles();
     const theme = useTheme();
@@ -66,11 +66,8 @@ function ResponsiveDrawerReg(props) {
     const drawer = (
         <div>
             <div className={classes.toolbar} />
+        {/* Lefthand side bar (grey) */}
             <List>
-                {/*<ListItem button component={Link} to="/profile">
-              <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-              <ListItemText primary="Profile"></ListItemText>
-            </ListItem>*/}
                 <ListItem button component={Link} to="/profile">
                     <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
                     <ListItemText primary="My favourite walks"></ListItemText>
@@ -87,8 +84,6 @@ function ResponsiveDrawerReg(props) {
         </div>
     );
     const container = window !== undefined ? () => window().document.body : undefined;
-    const today = new Date();
-    const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     return (
         <div className={classes.root}>
             <CssBaseline />
@@ -104,7 +99,7 @@ function ResponsiveDrawerReg(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Welcome to Sign In
+                        Welcome to the { props.Greeting }
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -147,4 +142,4 @@ function ResponsiveDrawerReg(props) {
         </div>
     );
 }
-export default ResponsiveDrawerReg;
+export default UniversalDrawer;
