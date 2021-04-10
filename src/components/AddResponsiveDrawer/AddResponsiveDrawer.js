@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 80,
   },
   content: {
-    flexGrow: 1,
     padding: theme.spacing(3),
   },
 }));
@@ -61,10 +60,6 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
         <List>
-          {/*<ListItem button component={Link} to="/profile">
-              <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-              <ListItemText primary="Profile"></ListItemText>
-            </ListItem>*/}
             <ListItem button component={Link} to="/profile">
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
               <ListItemText primary="My favourite walks"></ListItemText>
@@ -100,7 +95,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Welcome UserName
+            Welcome to the { props.Greeting }
           </Typography>
         </Toolbar>
       </AppBar>

@@ -1,11 +1,11 @@
 import "./Register.css";
-import { RegisterForm, RegisterHeader, ResponsiveDrawerReg } from "../../components";
+import { RegisterForm, RegisterHeader, UniversalDrawer } from "../../components";
 
 function Register() {
     return (
         <div>
             <RegisterHeader />
-                <ResponsiveDrawerReg />
+                < UniversalDrawer Greeting="Register Page" />
                 <RegisterForm />
         </div>
     );

@@ -1,13 +1,13 @@
 import "./Login.css";
 import { LoginForm, LoginHeader } from "../../components";
-import LoginResponsiveDrawer from "../../components/LoginResponsiveDrawer/LoginResponsiveDrawer";
+import UniversalDrawer from "../../components/UniversalDrawer/UniversalDrawer";
 import {Container} from "@material-ui/core";
 
 function Login() {
     return (
       <div>
         <LoginHeader />
-        <LoginResponsiveDrawer />
+        < UniversalDrawer Greeting="Login Page" />
         <LoginForm />
       </div>
     )

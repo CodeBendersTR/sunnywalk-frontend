@@ -61,12 +61,12 @@ function SignIn() {
                     <Grid container>
                         <Grid item xs>
                             <Link href="#" variant="body2">
-                                Forgot password?
+                              <br />  Forgot password?
                             </Link>
                         </Grid>
                         <Grid item xs>
                             <Link href="/register" variant="body2">
-                                No account yet? Register
+                               <br /> No account yet? Register
                             </Link>
                         </Grid>
                     </Grid>
