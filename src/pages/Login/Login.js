@@ -1,16 +1,21 @@
 import "./Login.css";
-import { LoginForm, LoginHeader } from "../../components";
+import { LoginForm, UniversalHeader } from "../../components";
 import UniversalDrawer from "../../components/UniversalDrawer/UniversalDrawer";
-import {Container} from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 function Login() {
     return (
-      <div>
-        <LoginHeader />
-        < UniversalDrawer Greeting="Login Page" />
-        <LoginForm />
-      </div>
-    )
+        <div>
+            <UniversalHeader
+                ButtonMain="Main"
+                ButtonRegister="Register"
+                ButtonProfile="Profile"
+                ButtonUserHome="User Home"
+            />
+            <UniversalDrawer Greeting="Login Page" />
+            <LoginForm />
+        </div>
+    );
 }
 
 export default Login;

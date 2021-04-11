@@ -1,12 +1,17 @@
 import "./Register.css";
-import { RegisterForm, RegisterHeader, UniversalDrawer } from "../../components";
+import { RegisterForm, UniversalDrawer, UniversalHeader } from "../../components";
 
 function Register() {
     return (
         <div>
-            <RegisterHeader />
-                < UniversalDrawer Greeting="Register Page" />
-                <RegisterForm />
+            <UniversalHeader
+                ButtonMain="Main"
+                ButtonLogin="Login"
+                ButtonProfile="Profile"
+                ButtonUserHome="User Home"
+            />
+            <UniversalDrawer Greeting="Register Page" />
+            <RegisterForm />
         </div>
     );
 }
