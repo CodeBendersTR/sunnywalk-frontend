@@ -1,14 +1,18 @@
-/*
 import { render, screen } from "@testing-library/react";
 import { AddResponsiveDrawer } from "../../components";
 import "@testing-library/jest-dom/extend-expect";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-
-test("Check the login text renders", () => {
-    render(<AddResponsiveDrawer />);
-    const input = screen.getByText("Already have an account? Log In");
+//as addresponsivedrawer has links we need to put it within a container of routers.
+test("Check Welcome UserName renders", () => {
+    //render(<Router><addResponsiveDrawer /></Router>);
+    render(<Router><Route path="/" component={AddResponsiveDrawer} /></Router>)
+    const input = screen.getByText("Welcome UserName"); 
     expect(input).toBeInTheDocument();
 });
-To Do:
-Find what "Invariant failed: You should not use <Link> outside a <Router>" means here.
-*/
+test("Check Today's best times for a sunny walk renders", () => {
+  //render(<Router><addResponsiveDrawer /></Router>);
+  render(<Router><Route path="/" component={AddResponsiveDrawer} /></Router>)
+  const input = screen.getByText("Today's best times for a sunny walk"); 
+  expect(input).toBeInTheDocument();
+});
