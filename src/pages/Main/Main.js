@@ -1,16 +1,15 @@
 import "./Main.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardDisplay, MainHeader, ImageLoad } from "../../components";
+import { CardDisplay, ImageLoad, UniversalHeader } from "../../components";
 // import { images } from '../../images'; const { width, height } = Image.resolveAssetSource(myImage) // this doesn't work
 import { Container } from "@material-ui/core";
-
 
 function Main() {
     return (
         <div>
             {/* HeaderMain with sun icon, product name and two buttons */}
-            <MainHeader />
+            <UniversalHeader ButtonLogin="Login" ButtonRegister="Register" />
 
             {/* Main Landing Page Image */}
             <Container>
@@ -18,7 +17,8 @@ function Main() {
                     <div className="inner">
                         <div className="image center">
                             <img
-                                src="images/pic06.banner3-large.jpg" srcSet="images/pic06.banner3-small.jpg 480w, images/pic06.banner3-large.jpg 1080w" 
+                                src="images/pic06.banner3-large.jpg"
+                                srcSet="images/pic06.banner3-small.jpg 480w, images/pic06.banner3-large.jpg 1080w"
                                 alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
                                 placeholder="images/pic06.banner3.placeholder.jpg"
                                 rel="preload"
@@ -65,8 +65,8 @@ function Main() {
                             <div className="flex-container">
                                 <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
                                 <p>
-                                    Soak in the benefits of exposing your skin to a sensible amount of
-                                    natural sunlight.
+                                    Soak in the benefits of exposing your skin to a sensible amount
+                                    of natural sunlight.
                                 </p>
                             </div>
                             <span className="navbar-brand mb-0 h1"></span>

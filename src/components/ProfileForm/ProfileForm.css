@@ -1,23 +1,4 @@
 
-body {
-	background: #fff;
-}
-
-h1 {
-    text-align: center;
-    color: #555f66;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 16pt !important;
-    font-weight: 500;
-}
-
-/* this is impacting main page */
-p {
-    /* text-align: center; */
-    /* color: #555f66; */
-    /* font-size: 10pt !important; */
-}
-
 .Profile {
     text-align: center;
     color: #555f66;
@@ -40,8 +21,26 @@ p {
     border-radius: 4px; */
 }
 
-ul {
-    text-align: right;
-    background-position: 100%;
-    padding-right: 2px;
-}
+    .body {
+        background: #fff;
+    }
+
+    .h1 {
+        text-align: center;
+        color: #555f66;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-size: 16pt !important;
+        font-weight: 500;
+    }
+
+    .p {
+        text-align: center; 
+        color: #555f66;
+        font-size: 10pt !important;
+    }
+
+    .ul {
+        text-align: right;
+        background-position: 100%;
+        padding-right: 2px;
+    }
