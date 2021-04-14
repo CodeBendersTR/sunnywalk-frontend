@@ -17,8 +17,8 @@ function Main() {
                     <div className="inner">
                         <div className="image center">
                             <img
-                                src="images/pic06.banner3-large.jpg"
-                                srcSet="images/pic06.banner3-small.jpg 480w, images/pic06.banner3-large.jpg 1080w"
+                                src="images/pic13.bannerOp3.jpg"
+                                srcSet="images/pic13.bannerOp3-small.jpg 480w, images/pic13.bannerOp3-large.jpg 1080w"
                                 alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
                                 placeholder="images/pic06.banner3.placeholder.jpg"
                                 rel="preload"
@@ -231,6 +231,8 @@ function Main() {
                             <p>
                                 &copy; CodeBenders Sunny Walk. All rights reserved.
                                 <br /> Can you spot the 11 song titles?
+                                <br />
+                                <br /> ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
                             </p>
                         </ul>
                     </div>

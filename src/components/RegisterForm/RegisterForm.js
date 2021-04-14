@@ -17,7 +17,7 @@ function RegisterForm() {
 
             <div className="paper">
                 <Typography component="h1" variant="h5">
-                    Sign In
+                    Register Here
                 </Typography>
 
                 <form className="form" noValidate>
@@ -73,14 +73,14 @@ function RegisterForm() {
                         className="submit"
                         fullWidth
                     >
-                        Sign In
+                        Register
                     </Button>
 
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Link href="/login" variant="body2">
                                 <br />
-                                Already have an account? Log In
+                                Already have an account? Login
                             </Link>
                         </Grid>
                     </Grid>
