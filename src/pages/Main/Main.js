@@ -1,6 +1,6 @@
 import "./Main.css";
 import React from "react";
-import { Link } from "react-router-dom";
+//
 import { CardDisplay, ImageLoad, UniversalHeader } from "../../components";
 // import { images } from '../../images'; const { width, height } = Image.resolveAssetSource(myImage) // this doesn't work
 import { Container } from "@material-ui/core";
@@ -19,7 +19,7 @@ function Main() {
                             <img
                                 src="images/pic13.bannerOp3.jpg"
                                 srcSet="images/pic13.bannerOp3-small.jpg 480w, images/pic13.bannerOp3-large.jpg 1080w"
-                                alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
+                                alt="Woman in red t-shirt and jeans holding hand of blonde child in striped t-shirt walking into geometric keloidoscope design, tagline Find your Bright Side, A weather and mapping app inspiring us to take a walk in the sunshine "
                                 placeholder="images/pic06.banner3.placeholder.jpg"
                                 rel="preload"
                                 dpr="auto"
@@ -61,7 +61,7 @@ function Main() {
                 {/* Section Divider - Text Header */}
                 <section id="one" className="wrapper">
                     <header className="major">
-                        <nav className="navbar navbar-light bg-light text-color: #966602">
+                        <nav className="navbar navbar-light bg-light text-color: #b8860b">
                             <div className="flex-container">
                                 <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
                                 <p>
