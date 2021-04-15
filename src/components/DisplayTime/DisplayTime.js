@@ -1,5 +1,6 @@
 import React from 'react';
 import "./DisplayTime.css";
+import CardHome from "../CardHome/CardHome";
 import { makeStyles, Button  } from '@material-ui/core';
 
 
@@ -30,9 +31,12 @@ function DisplayTime(props) {
 
   return (
     <li className="list-style">
-      <p>{ props.dispTime }
+      <p>
+        {/*{ props.dispTime }
         <Button onClick={dispButton} variant="contained" size="small" className={classes.margin}>Notify</Button>
         <Button onClick={dispButton} variant="contained" size="small" className={classes.margin}>Log Feedback</Button>
+        */}
+        <CardHome />
       </p>
     </li>
   );

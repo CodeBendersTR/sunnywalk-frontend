@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import DisplayTime from "../DisplayTime/DisplayTime";
+import CardHome from "../CardHome/CardHome";
 import {AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography} from '@material-ui/core';
+ makeStyles, useTheme, Toolbar, Typography, Box} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
+      marginTop: 80,
     },
   },
   appBar: {
@@ -136,9 +138,17 @@ function ResponsiveDrawer(props) {
             Today's best times for a sunny walk
           </h4>
           <ul>
-            <DisplayTime dispTime={ time } />
-            <DisplayTime dispTime={ time }/>
-            <DisplayTime dispTime={ time }/>
+            <Box display="flex" flexDirection="row">
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+            </Box>
           </ul>
         <Typography paragraph>
 
