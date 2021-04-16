@@ -17,7 +17,7 @@ function RegisterForm() {
 
             <div className="paper">
                 <Typography component="h1" variant="h5">
-                    Register
+                    Register Here
                 </Typography>
 
                 <form className="form" noValidate>
@@ -61,7 +61,7 @@ function RegisterForm() {
                         autoComplete="current-password"
                         name="password"
                         id="password"
-                        label="Password"
+                        label="Pasword"
                         required
                         fullWidth
                     />
@@ -69,7 +69,7 @@ function RegisterForm() {
                     <Button
                         type="submit"
                         variant="contained"
-                        color="primary"
+                        color="inherit"
                         className="submit"
                         fullWidth
                     >
@@ -79,7 +79,8 @@ function RegisterForm() {
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Link href="/login" variant="body2">
-                                Already have an account? Log In
+                                <br />
+                                Already have an account? Login
                             </Link>
                         </Grid>
                     </Grid>

@@ -1,7 +1,7 @@
 import "./Main.css";
 import React from "react";
-import { Link } from "react-router-dom";
-import { CardDisplay, MainHeader } from "../../components";
+//
+import { CardDisplay, ImageLoad, UniversalHeader } from "../../components";
 // import { images } from '../../images'; const { width, height } = Image.resolveAssetSource(myImage) // this doesn't work
 import { Container } from "@material-ui/core";
 
@@ -9,7 +9,7 @@ function Main() {
     return (
         <div>
             {/* HeaderMain with sun icon, product name and two buttons */}
-            <MainHeader />
+            <UniversalHeader ButtonLogin="Login" ButtonRegister="Register" />
 
             {/* Main Landing Page Image */}
             <Container>
@@ -17,16 +17,21 @@ function Main() {
                     <div className="inner">
                         <div className="image center">
                             <img
-                                src="images/pic06.banner3.jpg"
-                                alt="Four men and one woman of multiple cultures, under 20 years, smiling, running toward camera, in casual dress, background of blue skies and grassy suburbia"
+                                src="images/pic13.bannerOp3.jpg"
+                                srcSet="images/pic13.bannerOp3-small.jpg 480w, images/pic13.bannerOp3-large.jpg 1080w"
+                                alt="Woman in red t-shirt and jeans holding hand of blonde child in striped t-shirt walking into geometric keloidoscope design, tagline Find your Bright Side, A weather and mapping app inspiring us to take a walk in the sunshine "
+                                placeholder="images/pic06.banner3.placeholder.jpg"
+                                rel="preload"
                                 dpr="auto"
-                                responsive
+                                responsive="true"
                                 gravity="faces"
                                 accessibility="colorblind"
                                 quality="auto"
                                 fetchformat="auto"
                                 height="100%"
                                 width="100%"
+                                border-radius="6px"
+                                display="block"
                             />
                         </div>
                     </div>
@@ -37,11 +42,13 @@ function Main() {
             <section id="one" className="wrapper">
                 <header className="major">
                     <nav className="navbar navbar-light bg-light">
-                        <h3 style={{ color: "#985b9c" }}>Sunny Walks at your fingertips</h3>
-                        <p>
-                            Find the best time to take a daily walk, enjoy the sun outdoors and
-                            pursue your happiness.
-                        </p>
+                        <div className="flex-container">
+                            <h3 style={{ color: "#985b9c" }}>Sunny Walks at your fingertips</h3>
+                            <p>
+                                Find the best time to take a daily walk, enjoy the sun outdoors and
+                                pursue your happiness.
+                            </p>
+                        </div>
                         <span className="navbar-brand mb-0 h1"></span>
                     </nav>
                 </header>
@@ -54,12 +61,14 @@ function Main() {
                 {/* Section Divider - Text Header */}
                 <section id="one" className="wrapper">
                     <header className="major">
-                        <nav className="navbar navbar-light bg-light text-color: #966602">
-                            <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
-                            <p>
-                                Soak in the benefits of exposing your skin to a sensible amount of
-                                natural sunlight.
-                            </p>
+                        <nav className="navbar navbar-light bg-light text-color: #b8860b">
+                            <div className="flex-container">
+                                <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
+                                <p>
+                                    Soak in the benefits of exposing your skin to a sensible amount
+                                    of natural sunlight.
+                                </p>
+                            </div>
                             <span className="navbar-brand mb-0 h1"></span>
                         </nav>
                     </header>
@@ -130,10 +139,11 @@ function Main() {
                         <div className="6u">
                             <section className="special">
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic10.cityfamily.jpg"
                                         alt="Woman and child of color, smiling sweetly at camera, woman wearing leather clothes kneeling with gender neutral child hugging her shoulders, backdrop of center city, brick street"
-                                        responsive
+                                        placeholder="images/pic10.cityfamily.placeholder.jpg"
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
@@ -156,10 +166,11 @@ function Main() {
                         <div className="6u">
                             <section className="special">
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic05.funwheelchair.jpg"
                                         alt="Person pushing another in wheelchair against architectual building and waterfront"
-                                        responsive
+                                        placeholder="images/pic05.funwheelchair.placeholder.jpg"
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
@@ -183,15 +194,16 @@ function Main() {
                         <div className="8u">
                             <section>
                                 <div className="image fit">
-                                    <img
+                                    <ImageLoad
                                         src="images/pic02.jpg"
                                         alt="Woman of colour wearing backpack walking solo against industrial style city wall"
-                                        responsive
+                                        placeholder="images/pic02.placeholder.jpg"
+                                        responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
                                     />
                                 </div>
-                                <h2>Sunshine everywhere</h2>
+                                <h3>Sunshine everywhere</h3>
                                 <p>
                                     Create and discover new routes. Your next adventure begins now.
                                 </p>
@@ -217,9 +229,10 @@ function Main() {
                     <div className="row double">
                         <ul className="copyright">
                             <p>
-                                &copy; Untitled. All rights reserved. Images:{" "}
-                                <a href="http://unsplash.com">Unsplash</a>
-                                <p> Can you spot the 11 song titles?</p>
+                                &copy; CodeBenders Sunny Walk. All rights reserved.
+                                <br /> Can you spot the 11 song titles?
+                                <br />
+                                <br /> ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
                             </p>
                         </ul>
                     </div>
