@@ -35,8 +35,20 @@ const MenuProps = {
     },
 };
 
+const WalkerTypeSettings = [
+    "Active wheelchair",
+    "Electronic wheelchair",
+    "Pram",
+    "Push walker",
+    "Scooter",
+    "Skater/Rollerblades",
+    "Walker",
+    "With Pet(s)",
+    "With Family",
+    "Other",
+];
 const NotificationSettings = ["Email", "Web Notification"];
-const WeatherPreference = ["Sunny", "Cloudy", "Raining", "Snow", "Windy"];
+const WeatherPreference = ["Sunny", "Partly Sunny", "Cloudy", "Raining", "Snow", "Windy"];
 
 function getStyles(name, objectName, theme) {
     return {
@@ -45,6 +57,43 @@ function getStyles(name, objectName, theme) {
                 ? theme.typography.fontWeightRegular
                 : theme.typography.fontWeightMedium,
     };
+}
+
+function WalkerType() {
+    const classes = useStyles();
+    const theme = useTheme();
+    const [notificationName, setNotificationName] = React.useState([]);
+
+    const handleChange = (event) => {
+        setNotificationName(event.target.value);
+    };
+
+    return (
+        <div>
+            <FormControl className={classes.formControl}>
+                <InputLabel id="demo-mutiple-notification-label">Walker Type</InputLabel>
+                <Select
+                    labelId="demo-mutiple-notification-label"
+                    id="demo-mutiple-notification"
+                    multiple
+                    value={notificationName}
+                    onChange={handleChange}
+                    input={<Input />}
+                    MenuProps={MenuProps}
+                >
+                    {WalkerTypeSettings.map((notification) => (
+                        <MenuItem
+                            key={notification}
+                            value={notification}
+                            style={getStyles(notification, notificationName, theme)}
+                        >
+                            {notification}
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </div>
+    );
 }
 
 function NotificationPreferenceSelect() {
@@ -121,4 +170,4 @@ function WeatherPreferenceSelect() {
     );
 }
 
-export { WeatherPreferenceSelect, NotificationPreferenceSelect };
+export { WeatherPreferenceSelect, NotificationPreferenceSelect, WalkerType };

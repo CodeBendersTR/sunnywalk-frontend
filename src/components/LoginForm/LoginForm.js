@@ -19,7 +19,7 @@ function SignIn() {
             <div className="paper">
 
                 <Typography component="h1" variant="h5">
-                    Log in
+                    Login
                 </Typography>
 
                 <form className="form" noValidate>
@@ -55,7 +55,7 @@ function SignIn() {
                         className="submit"
                         href="../home"
                     >
-                        Log In
+                        LogIn
                     </Button>
 
                     <Grid container>
