@@ -1,5 +1,16 @@
 import React from "react";
 import "./Home.css";
+import { Menu } from "..";
+import { AddResponsiveDrawer } from "../../components";
+
+function Home() {
+    return (
+        <Menu>
+            <header>
+                <AddResponsiveDrawer />
+            </header>
+            <main></main>
+        </Menu>
 //import { Menu } from "..";
 import { AddResponsiveDrawer } from "../../components";
 import { UniversalHeader } from "../../components";

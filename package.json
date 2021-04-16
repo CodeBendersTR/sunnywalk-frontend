@@ -48,5 +48,20 @@
     "semi": true,
     "singleQuote": false,
     "tabWidth": 4
-  }
+  },
+  "devDependencies": {
+    "cypress": "^7.0.1"
+  },
+  "description": "FrontEnd repository for SunnyWalk application",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeBendersTR/sunnywalk-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeBendersTR/sunnywalk-frontend/issues"
+  },
+  "homepage": "https://github.com/CodeBendersTR/sunnywalk-frontend#readme"
 }
