@@ -10,61 +10,74 @@ import {
 } from "../../components";
 
 import TextField from "@material-ui/core/TextField";
-import { Button, Container } from "@material-ui/core";
-
+import { Button, Container, Typography } from "@material-ui/core";
 
 function ProfileForm() {
     return (
         <div>
             <Container className="profile-form-container" component="main" maxWidth="xs">
-                    <h1 className="Profile">Your Sunny Walk Profile</h1>
-                        <p className="Profile">Please edit and confirm any changes below.</p>
-                    <ul className="selectTest Profile ">
-                        Current password
+                <div className="paper">
+                    <Typography component="h1" variant="h5">
+                        Profile
+                    </Typography>
+                    <p className="Profile">Please edit and confirm any changes below.</p>
+                    <form className="form" noValidate>
                         <TextField
-                            id="outlined-password-input"
-                            label="Password"
-                            type="password"
-                            autoComplete="current-password"
                             variant="outlined"
                             margin="normal"
-                            required
-                            fullWidth   
-                        />
-                    </ul>
-                    <ul className="selectTest Profile ">
-                        New Password
-                        <TextField
                             id="outlined-password-input"
-                            label="Password"
-                            type="password"
+                            label="Current Password"
+                            name="Password"
                             autoComplete="current-password"
-                            variant="outlined"
-                            margin="normal"
-                            required
+                            autoFocus
                             fullWidth
+                            required
                         />
-                    </ul>
-                    <h1 className="Profile" text-align="left" >Your Preferences</h1>
-                    <ul className="Profile">
-                        Preferred location
-                        <AutoCompleteText items={UkCities} />
-                    </ul>
-                    <ul className="Profile">
-                        <WalkerType></WalkerType>
-                    </ul>
-                    <ul className="Profile">
-                        <NotificationPreferenceSelect></NotificationPreferenceSelect>
-                    </ul>
-                    {/* <ul className="Profile">
+
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            id="outlined-password-input"
+                            label="New Password"
+                            name="Password"
+                            autoComplete="new-password"
+                            autoFocus
+                            fullWidth
+                            required
+                        />
+                    <Typography component="h1" variant="h5">
+                        Your Preferences
+                    </Typography>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            id="UKCities"
+                            label="Preferred Location"
+                            name="Location"
+                            autoFocus
+                            fullWidth
+                            required
+                            autoComplete="address-level1"
+                            AutoCompleteText items={UkCities} //this doesn't work
+                            options={UkCities}
+                        />
+                        <ul className="Profile">
+                            <WalkerType></WalkerType>
+                        </ul>
+                        <ul className="Profile">
+                            <NotificationPreferenceSelect></NotificationPreferenceSelect>
+                        </ul>
+                        {/* <ul className="Profile">
                         <SingleSelects></SingleSelects>
                     </ul> */}
-                    <ul className="Profile">
-                        <WeatherPreferenceSelect></WeatherPreferenceSelect>
-                    </ul>
-                    <ul className="Profile">
-                        <Button variant="contained">confirm</Button>
-                    </ul>
+                        <ul className="Profile">
+                            <WeatherPreferenceSelect></WeatherPreferenceSelect>
+                        </ul>
+                        <ul className="Profile">
+                            <Button variant="contained">confirm</Button>
+                        </ul>
+                    </form>
+                </div>
             </Container>
         </div>
     );

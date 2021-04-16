@@ -33,6 +33,11 @@
         font-weight: 500;
     }
 
+    .form {
+        width: 100%;
+        margin-top: 1px;
+    }
+
     .p {
         text-align: center; 
         color: #555f66;
