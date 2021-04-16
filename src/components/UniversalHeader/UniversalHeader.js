@@ -1,6 +1,9 @@
 import "./UniversalHeader.css";
 import { Button } from "@material-ui/core";
 
+function handleClick() {
+}
+
 function UniversalHeader(props) {
     return (
         // HeaderMain with sun icon, product name and two buttons
@@ -18,7 +21,7 @@ function UniversalHeader(props) {
             <div className="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
             <div className="d-flex justify-content-end">
                 <div style={{ padding: 18 }}>
-                <Button onClick="complete()"
+                <Button onClick={handleClick}
                         variant="text" // can't use outline until figure out how to ignore those not in use
                         className="primary"
                         href="./"
@@ -28,7 +31,7 @@ function UniversalHeader(props) {
                     >
                         { props.ButtonMain }
                     </Button>
-                    <Button onClick="complete()"
+                    <Button onClick={handleClick}
                         variant="text"
                         className="primary"
                         href="../Login"
@@ -38,7 +41,7 @@ function UniversalHeader(props) {
                     >
                         { props.ButtonLogin }
                     </Button>
-                    <Button onClick="complete()"
+                    <Button onClick={handleClick}
                         variant="text"
                         color="primary"
                         href="../Register"
@@ -48,7 +51,7 @@ function UniversalHeader(props) {
                     >
                         { props.ButtonRegister }
                     </Button>
-                    <Button onClick="complete()"
+                    <Button onClick={handleClick}
                         variant="text"
                         color="primary"
                         href="../Profile"
@@ -58,7 +61,7 @@ function UniversalHeader(props) {
                     >
                         { props.ButtonProfile }
                     </Button>
-                    <Button onClick="complete()"
+                    <Button onClick={handleClick}
                         variant="text"
                         color="primary"
                         href="../Home"

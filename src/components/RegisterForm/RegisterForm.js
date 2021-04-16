@@ -17,7 +17,7 @@ function RegisterForm() {
 
             <div className="paper">
                 <Typography component="h1" variant="h5">
-                    Register Here
+                    Register
                 </Typography>
 
                 <form className="form" noValidate>
