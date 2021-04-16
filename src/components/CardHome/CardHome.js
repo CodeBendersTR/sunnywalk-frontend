@@ -26,8 +26,10 @@ function dispButton(){
 export default function SimpleCard(props) {
   const classes = useStyles();
 
+  //const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
-        <Card >
+        <Card className={classes.root}>
           <CardContent className={classes.root}>
             <Typography className={classes.pos} color="textSecondary">
               <Grid container justify="center">

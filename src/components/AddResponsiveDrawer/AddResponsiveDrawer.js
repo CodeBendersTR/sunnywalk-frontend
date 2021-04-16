@@ -4,7 +4,7 @@ import DisplayTime from "../DisplayTime/DisplayTime";
 import CardHome from "../CardHome/CardHome";
 import {AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography, Box} from '@material-ui/core';
+ makeStyles, useTheme, Toolbar, Typography, Box, Grid} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
@@ -15,6 +15,7 @@ const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -138,17 +139,17 @@ function ResponsiveDrawer(props) {
             Today's best times for a sunny walk
           </h4>
           <ul>
-            <Box display="flex" flexDirection="row">
-              <Box p={1} direction="row">
+            <Grid container spacing={5}>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-              <Box p={1} direction="row">
+              </Grid>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-              <Box p={1} direction="row">
+              </Grid>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-            </Box>
+              </Grid>
+            </Grid>
           </ul>
         <Typography paragraph>
 
