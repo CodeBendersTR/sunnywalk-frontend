@@ -1,5 +1,6 @@
 import "./LoginForm.css";
 
+
 import {
     Button,
     Container,
@@ -16,8 +17,9 @@ function SignIn() {
             <CssBaseline />
 
             <div className="paper">
+
                 <Typography component="h1" variant="h5">
-                    Log in
+                    Login
                 </Typography>
 
                 <form className="form" noValidate>
@@ -49,21 +51,22 @@ function SignIn() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        color="primary"
+                        color= 'default'
                         className="submit"
+                        href="../home"
                     >
-                        Log In
+                        LogIn
                     </Button>
 
                     <Grid container>
                         <Grid item xs>
                             <Link href="#" variant="body2">
-                                Forgot password?
+                              <br />  Forgot password?
                             </Link>
                         </Grid>
                         <Grid item xs>
                             <Link href="/register" variant="body2">
-                                No account yet? Register
+                               <br /> No account yet? Register
                             </Link>
                         </Grid>
                     </Grid>

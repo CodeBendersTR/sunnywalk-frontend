@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import DisplayTime from "../DisplayTime/DisplayTime";
+import CardHome from "../CardHome/CardHome";
 import {AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography} from '@material-ui/core';
+ makeStyles, useTheme, Toolbar, Typography, Box} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
@@ -19,12 +20,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
+      marginTop: 80,
     },
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: "#e8b633",
-    marginTop: 50,
+    marginTop: 80,
     //backgroundColor: "#8d359c",
     //;#722c7d,#a73eb8
   },
@@ -39,10 +41,9 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
     backgroundColor: "lightgrey",
-    marginTop: 50,
+    marginTop: 80,
   },
   content: {
-    flexGrow: 1,
     padding: theme.spacing(3),
   },
 }));
@@ -62,10 +63,6 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
         <List>
             <ListItem button component={Link} to="/profile">
-              <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-              <ListItemText primary="Profile"></ListItemText>
-            </ListItem>
-            <ListItem button component={Link} to="/profile">
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
               <ListItemText primary="My favourite walks"></ListItemText>
             </ListItem>
@@ -82,6 +79,8 @@ function ResponsiveDrawer(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  const today = new Date();
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
   return (
     <div className={classes.root}>
@@ -98,7 +97,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Welcome UserName
+            Welcome to the { props.Greeting }
           </Typography>
         </Toolbar>
       </AppBar>
@@ -139,9 +138,17 @@ function ResponsiveDrawer(props) {
             Today's best times for a sunny walk
           </h4>
           <ul>
-            <DisplayTime />
-            <DisplayTime />
-            <DisplayTime />
+            <Box display="flex" flexDirection="row">
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+              <Box p={1} direction="row">
+                <CardHome dispTime={ time } />
+              </Box>
+            </Box>
           </ul>
         <Typography paragraph>
 

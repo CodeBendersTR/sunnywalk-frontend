@@ -12,7 +12,7 @@
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 14pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		/* line-height: 1.75em; */
 	}
 
 	a {
@@ -34,16 +34,13 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
-        font-size: 14pt;
+        font-size: 12pt;
 
 	}
 
 	h1, h2, h3, h4, h5, h6, h7 {
 		color: #666f77;
-		font-weight: 300;
 		line-height: 1em;
-		margin: 0 0 1em 0;
 		text-transform: uppercase;
 		letter-spacing: 0.125em;
 	}
@@ -92,7 +89,7 @@
     h7 {
         font-size: 1.25em;
 		line-height: 1.5em;
-        color: #966602;
+        color: #b8860b;
 	}
 
 	hr {
@@ -170,19 +167,9 @@
         }
 
         .wrapper.style3 {
-            background: #966602;
+            background: #b8860b;
             color: #c5c7c8;
         }
-
-        /* /* .wrapper.style4 {    THIS DOES NOT WORK!
-            background-image: url("./pic06.banner3.jpg");
-            height: 100%;
-            background-position: center;
-            background-repeat: no repeat;
-            background-size: cover;
-            throwIfNamespace: false;
-            color: #c5c7c8; */
-        /* } */
 
             .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6, .wrapper.style3 h2, .wrapper.style3 h3 {
                 color: #ffffff;
@@ -241,11 +228,6 @@
             width: 100%;
 
         }
-
-        /* main-container {
-            margin-left: auto;
-            margin-right: auto;
-        } */
 
 /* Grid */
 

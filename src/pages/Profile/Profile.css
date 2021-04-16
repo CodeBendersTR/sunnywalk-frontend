@@ -1,9 +1,8 @@
-
 .Profile {
     text-align: center;
 }
 
-.Profile-Component{
-    margin: 150px auto 0 auto;
-    width: 600px;
+.text_align{
+  display:flex;
+  justify-content: space-around;
 }
