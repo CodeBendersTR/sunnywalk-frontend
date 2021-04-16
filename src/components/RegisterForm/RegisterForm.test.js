@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 test("Check the login text renders", () => {
     render(<RegisterForm />);
-    const input = screen.getByText("Already have an account? Log In");
+    const input = screen.getByText("Already have an account? Login");
     expect(input).toBeInTheDocument();
 });
 
