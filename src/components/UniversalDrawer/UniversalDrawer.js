@@ -99,7 +99,7 @@ function UniversalDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Welcome to the { props.Greeting }
+                        {/* Welcome to the { props.Greeting } */}
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -137,6 +137,7 @@ function UniversalDrawer(props) {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                 <Typography paragraph></Typography>
+                { props.Greeting1 }
                 <Typography paragraph></Typography>
             </main>
         </div>
