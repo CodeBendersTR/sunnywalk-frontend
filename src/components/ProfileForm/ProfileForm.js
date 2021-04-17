@@ -20,7 +20,7 @@ function ProfileForm() {
                     <Typography component="h1" variant="h5">
                         Profile
                     </Typography>
-                    <p className="Profile">Please edit and confirm any changes below.</p>
+                    <p className="p">Please edit and confirm any changes below.</p>
                     <form className="form" noValidate>
                         <TextField
                             variant="outlined"
@@ -58,7 +58,7 @@ function ProfileForm() {
                             fullWidth
                             required
                             autoComplete="address-level1"
-                            AutoCompleteText items={UkCities} //this doesn't work
+                            // AutoCompleteText items={UkCities} //this doesn't work
                             options={UkCities}
                         />
                         <ul className="Profile">
