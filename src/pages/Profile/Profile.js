@@ -11,6 +11,7 @@ function Profile() {
                 ButtonLogin="Login"
                 ButtonRegister="Register"
                 ButtonUserHome="User Home"
+                ButtonProfile="Profile"
             />
             <UniversalDrawer Greeting="Profile Page" />
             <ProfileForm />

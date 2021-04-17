@@ -11,6 +11,7 @@ function Login() {
                 ButtonRegister="Register"
                 ButtonProfile="Profile"
                 ButtonUserHome="User Home"
+                ButtonLogin="Login"
             />
             <UniversalDrawer Greeting="Login Page" />
             <LoginForm />

@@ -1,15 +1,18 @@
 import "./Main.css";
 import React from "react";
-//
 import { CardDisplay, ImageLoad, UniversalHeader } from "../../components";
-// import { images } from '../../images'; const { width, height } = Image.resolveAssetSource(myImage) // this doesn't work
 import { Container } from "@material-ui/core";
 
 function Main() {
     return (
         <div>
-            {/* HeaderMain with sun icon, product name and two buttons */}
-            <UniversalHeader ButtonLogin="Login" ButtonRegister="Register" />
+            {/* HeaderMain with sun icon, product name and buttons */}
+            <UniversalHeader
+                ButtonLogin="Login"
+                ButtonRegister="Register"
+                ButtonProfile="Profile"
+                ButtonUserHome="User Home"
+            />
 
             {/* Main Landing Page Image */}
             <Container>

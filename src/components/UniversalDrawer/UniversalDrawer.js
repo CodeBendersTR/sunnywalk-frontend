@@ -70,11 +70,11 @@ function UniversalDrawer(props) {
             <List>
                 <ListItem button component={Link} to="/profile">
                     <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
-                    <ListItemText primary="My favourite walks"></ListItemText>
+                    <ListItemText primary="My Favourite Walks"></ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/profile">
                     <ListItemIcon>{<MapIcon />}</ListItemIcon>
-                    <ListItemText primary="Map"></ListItemText>
+                    <ListItemText primary="My Map"></ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/main">
                     <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
