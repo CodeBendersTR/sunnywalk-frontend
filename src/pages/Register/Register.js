@@ -9,6 +9,8 @@ function Register() {
                 ButtonLogin="Login"
                 ButtonProfile="Profile"
                 ButtonUserHome="User Home"
+                ButtonRegister="Register"
+                
             />
             <UniversalDrawer Greeting="Register Page" />
             <RegisterForm />

@@ -6,10 +6,16 @@ import { UniversalHeader } from "../../components";
 
 function Home() {
     return (
-            <div>
-              <UniversalHeader ButtonMain="Main" ButtonLogin="Login" ButtonRegister="Register" ButtonProfile="Profile" />
-              < AddResponsiveDrawer Greeting="User Home Page"/>
-            </div>
+        <div>
+            <UniversalHeader
+                ButtonMain="Main"
+                ButtonLogin="Login"
+                ButtonRegister="Register"
+                ButtonProfile="Profile"
+                ButtonUserHome="UserHome"
+            />
+            <AddResponsiveDrawer Greeting="User Home Page" />
+        </div>
     );
 }
 
