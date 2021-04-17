@@ -1,10 +1,5 @@
 import React from "react";
-import { makeStyles, GridList, GridListTile, Box, Grid } from "@material-ui/core";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import { makeStyles, Grid, Card, CardActions, CardContent, Button, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,6 +12,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#e8b633",
         fontSize: 12,
     },
+
+    pos: {
+        marginBottom: 12,
+
+    }
 }));
 
 function dispButton() {
@@ -54,6 +54,7 @@ export default function SimpleCard(props) {
                             Notify
                         </Button>
                     </Grid>
+                    <br/>
                     <Typography color="textSecondary">Tell us how your walk was!</Typography>
                     <Grid container justify="center">
                         <Button
