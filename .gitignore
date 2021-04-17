@@ -40,6 +40,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+cypress/
 
 # TypeScript v1 declaration files
 typings/
@@ -104,3 +105,4 @@ dist
 .tern-port
 package-lock.json
 .vscode/settings.json
+cypress.json
