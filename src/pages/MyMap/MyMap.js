@@ -1,5 +1,5 @@
 import "./MyMap.css";
-import { FixedContainer, MyGoogleMap, UniversalDrawer, UniversalHeader } from "../../components";
+import { Map, GoogleMap, UniversalDrawer, UniversalHeader } from "../../components";
 
 
 function MyMap() {
@@ -14,9 +14,7 @@ function MyMap() {
                 
             />
             <UniversalDrawer Greeting="My Map" />
-                {/* <FixedContainer> */}
-                    <MyGoogleMap>May Your Sunny Walk</MyGoogleMap>
-                {/* </FixedContainer> */}
+                    <GoogleMap>Your Sunny Walk</GoogleMap>
         </div>
     );
 }

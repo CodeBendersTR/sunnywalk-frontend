@@ -75,7 +75,7 @@ function WalkerType() {
                 <Select
                     labelId="demo-mutiple-notification-label"
                     id="demo-mutiple-notification"
-                    multiple
+                    // multiple
                     value={notificationName}
                     onChange={handleChange}
                     input={<Input />}
