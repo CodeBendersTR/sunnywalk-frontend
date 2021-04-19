@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 
 const mapStyles = {
     map: {
-        position: "absolute",
         width: "100%",
         height: "100%",
     },
@@ -84,7 +83,9 @@ export class CurrentLocation extends React.Component {
             let { disableDoubleClickZoom } = this.props;
             const { lat, lng } = this.state.currentLocation;
             if (!(this.props.lat === undefined || this.props.lng === undefined)) {
+                // eslint-disable-next-line no-const-assign
                 lat = this.props.lat;
+                // eslint-disable-next-line no-const-assign
                 lng = this.props.lng;
             }
             const center = new maps.LatLng(lat, lng);
@@ -122,19 +123,15 @@ export class CurrentLocation extends React.Component {
         });
     }
     render() {
+        const style = Object.assign({}, mapStyles.map);
+
         return (
-            <div
-                className={
-                    this.props.maptype === "addwalk"
-                        ? "map_location__container--addwalk"
-                        : "map_location__container--individualwalk"
-                }
-            >
-                <div className="map_location__map" ref="map">
-                    Loading map...
-                </div>
-                {this.renderChildren()}
+        <div>
+            <div style={style} ref="map">
+            Loading map...
             </div>
+            {this.renderChildren()}
+        </div>
         );
     }
 }
