@@ -1,5 +1,6 @@
 import "./MyMap.css";
-import { Map, GoogleMap, UniversalDrawer, UniversalHeader } from "../../components";
+import { GoogleMap, UniversalDrawer, UniversalHeader } from "../../components";
+
 
 
 function MyMap() {
@@ -15,6 +16,7 @@ function MyMap() {
             />
             <UniversalDrawer Greeting="My Map" />
                     <GoogleMap>Your Sunny Walk</GoogleMap>
+                    
         </div>
     );
 }

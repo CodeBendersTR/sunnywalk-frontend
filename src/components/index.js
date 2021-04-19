@@ -14,6 +14,6 @@ export { default as ProfileForm } from "./ProfileForm/ProfileForm";
 export { default as AddResponsiveDrawer } from "./AddResponsiveDrawer/AddResponsiveDrawer";
 export { default as UniversalHeader } from "./UniversalHeader/UniversalHeader";
 export { default as GoogleMap } from "./GoogleMap/GoogleMap";
-export { default as FixedContainer } from "./FixedContainer/FixedContainer";
-export { default as Map } from "./GoogleMap/Map";
+export { default as CurrentLocation } from "./GoogleMap/Map";
+
 
