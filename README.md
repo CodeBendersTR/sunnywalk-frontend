@@ -14,7 +14,7 @@ Features:
 <table>
   <tr>
     <td>
-      <img src="https://i.imgur.com/WnL7eFG.jpg" alt="Javascript"/>
+      <img src="https://i.imgur.com/HwtLE65.jpg" alt="HTML, CSS & Javascript"/>
     </td>
     <td>
       <img src="https://i.imgur.com/qJnsQdJ.jpg" alt="React"/>
@@ -28,32 +28,33 @@ Features:
   </tr>
 </table>
 
-* JAVA as the programming language for the back-end (IntelliJ Idea Community IDE)
-* Spring Boot framework for creation of the REST API (project initialized with Spring Initializr)
-* MySQL for persistence (MySQL Workbench for working on the database)
-* JUnit for testing
+* HTML + CSS + Javascript at the core
+* React as the main library we use for the front-end structure
+* Material-UI for visuals
+* Cypress for testing
 
 # Instructions on how to run the project
 0. Prerequisites:
 * GIT
-* JDK 1.8
-* Maven (must be visible on windows path)
+* Node.js (for npm)
+* A web browser
 1. Clone the repository on your PC
 ```sh
-git clone https://github.com/CodeBendersTR/sunnywalk-backend.git
+git clone https://github.com/CodeBendersTR/sunnywalk-frontend.git
 ```
 2. (Optional) Switch to a specific branch
 ```sh
-git checkout BXXXX
+git checkout FXXXX
 ```
-3. Make the connection with your database (for security reasons we cannot provide the connection to our database)
-* We used in our application.properties Windows evironment variables
-* You can replace those variables with your own connection string or set the environment variables accordingly
-4. Run the application with Maven
+3. Install the dependencies witn NPM
 ```sh
-mvn spring-boot:run
+npm install
 ```
-5. Test the API at http://localhost:8080
+4. Run the application with NPM
+```sh
+npm start
+```
+5. Test the application at http://localhost:3000
 
 # About the team
 ## CodeBenders - because code bends at our will :)
