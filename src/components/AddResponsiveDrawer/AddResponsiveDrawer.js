@@ -1,10 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import DisplayTime from "../DisplayTime/DisplayTime";
 import CardHome from "../CardHome/CardHome";
 import {AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography, Box} from '@material-ui/core';
+ makeStyles, useTheme, Toolbar, Typography, Grid} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
@@ -15,6 +14,7 @@ const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -27,8 +27,6 @@ const useStyles = makeStyles((theme) => ({
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: "#e8b633",
     marginTop: 80,
-    //backgroundColor: "#8d359c",
-    //;#722c7d,#a73eb8
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -44,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 80,
   },
   content: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(20),
   },
 }));
 
@@ -64,7 +62,7 @@ function ResponsiveDrawer(props) {
         <List>
             <ListItem button component={Link} to="/profile">
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
-              <ListItemText primary="My favourite walks"></ListItemText>
+              <ListItemText>My favourite walks</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/mymap">
               <ListItemIcon>{<MapIcon />}</ListItemIcon>
@@ -72,7 +70,7 @@ function ResponsiveDrawer(props) {
             </ListItem>
             <ListItem button component={Link} to="/main">
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-              <ListItemText primary="Logout"></ListItemText>
+              <ListItemText>Logout</ListItemText>
             </ListItem>
         </List>
     </div>
@@ -132,30 +130,26 @@ function ResponsiveDrawer(props) {
           </Drawer>
         </Hidden>
       </nav>
+      {/* Code to display time/buttons in 3 cards */}
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+        <div>
           <h4>
             Today's best times for a sunny walk
           </h4>
           <ul>
-            <Box display="flex" flexDirection="row">
-              <Box p={1} direction="row">
+            <Grid container spacing={5}>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-              <Box p={1} direction="row">
+              </Grid>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-              <Box p={1} direction="row">
+              </Grid>
+              <Grid container item lg={4} xs={12} spacing={2}>
                 <CardHome dispTime={ time } />
-              </Box>
-            </Box>
+              </Grid>
+            </Grid>
           </ul>
-        <Typography paragraph>
-
-        </Typography>
-        <Typography paragraph>
-
-        </Typography>
+        </div>
       </main>
     </div>
   );

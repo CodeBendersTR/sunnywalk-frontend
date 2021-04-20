@@ -50,5 +50,8 @@
     "semi": true,
     "singleQuote": false,
     "tabWidth": 4
+  },
+  "devDependencies": {
+    "cypress": "^7.1.0"
   }
 }
