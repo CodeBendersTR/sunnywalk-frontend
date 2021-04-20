@@ -22,7 +22,7 @@ const locations = [
         },
     },
     {
-        name: "Wheelchair accessible Park",
+        name: "Wheelchair Accessible Park",
         location: {
             lat: 51.51699454189082,
             lng: -0.0430490864531763,
@@ -65,6 +65,7 @@ export class MapContainer extends Component {
             <Map
                 centerAroundCurrentLocation={true}
                 google={this.props.google}
+                defaultCenter={{lat: 51.509865, lng: -0.118092}}
                 zoom={13}
                 // style={mapStyles}
             >
@@ -80,7 +81,7 @@ export class MapContainer extends Component {
                         />
                     );
                 })}
-                <Marker onClick={this.onMarkerClick} name={"Current Location"} />
+                <Marker onClick={this.onMarkerClick} name={"Current Location"} draggable={true} />
                 <InfoWindow
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
