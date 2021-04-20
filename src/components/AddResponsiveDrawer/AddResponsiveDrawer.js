@@ -64,9 +64,9 @@ function ResponsiveDrawer(props) {
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
               <ListItemText>My favourite walks</ListItemText>
             </ListItem>
-            <ListItem button component={Link} to="/profile">
+            <ListItem button component={Link} to="/mymap">
               <ListItemIcon>{<MapIcon />}</ListItemIcon>
-              <ListItemText>Map</ListItemText>
+              <ListItemText primary="My Map"></ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/main">
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>

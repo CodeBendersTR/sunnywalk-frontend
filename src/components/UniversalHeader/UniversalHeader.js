@@ -27,7 +27,7 @@ function UniversalHeader(props) {
                     <Button onClick={handleClick}
                             variant="text" 
                             className="navbar-toggler "
-                            color="rgba(0,0,0,.5)"
+                            color="default"
                             type="button"
                             data-toggle="collapse"
                             href="./"
@@ -40,7 +40,7 @@ function UniversalHeader(props) {
                         <Button onClick={handleClick}
                             variant="text"
                             className="primary"
-                            color="rgba(0,0,0,.5)"
+                            color="default"
                             href="../Login"
                             alt="Login button"
                             my={1}
@@ -50,7 +50,7 @@ function UniversalHeader(props) {
                         </Button>
                         <Button onClick={handleClick}
                             variant="text"
-                            color="rgba(0,0,0,.5)"
+                            color="default"
                             href="../Register"
                             alt="Register button"
                             my={1}
@@ -60,7 +60,7 @@ function UniversalHeader(props) {
                         </Button>
                         <Button onClick={handleClick}
                             variant="text"
-                            color="rgba(0,0,0,.5)"
+                            color="default"
                             href="../Profile"
                             alt="Profile button"
                             my={1}
@@ -70,7 +70,7 @@ function UniversalHeader(props) {
                         </Button>
                         <Button onClick={handleClick}
                             variant="text"
-                            color="rgba(0,0,0,.5)"
+                            color="default"
                             href="../Home"
                             alt="Home User button"
                             my={1}

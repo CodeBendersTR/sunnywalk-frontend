@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Login, Main, NotFound, Profile, Register } from "./pages";
+import { Home, Login, Main, NotFound, Profile, Register, MyMap } from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
                     </Route>
                     <Route exact path="/profile">
                         <Profile/>
+                    </Route>
+                    <Route exact path="/mymap">
+                        <MyMap/>
                     </Route>
 
                     {/* The last routing is for "Not found"; new pages must be added before this line*/}

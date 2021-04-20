@@ -72,7 +72,7 @@ function UniversalDrawer(props) {
                     <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
                     <ListItemText primary="My Favourite Walks"></ListItemText>
                 </ListItem>
-                <ListItem button component={Link} to="/profile">
+                <ListItem button component={Link} to="/mymap">
                     <ListItemIcon>{<MapIcon />}</ListItemIcon>
                     <ListItemText primary="My Map"></ListItemText>
                 </ListItem>
@@ -99,7 +99,7 @@ function UniversalDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        {/* Welcome to the { props.Greeting } */}
+                         { props.Greeting }
                     </Typography>
                 </Toolbar>
             </AppBar>
