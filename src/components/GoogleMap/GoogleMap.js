@@ -1,7 +1,7 @@
 import "./GoogleMap.css";
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, InfoWindow, Marker, Polyline } from "google-maps-react";
-import { CurrentLocation } from "./Map";
+import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
+// import { MainMap } from "./GoogleMap";
 
 const locations = [
     {

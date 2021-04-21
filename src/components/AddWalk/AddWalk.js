@@ -7,14 +7,14 @@ let poly;
 let map;
 
 function AddWalk() {
-    map = new maps.Map(document.getElementById("map"), {
+    map = new Map(document.getElementById("map"), {
         zoom: 7,
         center: { 
             lat: 51.509865,
             lng: -0.118092, 
         },
     });
-    poly = new maps.Polyline({
+    poly = new map.Polyline({
         strokeColor: "#000000",
         strokeOpacity: 1.0,
         strokeWeight: 3,
@@ -31,7 +31,7 @@ function addLatLng(event) {
     // and it will automatically appear.
     path.push(event.latLng);
     // Add a new marker at the new plotted point on the polyline.
-    new maps.Marker({
+    new map.Marker({
         position: event.latLng,
         title: "#" + path.getLength(),
         map: map,
