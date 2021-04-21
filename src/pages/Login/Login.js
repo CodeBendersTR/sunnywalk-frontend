@@ -3,17 +3,19 @@ import { LoginForm, UniversalHeader } from "../../components";
 import UniversalDrawer from "../../components/UniversalDrawer/UniversalDrawer";
 import {  } from "@material-ui/core";
 
+
 function Login() {
     return (
         <div>
             <UniversalHeader
-                ButtonMain="Main"
-                ButtonRegister="Register"
-                ButtonProfile="Profile"
-                ButtonUserHome="User Home"
-                ButtonLogin="Login"
+                // ButtonMain="Main"
+                // ButtonRegister="Register"
+                //ButtonLogin="Register"
+                ButtonProfile="Main" FirstButton={"../Main"}
+                ButtonUserHome="Register"   SecondButton={"../Register"}
+
             />
-            <UniversalDrawer Greeting="Login Page" />
+            <UniversalDrawer Greeting="Login Page"  />
             <LoginForm />
         </div>
     );

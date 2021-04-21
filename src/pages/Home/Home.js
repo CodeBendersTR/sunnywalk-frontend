@@ -8,11 +8,11 @@ function Home() {
     return (
         <div>
             <UniversalHeader
-                ButtonMain="Main"
-                ButtonLogin="Login"
-                ButtonRegister="Register"
-                ButtonProfile="Profile"
-                ButtonUserHome="UserHome"
+                // ButtonMain="Main"
+                // ButtonLogin="Login"
+                // ButtonRegister="Register"
+                ButtonProfile="Main" FirstButton={"../Main"}
+                ButtonUserHome="Profile" SecondButton={"../Profile"}
             />
             <AddResponsiveDrawer Greeting="User Home Page" />
         </div>
