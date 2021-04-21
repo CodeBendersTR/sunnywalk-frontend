@@ -69,16 +69,22 @@ function UniversalDrawer(props) {
         {/* Lefthand side bar (grey) */}
             <List>
                 <ListItem button component={Link} to="/profile">
-                    <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
-                    <ListItemText primary="My Favourite Walks"></ListItemText>
+                    {/*<ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>*/}
+                    {/*<ListItemText primary="My Favourite Walks"></ListItemText>*/}
+                    <ListItemIcon> { props.ListItem1Icon } </ListItemIcon>
+                     <ListItemText> { props.ListItem1 } </ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/mymap">
-                    <ListItemIcon>{<MapIcon />}</ListItemIcon>
-                    <ListItemText primary="My Map"></ListItemText>
+                    {/*<ListItemIcon>{<MapIcon />}</ListItemIcon>*/}
+                    {/*<ListItemText primary="My Map"></ListItemText>*/}
+                    <ListItemIcon>{ props.ListItem2Icon }</ListItemIcon>
+                    <ListItemText> { props.ListItem2 } </ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/main">
-                    <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
-                    <ListItemText primary="Logout"></ListItemText>
+                    {/*<ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>*/}
+                    {/*<ListItemText primary="Logout"></ListItemText>*/}
+                    <ListItemIcon>{ props.ListItem3Icon }</ListItemIcon>
+                    <ListItemText> { props.ListItem3 } </ListItemText>
                 </ListItem>
             </List>
         </div>

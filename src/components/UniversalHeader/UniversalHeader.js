@@ -24,44 +24,46 @@ function UniversalHeader(props) {
                 <div className="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
                 <div className="d-flex justify-content-end">
                     <div style={{ padding: 18 }}>
-                    <Button onClick={handleClick}
-                            variant="text" 
-                            className="navbar-toggler "
-                            color="default"
-                            type="button"
-                            data-toggle="collapse"
-                            href="./"
-                            alt="Main button"
-                            my={1}
-                            px={2}
-                        >
-                            { props.ButtonMain }
-                        </Button>
+                    {/*<Button onClick={handleClick}*/}
+                    {/*        variant="text"*/}
+                    {/*        className="navbar-toggler "*/}
+                    {/*        color="default"*/}
+                    {/*        type="button"*/}
+                    {/*        data-toggle="collapse"*/}
+                    {/*        href="./"*/}
+                    {/*        alt="Main button"*/}
+                    {/*        my={1}*/}
+                    {/*        px={2}*/}
+                    {/*    >*/}
+                    {/*        { props.ButtonMain }*/}
+                    {/*    </Button>*/}
+                    {/*    <Button onClick={handleClick}*/}
+                    {/*        variant="text"*/}
+                    {/*        className="primary"*/}
+                    {/*        color="default"*/}
+                    {/*        href="../Login"*/}
+                    {/*        alt="Login button"*/}
+                    {/*        my={1}*/}
+                    {/*        px={2}*/}
+                    {/*    >*/}
+                    {/*        { props.ButtonLogin }*/}
+                    {/*    </Button>*/}
+                    {/*    <Button onClick={handleClick}*/}
+                    {/*        variant="text"*/}
+                    {/*        color="default"*/}
+                    {/*        href="../Register"*/}
+                    {/*        alt="Register button"*/}
+                    {/*        my={1}*/}
+                    {/*        px={2}*/}
+                    {/*    >*/}
+                    {/*        { props.ButtonRegister }*/}
+                    {/*    </Button>*/}
+                        {/*<button disabled={!this.state.value} />*/}
                         <Button onClick={handleClick}
                             variant="text"
-                            className="primary"
                             color="default"
-                            href="../Login"
-                            alt="Login button"
-                            my={1}
-                            px={2}
-                        >
-                            { props.ButtonLogin }
-                        </Button>
-                        <Button onClick={handleClick}
-                            variant="text"
-                            color="default"
-                            href="../Register"
-                            alt="Register button"
-                            my={1}
-                            px={2}
-                        >
-                            { props.ButtonRegister }
-                        </Button>
-                        <Button onClick={handleClick}
-                            variant="text"
-                            color="default"
-                            href="../Profile"
+                            // href="../Profile"
+                            href={props.FirstButton}
                             alt="Profile button"
                             my={1}
                             px={2}
@@ -71,7 +73,8 @@ function UniversalHeader(props) {
                         <Button onClick={handleClick}
                             variant="text"
                             color="default"
-                            href="../Home"
+                            // href="../Home"
+                            href={props.SecondButton}
                             alt="Home User button"
                             my={1}
                             px={2}
