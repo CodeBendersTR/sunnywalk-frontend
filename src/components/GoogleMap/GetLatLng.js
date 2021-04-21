@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { Map, GoogleMap, GoogleApiWrapper, Marker } from "google-maps-react";
 
 
-class MainMap extends Component {
+class GetLatLng extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -10,14 +10,14 @@ class MainMap extends Component {
           {
             title: "The marker`s title will appear as a tooltip.",
             name: "SOMA",
-            position: { lat: 37.778519, lng: -122.40564 }
+            position: { lat: 51.49748169990848, lng: -0.10281244511195696 }
           }
         ]
       };
       this.onClick = this.onClick.bind(this);
     }
   
-    onClick(t, map, coord) {
+    onClick(title, map, coord) {
       const { latLng } = coord;
       const lat = latLng.lat();
       const lng = latLng.lng();
@@ -27,9 +27,9 @@ class MainMap extends Component {
           markers: [
             ...previousState.markers,
             {
-              title: "",
-              name: "",
-              position: { lat, lng }
+                title: "",
+                name: "",
+                position: { lat, lng }
             }
           ]
         };
@@ -39,10 +39,9 @@ class MainMap extends Component {
     render() {
       return (
         <div>
-          <h1 className="text-center">My Maps</h1>
           <Map
-            google={this.props.google}
-            style={{ width: "80%", margin: "auto" }}
+            google={this.props.google} //Map
+            style={{ width: "60%", margin: "auto" }}
             className={"map"}
             zoom={14}
             onClick={this.onClick}
@@ -61,12 +60,9 @@ class MainMap extends Component {
     }
   }
   
-//   const App = GoogleApiWrapper({
-//     apiKey: ("AIzaSyCqT-9wGFmTpsxwvVMApOZquHIVmgFc_FY")
-//   })(MainMap);
 
   export default GoogleApiWrapper((props) => ({
     apiKey: "AIzaSyCqT-9wGFmTpsxwvVMApOZquHIVmgFc_FY",
-}))(MainMap);
+}))(GetLatLng);
 
 
