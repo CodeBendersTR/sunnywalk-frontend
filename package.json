@@ -53,6 +53,7 @@
     "tabWidth": 4
   },
   "devDependencies": {
-    "cypress": "^7.1.0"
+    "cypress": "^7.1.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }

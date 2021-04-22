@@ -20,11 +20,12 @@ function Main() {
                     <div className="inner">
                         <div className="image center">
                             <img
+                                rel="preload"
+                                as="image"
                                 src="images/pic13.bannerOp3.jpg"
                                 srcSet="images/pic13.bannerOp3-small.jpg 480w, images/pic13.bannerOp3-large.jpg 1080w"
                                 alt="Woman in red t-shirt and jeans holding hand of blonde child in striped t-shirt walking into geometric keloidoscope design, tagline Find your Bright Side, A weather and mapping app inspiring us to take a walk in the sunshine "
                                 placeholder="images/pic06.banner3.placeholder.jpg"
-                                rel="preload"
                                 dpr="auto"
                                 responsive="true"
                                 gravity="faces"
@@ -35,8 +36,6 @@ function Main() {
                                 width="100%"
                                 border-radius="6px"
                                 display="block"
-                                // position="absolute"
-                                // top="20px"
                             />
                         </div>
                     </div>
@@ -88,6 +87,7 @@ function Main() {
                                 <h3>Sunshine Enhances mood</h3>
                                 <a
                                     href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature"
+                                    alt="sunshine enhances mood"
                                     className="image fit"
                                     style={{ color: "#985b9c" }}
                                 >
@@ -101,6 +101,7 @@ function Main() {
                                 <h3>Reduces stress, improves sleep</h3>
                                 <a
                                     href="https://www.webmd.com/balance/ss/slideshow-health-benefits-nature"
+                                    alt="sunshine reduces stress, improves sleep"
                                     className="image fit"
                                     style={{ color: "#985b9c" }}
                                 >
@@ -114,6 +115,7 @@ function Main() {
                                 <h3>Strengthens your immune system</h3>
                                 <a
                                     href="https://www.webmd.com/food-recipes/features/vitamin-d-vital-role-in-your-health"
+                                    alt="suncshine strengthens your immune system"
                                     className="image fit"
                                     margin-top="0"
                                     style={{ color: "#985b9c" }}
@@ -151,6 +153,8 @@ function Main() {
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
+                                        rel="preload"
+                                        as="image"
                                     />
                                 </div>
                                 <h3>You are my sunshine</h3>
@@ -178,6 +182,8 @@ function Main() {
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
+                                        rel="preload"
+                                        as="image"
                                     />
                                 </div>
                                 <h3>Chasing the sun</h3>
@@ -206,6 +212,8 @@ function Main() {
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
+                                        rel="preload"
+                                        as="image"
                                     />
                                 </div>
                                 <h3>Sunshine everywhere</h3>
