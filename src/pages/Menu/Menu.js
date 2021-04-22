@@ -6,16 +6,16 @@ function Menu(props) {
         <div>
             <nav>
                 <ul>
-                    <li>
+                    <li><script>
                         <NavLink exact to="/home">
                             Home
                         </NavLink>
-                    </li>
-                    <li>
+                    </script></li>
+                    <li><script>
                         <NavLink exact to="/profile">
                             Profile
                         </NavLink>
-                    </li>
+                    </script></li>
                 </ul>
             </nav>
             {props.children}

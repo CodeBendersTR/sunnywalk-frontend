@@ -1,15 +1,26 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import CardHome from "../CardHome/CardHome";
 import {
-  AppBar, CssBaseline, Drawer, Hidden,
-  IconButton, List, ListItem, ListItemIcon, ListItemText,
-  makeStyles, useTheme, Toolbar, Typography, Grid, Button
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
-import MapIcon from '@material-ui/icons/Map';
+    AppBar,
+    CssBaseline,
+    Drawer,
+    Hidden,
+    IconButton,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    makeStyles,
+    useTheme,
+    Toolbar,
+    Typography,
+    Grid,
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
+import MapIcon from "@material-ui/icons/Map";
 
 const drawerWidth = 200;
 
@@ -17,6 +28,7 @@ function handleClick() {
 }
 
 const useStyles = makeStyles((theme) => ({
+
   root: {
     display: 'flex',
     flexGrow: 1,
@@ -49,17 +61,19 @@ const useStyles = makeStyles((theme) => ({
   content: {
     padding: theme.spacing(20),
   },
+
 }));
 
 function ResponsiveDrawer(props) {
-  const { window } = props;
-  const classes = useStyles();
-  const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+    const { window } = props;
+    const classes = useStyles();
+    const theme = useTheme();
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+
 
   const drawer = (
     <div>
@@ -81,9 +95,9 @@ function ResponsiveDrawer(props) {
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-  const today = new Date();
-  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    const container = window !== undefined ? () => window().document.body : undefined;
+    const today = new Date();
+    const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
   return (
     <div className={classes.root}>
@@ -194,9 +208,7 @@ function ResponsiveDrawer(props) {
             </Grid>
           </ul>
         </div>
-      </main>
-    </div>
-  );
+    );
 }
 
 export default ResponsiveDrawer;

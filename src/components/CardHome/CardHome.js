@@ -35,11 +35,9 @@ export default function SimpleCard(props) {
                     </Grid>
                 </Typography>
                 <br />
-                {/*<p>*/}
                     <Grid container justify="center">
                         {props.dispTime}
                     </Grid>
-                {/*</p>*/}
             </CardContent>
             <CardActions className={classes.root}>
                 <div>
