@@ -16,8 +16,6 @@ function MyMap() {
             />
             <UniversalDrawer Greeting="My Map" />
                     <GoogleMap />
-                    {/* <GetLatLng /> */}
-                    {/* <CurrentLocation /> */}
                     
         </div>
     );
