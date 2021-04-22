@@ -73,7 +73,7 @@ function ResponsiveDrawer(props) {
               <ListItemIcon>{<MapIcon />}</ListItemIcon>
               <ListItemText primary="My Map"></ListItemText>
             </ListItem>
-            <ListItem button component={Link} to="/main">
+            <ListItem button component={Link} to="/">
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
               <ListItemText>Logout</ListItemText>
             </ListItem>

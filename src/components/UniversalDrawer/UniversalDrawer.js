@@ -83,7 +83,7 @@ function UniversalDrawer(props) {
                     <ListItemIcon>{ props.ListItem2Icon }</ListItemIcon>
                     <ListItemText> { props.ListItem2 } </ListItemText>
                 </ListItem>
-                <ListItem button component={Link} to="/main">
+                <ListItem button component={Link} to="/">
                     {/*<ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>*/}
                     {/*<ListItemText primary="Logout"></ListItemText>*/}
                     <ListItemIcon>{ props.ListItem3Icon }</ListItemIcon>

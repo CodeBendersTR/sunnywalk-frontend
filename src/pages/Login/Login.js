@@ -15,7 +15,7 @@ function Login() {
                 // ButtonUserHome="Register"   SecondButton={"../Register"}
 
             />
-            <UniversalDrawer Greeting="Login Page"  ButtonProfile="Main"        FirstButton={"../Main"}
+            <UniversalDrawer Greeting="Login Page"  ButtonProfile="Main"        FirstButton={"../"}
                                                     ButtonUserHome="Register"   SecondButton={"../Register"}/>
             <LoginForm />
         </div>

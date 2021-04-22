@@ -12,7 +12,7 @@ function Register() {
                 // ButtonUserHome="Login" SecondButton={"../Login"}
 
             />
-            <UniversalDrawer Greeting="Register Page" ButtonProfile="Main"   FirstButton={"../Main"}
+            <UniversalDrawer Greeting="Register Page" ButtonProfile="Main"   FirstButton={"../"}
                                                       ButtonUserHome="Login" SecondButton={"../Login"}/>
             <RegisterForm />
         </div>
