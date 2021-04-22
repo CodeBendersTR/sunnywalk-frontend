@@ -12,7 +12,7 @@ function UniversalHeader(props) {
                 <a href="https://github.com/CodeBendersTR">
                     <span className="navbar-brand mb-0 px-0 h1">
                         <img
-                            src="images/sun.icon.gif"
+                            src="images/sun.icon.TP.png"
                             width="30"
                             height="30"
                             className="d-inline-block align-top"

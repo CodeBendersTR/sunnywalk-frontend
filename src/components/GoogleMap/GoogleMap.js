@@ -1,6 +1,6 @@
 import "./GoogleMap.css";
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker, Polyline } from "google-maps-react";
 import { CurrentLocation } from "./Map";
 
 export class MapContainer extends Component {
@@ -48,6 +48,8 @@ export class MapContainer extends Component {
         const lat = latLng.lat();
         const lng = latLng.lng();
 
+        console.log(lat, lng)
+
         this.setState((previousState) => {
             return {
                 markers: [
@@ -58,30 +60,12 @@ export class MapContainer extends Component {
                         position: { lat, lng },
                     },
                 ],
+                Lat: [ lat ],
+                Lng: [ lng ],
+                polyPath: [ coord]
             };
         });
     }
-    state = {
-        showingInfoWindow: true, // Hides or shows the InfoWindow
-        activeMarker: {}, // Shows the active marker upon click
-        selectedPlace: {}, // Shows the InfoWindow to the selected place upon a marker
-    };
-
-    onMarkerClick = (props, marker, e) =>
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true,
-        });
-
-    onClose = (props) => {
-        if (this.state.showingInfoWindow) {
-            this.setState({
-                showingInfoWindow: false,
-                activeMarker: null,
-            });
-        }
-    };
 
     render() {
         return (
@@ -93,22 +77,28 @@ export class MapContainer extends Component {
                 zoom={13}
                 className={"map"}
                 onClick={this.onClick}
+                
+                
             >
                 {this.state.markers.map((marker, index) => (
 
                     <Marker
-                        color="orange"
                         key={index}
                         title={marker.title}
                         name={marker.name}
                         position={marker.position}
                         draggable={true}
                     >
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}
-                        onClose={this.onClose}
-                    />
+                    <Polyline
+                        path={this.state.polyPath}
+                        options={{
+                            geodesic: true,
+                            strokeColor: '#669DF6',
+                            strokeOpacity: '1.0',
+                            strokeWeight: 2,
+                            draggable: true,
+                            visible: true,
+                    }} />
                     /
                     </Marker>
                 ))}
