@@ -164,12 +164,13 @@
 
         .wrapper.style2 {
             background: #192024;
-            color: #c5c7c8;
+            color: #ffffff;
         }
 
         .wrapper.style3 {
+            /* background: #996f04; */
             background: #b8860b;
-            color: #c5c7c8;
+            color: #ffffff;
         }
 
             .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6, .wrapper.style3 h2, .wrapper.style3 h3 {
