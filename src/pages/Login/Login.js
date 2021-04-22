@@ -11,11 +11,12 @@ function Login() {
                 // ButtonMain="Main"
                 // ButtonRegister="Register"
                 //ButtonLogin="Register"
-                ButtonProfile="Main" FirstButton={"../Main"}
-                ButtonUserHome="Register"   SecondButton={"../Register"}
+                // ButtonProfile="Main" FirstButton={"../Main"}
+                // ButtonUserHome="Register"   SecondButton={"../Register"}
 
             />
-            <UniversalDrawer Greeting="Login Page"  />
+            <UniversalDrawer Greeting="Login Page"  ButtonProfile="Main"        FirstButton={"../Main"}
+                                                    ButtonUserHome="Register"   SecondButton={"../Register"}/>
             <LoginForm />
         </div>
     );

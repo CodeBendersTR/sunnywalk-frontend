@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function dispButton() {
-    window.alert("Hello there!!");
+    //window.alert("Hello there!!");
 }
 
 export default function SimpleCard(props) {
@@ -35,11 +35,11 @@ export default function SimpleCard(props) {
                     </Grid>
                 </Typography>
                 <br />
-                <p>
+                {/*<p>*/}
                     <Grid container justify="center">
                         {props.dispTime}
                     </Grid>
-                </p>
+                {/*</p>*/}
             </CardContent>
             <CardActions className={classes.root}>
                 <div>

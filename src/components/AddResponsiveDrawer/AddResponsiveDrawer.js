@@ -1,15 +1,20 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import CardHome from "../CardHome/CardHome";
-import {AppBar, CssBaseline, Drawer, Hidden,
+import {
+  AppBar, CssBaseline, Drawer, Hidden,
   IconButton, List, ListItem, ListItemIcon, ListItemText,
- makeStyles, useTheme, Toolbar, Typography, Grid} from '@material-ui/core';
+  makeStyles, useTheme, Toolbar, Typography, Grid, Button
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
 import MapIcon from '@material-ui/icons/Map';
 
 const drawerWidth = 200;
+
+function handleClick() {
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
-      marginTop: 80,
+      //marginTop: 80,
     },
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: "#e8b633",
-    marginTop: 80,
+    //marginTop: 80,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -39,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
     backgroundColor: "lightgrey",
-    marginTop: 80,
+    //marginTop: 80,
   },
   content: {
     padding: theme.spacing(20),
@@ -83,7 +88,7 @@ function ResponsiveDrawer(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar  className={classes.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -94,9 +99,48 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Welcome to the { props.Greeting }
-          </Typography>
+          <div className="container">
+            <a href="https://github.com/CodeBendersTR">
+              <span className="navbar-brand mb-0 px-0 h1">
+                <img
+                    src="images/sun.icon.gif"
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="sun icon"
+                  ></img>
+                     SUNNY WALK
+                  <Typography variant="h6" noWrap>
+                    {/*Welcome to the { props.Greeting }*/}
+                  </Typography>
+              </span>
+            </a>
+          </div>
+          <div className="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
+          <div className="d-flex   justify-content-end">
+            <Button onClick={handleClick}
+                    variant="text"
+                    color="default"
+              // href="../Profile"
+                    href={props.FirstButton}
+                    alt="Profile button"
+                    my={1}
+                    px={2}
+            >
+              { props.ButtonProfile }
+            </Button>
+            <Button onClick={handleClick}
+                    variant="text"
+                    color="default"
+              // href="../Home"
+                    href={props.SecondButton}
+                    alt="Home User button"
+                    my={1}
+                    px={2}
+            >
+              { props.ButtonUserHome }
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">

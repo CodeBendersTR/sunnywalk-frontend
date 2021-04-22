@@ -11,10 +11,11 @@ function Home() {
                 // ButtonMain="Main"
                 // ButtonLogin="Login"
                 // ButtonRegister="Register"
-                ButtonProfile="Main" FirstButton={"../Main"}
-                ButtonUserHome="Profile" SecondButton={"../Profile"}
+                // ButtonProfile="Main" FirstButton={"../Main"}
+                // ButtonUserHome="Profile" SecondButton={"../Profile"}
             />
-            <AddResponsiveDrawer Greeting="User Home Page" />
+            <AddResponsiveDrawer Greeting="User Home Page" ButtonProfile="Main" FirstButton={"../Main"}
+                                 ButtonUserHome="Profile" SecondButton={"../Profile"}/>
         </div>
     );
 }
