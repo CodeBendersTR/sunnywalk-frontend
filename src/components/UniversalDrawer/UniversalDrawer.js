@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-        width: drawerWidth,
+        width: 265,
         backgroundColor: "lightgrey",
         //marginTop: 80,
     },
@@ -98,6 +98,22 @@ function UniversalDrawer(props) {
             <CssBaseline />
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
+                  <div className="container">
+                    <a href="https://github.com/CodeBendersTR">
+                      <span className="navbar-brand mb-0 px-0 h1">
+                        <img
+                          src="images/sun.icon.gif"
+                          width="30"
+                          height="30"
+                          className="d-inline-block align-top"
+                          alt="sun icon"
+                        ></img>
+                         SUNNY WALK
+                        <Typography variant="h6" noWrap>
+                          {/*Welcome to the { props.Greeting }*/}
+                        </Typography>
+                      </span>
+                    </a>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -107,22 +123,6 @@ function UniversalDrawer(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                  <div className="container">
-                    <a href="https://github.com/CodeBendersTR">
-              <span className="navbar-brand mb-0 px-0 h1">
-                <img
-                  src="images/sun.icon.gif"
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                  alt="sun icon"
-                ></img>
-                     SUNNY WALK
-                  <Typography variant="h6" noWrap>
-                    {/*Welcome to the { props.Greeting }*/}
-                  </Typography>
-              </span>
-                    </a>
                   </div>
                   <div className="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
                   <div className="d-flex   justify-content-end">
@@ -186,11 +186,11 @@ function UniversalDrawer(props) {
                 </Hidden>
             </nav>
             <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <Typography paragraph></Typography>
-                { props.Greeting1 }
-                <Typography paragraph></Typography>
-              { props.MapView }
+                {/*/!*<div className={classes.toolbar} />*!/*/}
+                {/*<Typography paragraph></Typography>*/}
+                {/*{ props.Greeting1 }*/}
+                {/*<Typography paragraph></Typography>*/}
+                { props.MapView }
             </main>
         </div>
     );

@@ -14,7 +14,7 @@ function Home() {
                 // ButtonProfile="Main" FirstButton={"../Main"}
                 // ButtonUserHome="Profile" SecondButton={"../Profile"}
             />
-            <AddResponsiveDrawer Greeting="User Home Page" ButtonProfile="Main" FirstButton={"../Main"}
+            <AddResponsiveDrawer Greeting="User Home Page" ButtonProfile="Main" FirstButton={"../"}
                                  ButtonUserHome="Profile" SecondButton={"../Profile"}/>
         </div>
     );

@@ -4,14 +4,14 @@ import MapIcon from "@material-ui/icons/Map";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import React from "react";
-import { GetLatLng, Map, GoogleMap, UniversalDrawer, UniversalHeader, Marker, CurrentLocation } from "../../components";
+import { GetLatLng, Map, Marker, CurrentLocation } from "../../components";
 
 
 
 
 function MyMap() {
     return (
-        <div>
+        <div className="ud">
             {/*<UniversalHeader*/}
             {/*    ButtonMain="Main"*/}
             {/*    ButtonLogin="Login"*/}
@@ -25,10 +25,11 @@ function MyMap() {
                                                 ListItem3Icon=<AccountCircleIcon />  ListItem3="Logout"
                                                 ButtonProfile="Profile"   FirstButton={"../Profile"}
                                                 ButtonUserHome="User Home" SecondButton={"../Home"}
-                                                MapView={ <GoogleMap>Your Sunny Walk</GoogleMap> }/>
+                                                MapView={ <GoogleMap>Your Sunny Walk</GoogleMap> }
+                                                />
                     {/*<GoogleMap>Your Sunny Walk</GoogleMap>*/}
+         </div>
 
-        </div>
     );
 }
 

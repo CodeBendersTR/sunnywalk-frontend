@@ -16,6 +16,7 @@ import {
     Toolbar,
     Typography,
     Grid,
+    Button,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     //marginTop: 80,
   },
   content: {
-    padding: theme.spacing(20),
+    padding: theme.spacing(12),
   },
 
 }));
@@ -208,6 +209,8 @@ function ResponsiveDrawer(props) {
             </Grid>
           </ul>
         </div>
+      </main>
+    </div>
     );
 }
 
