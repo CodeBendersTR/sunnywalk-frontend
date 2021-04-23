@@ -16,4 +16,5 @@ export { default as UniversalHeader } from "./UniversalHeader/UniversalHeader";
 export { default as GoogleMap } from "./GoogleMap/GoogleMap";
 export { default as CurrentLocation } from "./GoogleMap/Map";
 export { default as Marker } from "./GoogleMap/Marker";
+export { default as RegisterConfirmation } from "./RegisterConfirmation/RegisterConfirmation";
 
