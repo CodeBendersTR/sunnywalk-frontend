@@ -77,8 +77,7 @@ export class MapContainer extends Component {
                 zoom={13}
                 className={"map"}
                 onClick={this.onClick}
-                
-                
+
             >
                 {this.state.markers.map((marker, index) => (
 

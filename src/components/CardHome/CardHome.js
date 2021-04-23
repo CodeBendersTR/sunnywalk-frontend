@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function dispButton() {
-    window.alert("Hello there!!");
+    //window.alert("Hello there!!");
 }
 
 export default function SimpleCard(props) {
