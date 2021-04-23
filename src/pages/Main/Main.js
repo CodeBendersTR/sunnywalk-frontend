@@ -12,8 +12,10 @@ function Main() {
                 // ButtonRegister="Register"
                 // ButtonProfile="Profile"
                 // ButtonUserHome="User Home"
-                ButtonProfile="Login" FirstButton={"../Login"}
-                ButtonUserHome="Register" SecondButton={"../Register"}
+                ButtonProfile="Login"
+                FirstButton={"../Login"}
+                ButtonUserHome="Register"
+                SecondButton={"../Register"}
             />
 
             {/* Main Landing Page Image */}
@@ -178,9 +180,10 @@ function Main() {
                             <section className="special">
                                 <div className="image fit">
                                     <ImageLoad
-                                        src="images/pic05.funwheelchair.jpg"
+                                        src="images/05.wheelchair.ride/pic05.funwheelchair.jpg"
+                                        srcSet="pic05.funwheelchair_desktop_1200,pic05.funwheelchair_phone_320, pic05.funwheelchair_tablet_768 "
                                         alt="Person pushing another in wheelchair against architectual building and waterfront"
-                                        placeholder="images/pic05.funwheelchair.placeholder.jpg"
+                                        placeholder="images/05.wheelchair.ride/pic05.funwheelchair.placeholder.jpg"
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
@@ -208,9 +211,10 @@ function Main() {
                             <section>
                                 <div className="image fit">
                                     <ImageLoad
-                                        src="images/pic02.jpg"
+                                        src="images/02.solo.city.walk/pic02.src"
+                                        srcset="pic02.desktop_1200.jpg, pic02_phone_420.jpg, pic02_tablet_1280.jpg"
                                         alt="Woman of colour wearing backpack walking solo against industrial style city wall"
-                                        placeholder="images/pic02.placeholder.jpg"
+                                        placeholder="images/02.solo.city.walk/pic02.placeholder.jpg"
                                         responsive="true"
                                         gravity="faces"
                                         accessibility="colorblind"
@@ -244,10 +248,10 @@ function Main() {
                     <div className="row double">
                         <ul className="copyright">
                             <p>
-                                &copy; CodeBenders Sunny Walk. All rights reserved.
+                                CodeBenders Sunny Walk. All rights reserved.
                                 <br /> Can you spot the 11 song titles?
                                 <br />
-                                <br /> ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
+                                <br />ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
                             </p>
                         </ul>
                     </div>

@@ -6,7 +6,6 @@ import {
     WeatherPreferenceSelect,
     NotificationPreferenceSelect,
     WalkerType,
-    SingleSelects,
 } from "../../components";
 
 import TextField from "@material-ui/core/TextField";
@@ -67,9 +66,6 @@ function ProfileForm() {
                         <ul className="Profile">
                             <NotificationPreferenceSelect></NotificationPreferenceSelect>
                         </ul>
-                        {/* <ul className="Profile">
-                        <SingleSelects></SingleSelects>
-                    </ul> */}
                         <ul className="Profile">
                             <WeatherPreferenceSelect></WeatherPreferenceSelect>
                         </ul>

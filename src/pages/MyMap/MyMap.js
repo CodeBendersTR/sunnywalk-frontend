@@ -1,5 +1,5 @@
 import "./MyMap.css";
-import { GetLatLng, Map, GoogleMap, UniversalDrawer, UniversalHeader, Marker, CurrentLocation } from "../../components";
+import { GoogleMap, UniversalDrawer, UniversalHeader } from "../../components";
 
 
 
