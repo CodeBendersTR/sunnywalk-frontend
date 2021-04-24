@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker, Polyline } from "google-maps-react";
 import { CurrentLocation } from "./Map";
 
+
 export class MapContainer extends Component {
     constructor(props) {
         super(props);
@@ -72,9 +73,9 @@ export class MapContainer extends Component {
             <Map
                 centerAroundCurrentLocation={true}
                 google={this.props.google}
-                defaultCenter={{ lat: 51.507347593630605, lng: -0.1291331607829911 }}
+                defaultCenter={{ lat: 51.499196546877556, lng: -0.07757697211526285 }}
                 Marker={{ lat: 51.49748169990848, lng: -0.10281244511195696 }}
-                zoom={13}
+                zoom={12}
                 className={"map"}
                 onClick={this.onClick}
 

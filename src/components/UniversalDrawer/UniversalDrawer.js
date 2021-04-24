@@ -16,9 +16,6 @@ import {
   Typography, Button,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
-import MapIcon from "@material-ui/icons/Map";
 
 const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
