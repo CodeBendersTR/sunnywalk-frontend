@@ -22,7 +22,7 @@ function UniversalHeader(props) {
                     </span>
                 </a>
                 <div className="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex   justify-content-end">
                     <div style={{ padding: 18 }}>
                     {/*<Button onClick={handleClick}*/}
                     {/*        variant="text"*/}
