@@ -69,7 +69,7 @@ function Main() {
                 {/* Section Divider - Text Header */}
                 <section id="one" className="wrapper">
                     <header className="major">
-                        <nav className="navbar navbar-light bg-light text-color: #b8860b">
+                        <nav className="navbar navbar-light bg-light text-color: #6F5206">
                             <div className="flex-container">
                                 <h3 style={{ color: "#985b9c" }}> Embrace the Power of the Sun </h3>
                                 <p>
@@ -159,6 +159,7 @@ function Main() {
                                         accessibility="colorblind"
                                         rel="preload"
                                         as="image"
+                                        aspect-ratio="attr(width) / attr(height)"
                                     />
                                 </div>
                                 <h3>You are my sunshine</h3>
@@ -189,6 +190,7 @@ function Main() {
                                         accessibility="colorblind"
                                         rel="preload"
                                         as="image"
+                                        aspect-ratio="attr(width) / attr(height)"
                                     />
                                 </div>
                                 <h3>Chasing the sun</h3>
@@ -220,6 +222,7 @@ function Main() {
                                         accessibility="colorblind"
                                         rel="preload"
                                         as="image"
+                                        aspect-ratio="attr(width) / attr(height)"
                                     />
                                 </div>
                                 <h3>Sunshine everywhere</h3>
@@ -246,13 +249,13 @@ function Main() {
             <footer id="footer">
                 <div className="container">
                     <div className="row double">
-                        <ul className="copyright">
-                            <p>
+                        <ul>
+                            <li>
                                 CodeBenders Sunny Walk. All rights reserved.
                                 <br /> Can you spot the 11 song titles?
                                 <br />
                                 <br />ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
-                            </p>
+                            </li>
                         </ul>
                     </div>
                 </div>

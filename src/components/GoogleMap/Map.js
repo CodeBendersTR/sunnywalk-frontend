@@ -23,8 +23,8 @@ export class CurrentLocation extends React.Component {
         };
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (prevProps.google !== this.props.google) {
+    static getDerivedStateFromProps(prevProps, prevState) {
+        if (prevProps.google !== this.state.props.google) {
             this.loadMap();
         }
         if (prevState.currentLocation !== this.state.currentLocation) {
@@ -37,6 +37,7 @@ export class CurrentLocation extends React.Component {
         const current = this.state.currentLocation;
         const google = this.props.google;
         const maps = google.maps;
+        
 
         if (map) {
             let center = new maps.LatLng(current.lat, current.lng);

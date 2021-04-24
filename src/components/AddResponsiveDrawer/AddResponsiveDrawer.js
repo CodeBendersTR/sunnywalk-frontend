@@ -118,7 +118,7 @@ function ResponsiveDrawer(props) {
             <a href="https://github.com/CodeBendersTR">
               <span className="navbar-brand mb-0 px-0 h1">
                 <img
-                    src="images/sun.icon.gif"
+                    src="images/sun.icon.TP.png"
                     width="30"
                     height="30"
                     className="d-inline-block align-top"
@@ -154,6 +154,17 @@ function ResponsiveDrawer(props) {
                     px={2}
             >
               { props.ButtonUserHome }
+            </Button>
+            <Button onClick={handleClick}
+                    variant="text"
+                    color="default"
+              // href="../"
+                    href={props.ThirdButton}
+                    alt="Main button"
+                    my={1}
+                    px={2}
+            >
+              { props.ButtonMain }
             </Button>
           </div>
         </Toolbar>
