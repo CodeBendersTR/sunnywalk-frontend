@@ -1,7 +1,6 @@
 import "./ProfileForm.css";
 import React from "react";
 import {
-    AutoCompleteText,
     UkCities,
     WeatherPreferenceSelect,
     NotificationPreferenceSelect,
