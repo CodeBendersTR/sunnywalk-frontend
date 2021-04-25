@@ -4,7 +4,6 @@ function getConfig(configName) {
 
     // add configurations here
     configs.set("backend-url", "http://localhost:8080");
-
     // return the requeste configuration
     return configs.get(configName);
 }
