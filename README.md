@@ -75,18 +75,18 @@ npm start
       <p>
         We are a team of four talented people taking part in the Tech Returners programme (March 2021, London).
         <ul>
-          <li>
+          <li><script>
             Ciaran (<a href="https://github.com/ShyguyCC">ShyguyCC</a>)
-          </li>
-          <li>
+          </script></li>
+          <li><script>
             Jini (<a href="https://github.com/jinirun">jinirun</a>)
-          </li>
-          <li>
+          </script></li>
+          <li><script>
             Marius (<a href="https://github.com/grigorem">grigorem</a>)
-          </li>
-          <li>
+          </script></li>
+          <li><script>
             Susan (<a href="https://github.com/SusanLuebke">SusanLuebke</a>)
-          </li>
+          </script></li>
         </ul>
       </p>
     </td>

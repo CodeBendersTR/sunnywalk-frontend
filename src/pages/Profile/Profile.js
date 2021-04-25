@@ -20,7 +20,7 @@ function Profile() {
             <UniversalDrawer Greeting="Profile Page"  ListItem1Icon=<DirectionsWalkIcon /> ListItem1="My Favourite Walks"
                                                       ListItem2Icon=<MapIcon />            ListItem2="My Map"
                                                       ListItem3Icon=<AccountCircleIcon />  ListItem3="Logout"
-                                                      ButtonUserHome="User Home" SecondButton={"../Home"}
+                                                      ButtonUserHome="User" SecondButton={"../Home"}
                 />
 
             <ProfileForm />
