@@ -22,6 +22,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import MapIcon from "@material-ui/icons/Map";
+import axios from "axios";
+import getConfig from "../../modules/Config";
 
 const drawerWidth = 200;
 
@@ -70,11 +72,40 @@ function ResponsiveDrawer(props) {
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [suggestionResponse, setSuggestionResponse] = React.useState([]);
+    const [suggestionStatus, setSuggestionStatus] = React.useState("loading");
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
+    if (suggestionStatus === "loading") {
+      axios.get(getConfig("backend-url") + "/walk/suggestion/1")
+      .then(
+          (response) => {
+              setSuggestionResponse(response.data);
+              setSuggestionStatus("fulfilled");
+          }
+      )
+      .catch((error) => {
+        if (suggestionStatus !== "error") {
+          alert("Server not available at the moment. Please try again later. " + error.message);
+          setSuggestionStatus("error");
+        }
+      });
+    }
+
+    for (var i = 0; i < suggestionResponse.length; i++) {
+      const time = new Date(suggestionResponse[i].time * 1000);
+      if (!isNaN(time)) {
+        const hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours().toString();
+        const minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes().toString();
+
+        const now = new Date();
+        const day = time.getDate() === now.getDate ? "Today" : "Tomorrow";
+        suggestionResponse[i].time = day + "at" + hours + ":" + minutes;
+      }
+    }
 
   const drawer = (
     <div>
@@ -97,8 +128,6 @@ function ResponsiveDrawer(props) {
   );
 
     const container = window !== undefined ? () => window().document.body : undefined;
-    const today = new Date();
-    const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
   return (
     <div className={classes.root}>
@@ -209,13 +238,13 @@ function ResponsiveDrawer(props) {
           <ul>
             <Grid container spacing={5}>
               <Grid container item lg={4} xs={12} spacing={2}>
-                <CardHome dispTime={ time } />
+                <CardHome status={ suggestionStatus } suggestion={ suggestionResponse[0] }/>
               </Grid>
               <Grid container item lg={4} xs={12} spacing={2}>
-                <CardHome dispTime={ time } />
+                <CardHome status={ suggestionStatus } suggestion={ suggestionResponse[1] }/>
               </Grid>
               <Grid container item lg={4} xs={12} spacing={2}>
-                <CardHome dispTime={ time } />
+                <CardHome status={ suggestionStatus } suggestion={ suggestionResponse[2] }/>
               </Grid>
             </Grid>
           </ul>
