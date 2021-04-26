@@ -26,18 +26,39 @@ function dispButton() {
 export default function SimpleCard(props) {
     const classes = useStyles();
 
+    let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
+    console.log("rendered");
+    if (props.status === "fulfilled") {
+        time = props.suggestion.time;
+        location = props.suggestion.location;
+        temp = props.suggestion.temp;
+        uvi = props.suggestion.uvi;
+        description = props.suggestion.weatherDescription;
+    }
+
     return (
         <Card>
             <CardContent className={classes.root}>
                 <Typography className={classes.pos} color="textSecondary">
                     <Grid container justify="center">
-                        Get your sunshine at
+                        Get your sunshine&nbsp;<b>{time}</b>
                     </Grid>
-                </Typography>
-                <br />
+                    <br />
                     <Grid container justify="center">
-                        {props.dispTime}
+                        Temp will be&nbsp;<b>{temp}° C</b>
                     </Grid>
+                    <Grid container justify="center">
+                        The UV Index is&nbsp;<b>{uvi}</b>
+                    </Grid>
+                    <br />
+                    <Grid container justify="center">
+                        Weather will be&nbsp;<b>{description}</b>
+                    </Grid>
+                    <Grid container justify="center">
+                        In&nbsp;<b>{location}</b>
+                    </Grid>
+                    
+                </Typography>
             </CardContent>
             <CardActions className={classes.root}>
                 <div>
