@@ -42,6 +42,7 @@ export class MapContainer extends Component {
             ],
         };
         this.onClick = this.onClick.bind(this);
+        this.props = props;
     }
 
     onClick(t, map, coord) {
@@ -80,6 +81,7 @@ export class MapContainer extends Component {
                 onClick={this.onClick}
 
             >
+                {this.props.AddWalk}
                 {this.state.markers.map((marker, index) => (
 
                     <Marker
@@ -102,6 +104,7 @@ export class MapContainer extends Component {
                     /
                     </Marker>
                 ))}
+                
             </Map>
         );
     }

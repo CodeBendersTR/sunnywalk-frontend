@@ -1,41 +1,61 @@
-import React from "react";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-// This example creates an interactive map which constructs a polyline based on
-// user clicks. Note that the polyline only appears once its path property
-// contains two LatLng coordinates.
-let poly;
-let map;
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    minHeight: 300,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: "purple",
+    position: "absolute"
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 function AddWalk() {
-    map = new Map(document.getElementById("map"), {
-        zoom: 7,
-        center: { 
-            lat: 51.509865,
-            lng: -0.118092, 
-        },
-    });
-    poly = new map.Polyline({
-        strokeColor: "#000000",
-        strokeOpacity: 1.0,
-        strokeWeight: 3,
-    });
-    poly.setMap(map);
-    // Add a listener for the click event
-    map.addListener("click", addLatLng);
-}
+  const classes = useStyles();
+  const bull = <span className={classes.bullet}>•</span>;
 
-// Handles click events on a map, and adds a new point to the Polyline.
-function addLatLng(event) {
-    const path = poly.getPath();
-    // Because path is an MVCArray, we can simply append a new coordinate
-    // and it will automatically appear.
-    path.push(event.latLng);
-    // Add a new marker at the new plotted point on the polyline.
-    new map.Marker({
-        position: event.latLng,
-        title: "#" + path.getLength(),
-        map: map,
-    });
+  return (
+    <Card className={classes.root}>
+      <CardContent>
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          Word of the Day
+        </Typography>
+        <Typography variant="h5" component="h2">
+          be{bull}nev{bull}o{bull}lent
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+          adjective
+        </Typography>
+        <Typography variant="body2" component="p">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
 }
 
 export default AddWalk;
