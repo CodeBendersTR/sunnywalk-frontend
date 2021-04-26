@@ -55,7 +55,11 @@ context('Actions', () => {
   it('Check i can go from register page to login page if i realise i do have a account.', () => {
     // https://on.cypress.io/type
     cy.contains('Register').click()
-    cy.contains('No account yet? Register').click()
-    cy.url().should('include', '/Register')
+    cy.contains('Already have an account? Login').click()
+    cy.url().should('include', '/Login')
+  })
+  it('If i click the sunny walk logo and text i should go into the development github.', () => {
+    // https://on.cypress.io/type
+    cy.get('a').should('have.attr','href', 'https://github.com/CodeBendersTR')
   })
 })
