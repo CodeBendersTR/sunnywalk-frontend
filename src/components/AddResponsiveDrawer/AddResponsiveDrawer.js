@@ -102,8 +102,8 @@ function ResponsiveDrawer(props) {
         const minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes().toString();
 
         const now = new Date();
-        const day = time.getDate() === now.getDate ? "Today" : "Tomorrow";
-        suggestionResponse[i].time = day + "at" + hours + ":" + minutes;
+        const day = time.getDate() === now.getDate() ? "Today" : "Tomorrow";
+        suggestionResponse[i].time = day + " at " + hours + ":" + minutes;
       }
     }
 
@@ -233,7 +233,7 @@ function ResponsiveDrawer(props) {
       <main className={classes.content}>
         <div>
           <h4>
-            Today's best times for a sunny walk
+            Best times for a sunny walk in&nbsp;<strong>{suggestionResponse[0].location}</strong>
           </h4>
           <ul>
             <Grid container spacing={5}>
