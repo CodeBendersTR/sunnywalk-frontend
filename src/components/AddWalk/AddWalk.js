@@ -1,10 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { WbSunny } from '@material-ui/icons';
+import { Rating } from '@material-ui/lab';
+import {
+  Card,
+  TextField,
+  CardActions,
+  CardContent,
+  Button,
+  Typography,
+  Box,
+} from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -13,46 +19,55 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "purple",
+    backgroundColor: "white",
     position: "absolute"
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
+  actions: {
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: "white",
   },
 });
 
 function AddWalk() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
+  const date = new Date().toISOString().match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/g); // remove seconds and milliseconds
   return (
     <Card className={classes.root}>
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
+      <CardContent flexDirection="column">
+        <Typography variant="h5" component="h2" fontWeight="fontWeightBold">
+          Record your sunny walk
         </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        <div>
+          <TextField
+            id="addWalkTime"
+            label="Walk time"
+            type="datetime-local"
+            defaultValue={date}
+            fullWidth
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </div>
+        <div>
+          <TextField
+            variant="standard"
+            margin="normal"
+            name="location"
+            id="addWalkLocation"
+            label="Location"
+            fullWidth
+            required
+          />
+        </div>
+        <Box mb={1} mt={3} borderColor="transparent">
+          <Rating icon={<WbSunny fontSize="inherit" />} />
+        </Box>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
+      <CardActions className={classes.actions}>
+        <Button size="medium">Add Walk</Button>
       </CardActions>
     </Card>
   );
