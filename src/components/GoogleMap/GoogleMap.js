@@ -2,6 +2,9 @@ import "./GoogleMap.css";
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker, Polyline } from "google-maps-react";
 import { CurrentLocation } from "./Map";
+import { AddWalk } from "..";
+import getConfig from "../../modules/Config";
+import axios from "axios";
 
 
 export class MapContainer extends Component {
@@ -40,17 +43,21 @@ export class MapContainer extends Component {
                     position: { CurrentLocation },
                 },
             ],
+            lat: [],
+            lng: [],
+            location: [],
+            mapsStatus: "waiting",
+            mapsResponse: []
         };
         this.onClick = this.onClick.bind(this);
+        this.props = props;
     }
 
     onClick(t, map, coord) {
         const { latLng } = coord;
-        const lat = latLng.lat();
-        const lng = latLng.lng();
-
-        console.log(lat, lng)
-
+        const lat = latLng.lat().toString().match(/-?\d+\.\d{1,6}/g);
+        const lng = latLng.lng().toString().match(/-?\d+\.\d{1,6}/g);
+        this.callLocationApi(lat, lng);
         this.setState((previousState) => {
             return {
                 markers: [
@@ -61,14 +68,56 @@ export class MapContainer extends Component {
                         position: { lat, lng },
                     },
                 ],
-                Lat: [ lat ],
-                Lng: [ lng ],
-                polyPath: [ coord]
+                lat: lat,
+                lng: lng
             };
         });
     }
 
+    callLocationApi(lat, lng) {
+        axios.get(getConfig("gmaps-api") + "?latlng=" + lat + "," + lng + "&key=AIzaSyCqT-9wGFmTpsxwvVMApOZquHIVmgFc_FY")
+        .then(
+            (response) => {
+                console.log("We got a response");
+                this.setState(
+                    () => {
+                        return {
+                            mapsStatus: "fulfilled",
+                            mapsResponse: response.data
+                        }
+                    }
+                );
+            }
+        )
+        .catch((error) => {
+            
+        });
+    }
+
+    extractLocationName(mapsJson) {
+        let locationName = "(location not found)";
+        if (mapsJson.status === "OK") {
+            console.log(mapsJson);
+            for (let i = 0; i < mapsJson.results.length; i++) {
+                const result = mapsJson.results[i];
+                if (result.types.includes("sublocality")
+                || result.types.includes("locality")
+                || result.types.includes("postal_town")) {
+                    locationName = result.formatted_address;
+                    break;
+                }
+            }
+        }
+        return locationName;
+    }
+
     render() {
+        let location = {};
+        if (this.state.mapsStatus === "fulfilled") {
+            location.name = this.extractLocationName(this.state.mapsResponse);
+            location.lat = this.state.lat;
+            location.lng = this.state.lng;
+        }
         return (
             <Map
                 centerAroundCurrentLocation={true}
@@ -80,6 +129,7 @@ export class MapContainer extends Component {
                 onClick={this.onClick}
 
             >
+                <AddWalk location={location}/>
                 {this.state.markers.map((marker, index) => (
 
                     <Marker
@@ -102,6 +152,7 @@ export class MapContainer extends Component {
                     /
                     </Marker>
                 ))}
+                
             </Map>
         );
     }

@@ -1,41 +1,78 @@
-import React from "react";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { WbSunny } from '@material-ui/icons';
+import { Rating } from '@material-ui/lab';
+import {
+  Card,
+  TextField,
+  CardActions,
+  CardContent,
+  Button,
+  Typography,
+  Box,
+} from '@material-ui/core';
 
-// This example creates an interactive map which constructs a polyline based on
-// user clicks. Note that the polyline only appears once its path property
-// contains two LatLng coordinates.
-let poly;
-let map;
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    minHeight: 300,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: "white",
+    position: "absolute"
+  },
+  actions: {
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: "white",
+  },
+});
 
-function AddWalk() {
-    map = new Map(document.getElementById("map"), {
-        zoom: 7,
-        center: { 
-            lat: 51.509865,
-            lng: -0.118092, 
-        },
-    });
-    poly = new map.Polyline({
-        strokeColor: "#000000",
-        strokeOpacity: 1.0,
-        strokeWeight: 3,
-    });
-    poly.setMap(map);
-    // Add a listener for the click event
-    map.addListener("click", addLatLng);
-}
-
-// Handles click events on a map, and adds a new point to the Polyline.
-function addLatLng(event) {
-    const path = poly.getPath();
-    // Because path is an MVCArray, we can simply append a new coordinate
-    // and it will automatically appear.
-    path.push(event.latLng);
-    // Add a new marker at the new plotted point on the polyline.
-    new map.Marker({
-        position: event.latLng,
-        title: "#" + path.getLength(),
-        map: map,
-    });
+function AddWalk(props) {
+  const classes = useStyles();
+  const date = new Date().toISOString().match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/g); // remove seconds and milliseconds
+  return (
+    <Card className={classes.root}>
+      <CardContent flexDirection="column">
+        <Typography variant="h5" component="h2" fontWeight="fontWeightBold">
+          Record your sunny walk
+        </Typography>
+        <div>
+          <TextField
+            id="addWalkTime"
+            label="Walk time"
+            type="datetime-local"
+            defaultValue={date}
+            fullWidth
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </div>
+        <div>
+          <TextField
+            variant="standard"
+            margin="normal"
+            name="location"
+            id="addWalkLocation"
+            label={props.location.lat + "|" + props.location.lng}
+            value={props.location.name}
+            defaultValue="(Click on the map for location)"
+            fullWidth
+            required
+            disabled
+          />
+        </div>
+        <Box mb={1} mt={3} borderColor="transparent">
+          <Rating icon={<WbSunny fontSize="inherit" />} />
+        </Box>
+      </CardContent>
+      <CardActions className={classes.actions}>
+        <Button size="medium">Add Walk</Button>
+      </CardActions>
+    </Card>
+  );
 }
 
 export default AddWalk;

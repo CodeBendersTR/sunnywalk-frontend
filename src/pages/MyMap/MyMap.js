@@ -33,7 +33,6 @@ function MyMap() {
                 ThirdButton={"../"}
                 MapView={<GoogleMap>Your Sunny Walk</GoogleMap>}
             />
-            {/*<GoogleMap>Your Sunny Walk</GoogleMap>*/}
         </div>
     );
 }
