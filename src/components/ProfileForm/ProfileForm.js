@@ -1,5 +1,5 @@
 import "./ProfileForm.css";
-import React from "react";
+import React, {useState} from "react";
 import {
     UkCities,
     WeatherPreferenceSelect,
@@ -10,10 +10,55 @@ import {
 import TextField from "@material-ui/core/TextField";
 import { Button, Container, Typography } from "@material-ui/core";
 
+import getConfig from "../../modules/Config";
+import axios from "axios";
+import { ProfileConfirmation } from "../../components";
+
 function ProfileForm() {
+    const [profileResponse, setProfileResponse] = useState([]);
+    const [profileStatus, setProfileStatus] = useState("waiting");
+    //Function to store user data in the database
+    function handleSubmit() {
+
+      class ProfileDto  {
+          constructor(currentPassword, newPassword, location, userType, notification, weather) {
+              this.currentPassword = currentPassword;
+              this.newPassword = newPassword;
+              this.location = location;
+              this.userType = userType;
+              this.notification = notification;
+              this.weather = weather;
+          }
+      }
+
+      const currentPassword = document.getElementById("profileCurrentPassword").textContent;
+      const newPassword     = document.getElementById("profileNewPassword").textContent;
+      const location        = document.getElementById("profileLocation").textContent;
+      const userType        = document.getElementById("demo-mutiple-notification").textContent;
+      const notification    = document.getElementById("demo-mutiple-notification").textContent;
+      const weather         = document.getElementById("demo-mutiple-weather").textContent;
+
+      const profileDto = new ProfileDto(currentPassword, newPassword, location, userType, notification, weather);
+
+      let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/1359315414", profileDto);
+      setProfileStatus("loading");
+      profilePromise.then(
+          (response) => {
+              setProfileResponse(response);
+              setProfileStatus("fulfilled");
+          }
+      ).catch(
+        (err) => {
+            setProfileResponse(err.response);
+            setProfileStatus("error");
+        }
+      );
+    }
+
     return (
         <div>
             <Container className="profile-form-container" component="main" maxWidth="xs">
+              <ProfileConfirmation status={profileStatus} response={profileResponse}/>
                 <div className="paper">
                     <Typography component="h1" variant="h5">
                         Profile
@@ -23,7 +68,7 @@ function ProfileForm() {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            id="outlined-password-input"
+                            id="profileCurrentPassword"
                             label="Current Password"
                             name="Password"
                             autoComplete="current-password"
@@ -35,7 +80,7 @@ function ProfileForm() {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            id="outlined-password-input"
+                            id="profileNewPassword"
                             label="New Password"
                             name="Password"
                             autoComplete="new-password"
@@ -49,7 +94,7 @@ function ProfileForm() {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            id="UKCities"
+                            id="profileLocation"
                             label="Preferred Location"
                             name="Location"
                             autoFocus
@@ -60,16 +105,21 @@ function ProfileForm() {
                             options={UkCities}
                         />
                         <ul className="Profile">
-                            <WalkerType></WalkerType>
+                            <WalkerType ></WalkerType>
                         </ul>
                         <ul className="Profile">
-                            <NotificationPreferenceSelect></NotificationPreferenceSelect>
+                            <NotificationPreferenceSelect ></NotificationPreferenceSelect>
                         </ul>
                         <ul className="Profile">
-                            <WeatherPreferenceSelect></WeatherPreferenceSelect>
+                            <WeatherPreferenceSelect ></WeatherPreferenceSelect>
                         </ul>
                         <ul className="Profile">
-                            <Button variant="contained">confirm</Button>
+                            <Button
+                                variant="contained"
+                                onClick={handleSubmit}
+                            >
+                                confirm
+                            </Button>
                         </ul>
                     </form>
                 </div>
