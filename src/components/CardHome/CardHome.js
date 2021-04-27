@@ -26,8 +26,7 @@ function dispButton() {
 export default function SimpleCard(props) {
     const classes = useStyles();
 
-    let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
-    console.log("rendered");
+    let [time, temp, uvi, description] = ["-", "-", "-", "-"];
     if (props.status === "fulfilled") {
         time = props.suggestion.time;
         temp = props.suggestion.temp;
