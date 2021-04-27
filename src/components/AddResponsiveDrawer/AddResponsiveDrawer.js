@@ -191,17 +191,6 @@ function ResponsiveDrawer(props) {
             >
               { props.ButtonUserHome }
             </Button>
-            <Button onClick={handleClick}
-                    variant="text"
-                    color="default"
-              // href="../"
-                    href={props.ThirdButton}
-                    alt="Main button"
-                    my={1}
-                    px={2}
-            >
-              { props.ButtonMain }
-            </Button>
           </div>
         </Toolbar>
       </AppBar>
