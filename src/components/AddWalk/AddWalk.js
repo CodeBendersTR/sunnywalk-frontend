@@ -29,9 +29,8 @@ const useStyles = makeStyles({
   },
 });
 
-function AddWalk() {
+function AddWalk(props) {
   const classes = useStyles();
-
   const date = new Date().toISOString().match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/g); // remove seconds and milliseconds
   return (
     <Card className={classes.root}>
@@ -57,9 +56,12 @@ function AddWalk() {
             margin="normal"
             name="location"
             id="addWalkLocation"
-            label="Location"
+            label={props.location.lat + "|" + props.location.lng}
+            value={props.location.name}
+            defaultValue="(Click on the map for location)"
             fullWidth
             required
+            disabled
           />
         </div>
         <Box mb={1} mt={3} borderColor="transparent">

@@ -1,5 +1,5 @@
 import "./MyMap.css";
-import { GoogleMap, UniversalDrawer, AddWalk } from "../../components";
+import { GoogleMap, UniversalDrawer } from "../../components";
 import MapIcon from "@material-ui/icons/Map";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
@@ -31,8 +31,7 @@ function MyMap() {
                 SecondButton={"../Home"}
                 ButtonMain="Main"
                 ThirdButton={"../"}
-                AddWalk={<AddWalk />}
-                MapView={<GoogleMap AddWalk={<AddWalk />}>Your Sunny Walk</GoogleMap>}
+                MapView={<GoogleMap>Your Sunny Walk</GoogleMap>}
             />
         </div>
     );
