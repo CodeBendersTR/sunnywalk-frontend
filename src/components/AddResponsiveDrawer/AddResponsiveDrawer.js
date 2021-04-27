@@ -107,6 +107,13 @@ function ResponsiveDrawer(props) {
       }
     }
 
+    var location;
+    if (suggestionStatus === "fulfilled") {
+      location = suggestionResponse[0].location
+    } else {
+      location = "-";
+    }
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -233,7 +240,7 @@ function ResponsiveDrawer(props) {
       <main className={classes.content}>
         <div>
           <h4>
-            Best times for a sunny walk in&nbsp;<strong>{suggestionResponse[0].location}</strong>
+            Best times for a sunny walk in&nbsp;<strong>{location}</strong>
           </h4>
           <ul>
             <Grid container spacing={5}>
