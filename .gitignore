@@ -42,6 +42,8 @@ node_modules/
 jspm_packages/
 cypress/fixtures/
 cypress/plugins/
+cypress/videos/
+cypress/screenshots/
 cypress/support/
 
 # TypeScript v1 declaration files
