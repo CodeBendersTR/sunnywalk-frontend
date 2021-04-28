@@ -13,7 +13,7 @@ import {
 import getConfig from "../../modules/Config";
 import axios from "axios";
 import { useState } from 'react';
-import { RegisterConfirmation } from "../../components";
+import { RequestConfirmation } from "../../components";
 
 
 
@@ -57,7 +57,7 @@ function RegisterForm() {
     return (
         <Container className="register-form-container" component="main" maxWidth="xs">
             <CssBaseline />
-            <RegisterConfirmation status={registerStatus} response={registerResponse}/>
+            <RequestConfirmation source="register" status={registerStatus} response={registerResponse}/>
             <div className="paper">
                 <Typography component="h1" variant="h5">
                     Register
