@@ -23,6 +23,14 @@ function RequestConfirmation(props) {
             color = "error.main";
             message = "Registration failed";
         }
+    } else if (props.source === "addWalk") {
+        if (props.status === "fulfilled") {
+            color = "success.main";
+            message = "Walk added successfully";
+        } else {
+            color = "error.main";
+            message = "Could not add walk";
+        }
     }
 
     return (

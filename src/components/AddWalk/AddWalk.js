@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 import axios from 'axios';
 import getConfig from "../../modules/Config";
+import { RequestConfirmation } from "..";
 
 const useStyles = makeStyles({
   root: {
@@ -75,6 +76,7 @@ function AddWalk(props) {
   return (
     <Card className={classes.root}>
       <CardContent flexDirection="column">
+        <RequestConfirmation source="addWalk" status={addWalkStatus} response={addWalkResponse}/>
         <Typography variant="h5" component="h2" fontWeight="fontWeightBold">
           Record your sunny walk
         </Typography>
