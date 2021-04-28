@@ -31,6 +31,14 @@ function RequestConfirmation(props) {
             color = "error.main";
             message = "Could not add walk";
         }
+    } else if (props.source === "login") {
+        if (props.status === "fulfilled") {
+            color = "success.main";
+            message = "Login successful. Redirecting to User Home page...";
+        } else {
+            color = "error.main";
+            message = "Login failed";
+        }
     }
 
     return (
