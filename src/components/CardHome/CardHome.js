@@ -1,5 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles, Grid, Card, CardActions, CardContent, Button, Typography } from "@material-ui/core";
+import getConfig from "../../modules/Config";
+import axios from "axios";
+import WalkConfirmation from "../WalkConfirmation/WalkConfirmation";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,15 +26,15 @@ function dispButton() {
     //window.alert("Hello there!!");
 }
 
-function notifyUser(){
-
-}
 
 export default function SimpleCard(props) {
     const classes = useStyles();
+    const [walkResponse, setWalkResponse] = useState([]);
+    const[walkStatus, setWalkStatus] = useState("waiting");
+
 
     let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
-    console.log("rendered");
+
     if (props.status === "fulfilled") {
         time = props.suggestion.time;
         location = props.suggestion.location;
@@ -40,6 +43,29 @@ export default function SimpleCard(props) {
         description = props.suggestion.weatherDescription;
     }
 
+    function notifyUser(){
+
+      const walk = {
+             weatherType: description,
+                    time: time,
+          weatherDetails: description,
+                  notify: true
+      };
+
+      let walkPromise = axios.post(getConfig("backend-url") + "/walk/addWalk/userId", walk);
+      setWalkStatus("loading");
+      walkPromise.then(
+          (response) => {
+            setWalkResponse(response);
+            setWalkStatus("fulfilled");
+          }
+        ).catch(
+        (err) => {
+            setWalkResponse(err.responsive);
+            setWalkStatus("Error");
+        }
+      );
+    }
     return (
         <Card>
             <CardContent className={classes.root}>
@@ -91,6 +117,7 @@ export default function SimpleCard(props) {
                     </Grid>
                 </div>
             </CardActions>
+          <WalkConfirmation status={walkStatus} response={walkResponse}/>
         </Card>
     );
 }
