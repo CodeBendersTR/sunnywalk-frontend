@@ -65,7 +65,7 @@ function SignIn() {
                             </Link>
                         </Grid>
                         <Grid item xs>
-                            <Link href="/register" variant="body2">
+                            <Link href="/Register" variant="body2">
                                <br /> No account yet? Register
                             </Link>
                         </Grid>
