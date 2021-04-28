@@ -17,5 +17,6 @@ export { default as GoogleMap } from "./GoogleMap/GoogleMap";
 export { default as CurrentLocation } from "./GoogleMap/Map";
 export { default as Marker } from "./GoogleMap/Marker";
 export { default as RegisterConfirmation } from "./RegisterConfirmation/RegisterConfirmation";
+export { default as AddWalk } from "./AddWalk/AddWalk";
 export { default as SimpleRating } from "./SimpleRating/SimpleRating";
 export { default as ProfileConfirmation } from "./ProfileConfirmation/ProfileConfirmation";

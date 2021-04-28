@@ -37,7 +37,6 @@ export default function SimpleCard(props) {
 
     if (props.status === "fulfilled") {
         time = props.suggestion.time;
-        location = props.suggestion.location;
         temp = props.suggestion.temp;
         uvi = props.suggestion.uvi;
         description = props.suggestion.weatherDescription;
@@ -71,21 +70,18 @@ export default function SimpleCard(props) {
             <CardContent className={classes.root}>
                 <Typography className={classes.pos} color="textSecondary">
                     <Grid container justify="center">
-                        Get your sunshine&nbsp;<b>{time}</b>
+                        Get your sunshine&nbsp;<strong>{time}</strong>
                     </Grid>
                     <br />
                     <Grid container justify="center">
-                        Temp will be&nbsp;<b>{temp}° C</b>
+                        Temp will be&nbsp;<strong>{temp}° C</strong>
                     </Grid>
                     <Grid container justify="center">
-                        The UV Index is&nbsp;<b>{uvi}</b>
+                        The UV Index is&nbsp;<strong>{uvi}</strong>
                     </Grid>
                     <br />
                     <Grid container justify="center">
-                        Weather will be&nbsp;<b>{description}</b>
-                    </Grid>
-                    <Grid container justify="center">
-                        In&nbsp;<b>{location}</b>
+                        Weather will be&nbsp;<strong>{description}</strong>
                     </Grid>
 
                 </Typography>
