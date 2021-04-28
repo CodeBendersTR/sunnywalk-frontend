@@ -12,11 +12,11 @@ function ProfileConfirmation(props) {
     );
   } else if (props.status === "fulfilled") {
     return (
-      <Box className="profile-confirmation" color="success.main">Profile updated. User name: {props.response.data}</Box>
+      <Box className="profile-confirmation" color="success.main">{props.response.data}</Box>
     );
   } else if (props.status === "error") {
     return (
-      <Box className="profile-confirmation" color="error.main">Profile updation failed. Reason: {props.response.data}</Box>
+      <Box className="profile-confirmation" color="error.main">Updating profile failed. Reason: {props.response.data}</Box>
     );
   } else {
     return (

@@ -14,33 +14,23 @@ import getConfig from "../../modules/Config";
 import axios from "axios";
 import { ProfileConfirmation } from "../../components";
 
+
 function ProfileForm() {
     const [profileResponse, setProfileResponse] = useState([]);
     const [profileStatus, setProfileStatus] = useState("waiting");
     //Function to store user data in the database
     function handleSubmit() {
 
-      class ProfileDto  {
-          constructor(currentPassword, newPassword, location, userType, notification, weather) {
-              this.currentPassword = currentPassword;
-              this.newPassword = newPassword;
-              this.location = location;
-              this.userType = userType;
-              this.notification = notification;
-              this.weather = weather;
-          }
-      }
+      const profile = {
+        currentPassword: document.getElementById("profileCurrentPassword").value,
+            newPassword: document.getElementById("profileNewPassword").value,
+               location: document.getElementById("profileLocation").value,
+               userType: document.getElementById("demo-mutiple-notification").textContent,
+           notification: document.getElementById("demo-mutiple-notification").textContent,
+                weather: document.getElementById("demo-mutiple-weather").textContent
 
-      const currentPassword = document.getElementById("profileCurrentPassword").textContent;
-      const newPassword     = document.getElementById("profileNewPassword").textContent;
-      const location        = document.getElementById("profileLocation").textContent;
-      const userType        = document.getElementById("demo-mutiple-notification").textContent;
-      const notification    = document.getElementById("demo-mutiple-notification").textContent;
-      const weather         = document.getElementById("demo-mutiple-weather").textContent;
-
-      const profileDto = new ProfileDto(currentPassword, newPassword, location, userType, notification, weather);
-
-      let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/1359315414", profileDto);
+      };
+      let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/1359315414", profile);
       setProfileStatus("loading");
       profilePromise.then(
           (response) => {

@@ -23,6 +23,10 @@ function dispButton() {
     //window.alert("Hello there!!");
 }
 
+function notifyUser(){
+
+}
+
 export default function SimpleCard(props) {
     const classes = useStyles();
 
@@ -57,7 +61,7 @@ export default function SimpleCard(props) {
                     <Grid container justify="center">
                         In&nbsp;<b>{location}</b>
                     </Grid>
-                    
+
                 </Typography>
             </CardContent>
             <CardActions className={classes.root}>
@@ -65,7 +69,7 @@ export default function SimpleCard(props) {
                     <Typography color="textSecondary">Would you like a notification?</Typography>
                     <Grid container justify="center">
                         <Button
-                            onClick={dispButton}
+                            onClick={notifyUser}
                             variant="contained"
                             size="small"
                             className={classes.margin}
