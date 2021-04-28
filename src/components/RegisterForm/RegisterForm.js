@@ -21,23 +21,13 @@ function RegisterForm() {
     const [registerResponse, setRegisterResponse] = useState([]);
     const [registerStatus, setRegisterStatus] = useState("waiting");
     function handleSubmit() {
-        
-        class RegisterDto {
-            constructor(firstName, lastName, email, password) {
-                this.firstName = firstName;
-                this.lastName = lastName;
-                this.email = email;
-                this.password = password;
-            }
-        }
+        const registerDto = {
+            "firstName" : document.getElementById("registerFirstName").value,
+            "lastName" : document.getElementById("registerLastName").value,
+            "email" : document.getElementById("registerEmail").value,
+            "password" : document.getElementById("registerPassword").value
+        };
     
-    
-        const firstName = document.getElementById("registerFirstName").value;
-        const lastName = document.getElementById("registerLastName").value;
-        const email = document.getElementById("registerEmail").value;
-        const password = document.getElementById("registerPassword").value;
-    
-        const registerDto = new RegisterDto(firstName, lastName, email, password);
         let registerPromise = axios.post(getConfig("backend-url") + "/user/register", registerDto);
         setRegisterStatus("loading");
         registerPromise.then(
@@ -93,6 +83,7 @@ function RegisterForm() {
                     name="email"
                     id="registerEmail"
                     label="Email Address"
+                    type="email"
                     required
                     fullWidth
                 />
@@ -104,10 +95,10 @@ function RegisterForm() {
                     name="password"
                     id="registerPassword"
                     label="Password"
+                    type="password"
                     required
                     fullWidth
                 />
-
                 <Button
                     onClick={handleSubmit}
                     variant="contained"
