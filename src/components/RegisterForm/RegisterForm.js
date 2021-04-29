@@ -24,6 +24,7 @@ function RegisterForm() {
         const registerDto = {
             "firstName" : document.getElementById("registerFirstName").value,
             "lastName" : document.getElementById("registerLastName").value,
+            "city" : document.getElementById("registerCity").value,
             "email" : document.getElementById("registerEmail").value,
             "password" : document.getElementById("registerPassword").value
         };
@@ -72,6 +73,17 @@ function RegisterForm() {
                     name="lastName"
                     id="registerLastName"
                     label="Last Name"
+                    required
+                    fullWidth
+                />
+
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    autoComplete="city"
+                    name="city"
+                    id="registerCity"
+                    label="City (example: Harrow)"
                     required
                     fullWidth
                 />
