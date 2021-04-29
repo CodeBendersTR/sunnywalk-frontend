@@ -24,6 +24,7 @@ import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import MapIcon from "@material-ui/icons/Map";
 import axios from "axios";
 import getConfig from "../../modules/Config";
+import { useHistory } from 'react-router-dom';
 
 const drawerWidth = 200;
 
@@ -74,25 +75,35 @@ function ResponsiveDrawer(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [suggestionResponse, setSuggestionResponse] = React.useState([]);
     const [suggestionStatus, setSuggestionStatus] = React.useState("loading");
+    const [logoutResponse, setLogoutResponse] = React.useState([]);
+    const [logoutStatus, setLogoutStatus] = React.useState("loading");
+    const history = useHistory();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     if (suggestionStatus === "loading") {
-      axios.get(getConfig("backend-url") + "/walk/suggestion/1")
-      .then(
-          (response) => {
-              setSuggestionResponse(response.data);
-              setSuggestionStatus("fulfilled");
+      const sessionId = localStorage.getItem("sessionId");
+      if (sessionId !== null) {
+        axios.get(getConfig("backend-url") + "/walk/suggestion?sessionId=" + sessionId)
+        .then(
+            (response) => {
+                setSuggestionResponse(response.data);
+                setSuggestionStatus("fulfilled");
+            }
+        )
+        .catch((error) => {
+          if (suggestionStatus !== "error") {
+            setSuggestionResponse("Error occured getting walk suggestions: " + error.message);
+            setSuggestionStatus("error");
           }
-      )
-      .catch((error) => {
-        if (suggestionStatus !== "error") {
-          alert("Server not available at the moment. Please try again later. " + error.message);
-          setSuggestionStatus("error");
-        }
-      });
+        });
+      } else {
+        setSuggestionResponse("No session ID found (user is not logged in)")
+        setSuggestionStatus("error");
+        history.push("/login");
+      }
     }
 
     for (var i = 0; i < suggestionResponse.length; i++) {
@@ -114,6 +125,34 @@ function ResponsiveDrawer(props) {
       location = "-";
     }
 
+  function handleLogout() {
+    const sessionId = localStorage.getItem("sessionId");
+    if (sessionId !== null) {
+      axios.put(getConfig("backend-url") + "/auth/logout?sessionId=" + sessionId)
+      .then(
+          (response) => {
+              setLogoutResponse(response.data);
+              setLogoutStatus("fulfilled");
+              localStorage.deleteItem("sessionId");
+          }
+      )
+      .catch((error) => {
+        if (suggestionStatus !== "error") {
+          setLogoutResponse("Error occured logging out: " + error.message);
+          setLogoutStatus("error");
+        }
+      });
+    } else {
+      setLogoutResponse("No session ID found (user is not logged in)")
+      setLogoutStatus("error");
+      history.push("/login");
+    }
+  }
+
+  if (logoutStatus === "fulfilled") {
+    history.push("/");
+  }
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -126,7 +165,7 @@ function ResponsiveDrawer(props) {
               <ListItemIcon>{<MapIcon />}</ListItemIcon>
               <ListItemText primary="My Map"></ListItemText>
             </ListItem>
-            <ListItem button component={Link} to="/">
+            <ListItem button onClick={handleLogout}>
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
               <ListItemText>Logout</ListItemText>
             </ListItem>
@@ -151,7 +190,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <div className="container">
-            <a href="https://github.com/CodeBendersTR">
+            <a href="/">
               <span className="navbar-brand mb-0 px-0 h1">
                 <img
                     src="images/sun.icon.TP.png"
