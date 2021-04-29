@@ -50,7 +50,7 @@ function ProfileForm() {
     return (
         <div>
             <Container className="profile-form-container" component="main" maxWidth="xs">
-              <RequestConfirmation status={ profileStatus } response={profileResponse}/>
+              <RequestConfirmation source="profile" status={ profileStatus } response={profileResponse}/>
                 <div className="paper">
                     <Typography component="h1" variant="h5">
                         Profile

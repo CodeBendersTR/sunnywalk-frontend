@@ -47,6 +47,14 @@ function RequestConfirmation(props) {
           color = "error.main";
           message = "Profile not updated";
         }
+    } else if (props.source === "notify") {
+      if (props.status === "fulfilled") {
+        color = "success.main";
+        message = "Notification updated";
+      } else {
+        color = "error.main";
+        message = "Could not update notification";
+      }
     }
 
     return (
