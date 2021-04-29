@@ -254,7 +254,8 @@ function Main() {
                                 CodeBenders Sunny Walk. All rights reserved.
                                 <br /> Can you spot the 11 song titles?
                                 <br />
-                                <br />ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
+                                <br />
+                                ABOUT US | PRIVACY POLICY | COOKIE POLICY | MANAGE YOUR DATA
                             </li>
                         </ul>
                     </div>

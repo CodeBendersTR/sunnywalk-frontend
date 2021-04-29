@@ -96,7 +96,7 @@ function UniversalDrawer(props) {
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                   <div className="container">
-                    <a href="https://github.com/CodeBendersTR">
+                    <a href="../">
                       <span className="navbar-brand mb-0 px-0 h1">
                         <img
                           src="images/sun.icon.TP.png"

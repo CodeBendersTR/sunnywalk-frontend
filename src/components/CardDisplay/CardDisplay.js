@@ -14,6 +14,7 @@ function CardDisplay() {
                     crop="fill"
                     alt="Woman, wearing backpack and jacket, and 4 children hike on path in woods, arm around a child, while others play ahead"
                     aspect-ratio="attr(width) / attr(height)"
+                    accessibility="colorblind"
                 />
                 <Card.Body>
                     <Card.Title> Check the Weather Forecast & Daylight Hours </Card.Title>
@@ -29,10 +30,11 @@ function CardDisplay() {
                     variant="top"
                     src="images/pic11.citysmiles.sm.jpg"
                     crop="fill"
+                    accessibility="colorblind"
                     alt="Young man of colour in foreground, wearing jean jacket and backpack, brightly smiles at camera with blurred background of people and city"
                 />
                 <Card.Body>
-                    <Card.Title>Map Your Route</Card.Title>
+                    <Card.Title>Map Your Desitination</Card.Title>
                     <Card.Text>
                         Walking on sunshine...map your preferences to hit favourite spots whether a
                         playground, dog or skate park or something completely new.{""}
@@ -45,6 +47,7 @@ function CardDisplay() {
                     variant="top"
                     src="images/pic03.sm.jpg"
                     crop="fill"
+                    accessibility="colorblind"
                     alt="Smiling woman, wearing jacket and hair windblown, offers stick to interested dog, with man smiling in immediate background"
                 />
                 <Card.Body>
