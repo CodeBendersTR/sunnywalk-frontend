@@ -108,6 +108,11 @@ export class MapContainer extends Component {
                 }
             }
         }
+        
+        if (locationName.includes(",")) {
+            locationName = /(.+?),|.+/.exec(locationName)[1];
+        }
+
         return locationName;
     }
 
