@@ -31,7 +31,6 @@ function ProfileForm() {
 
       };
       const sessionId = "?sessionId=" + localStorage.getItem("sessionId");
-      console.log(sessionId);
       let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/" + sessionId, profile);
 
       setProfileStatus("loading");
