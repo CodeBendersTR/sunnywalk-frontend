@@ -32,12 +32,20 @@ function RequestConfirmation(props) {
             message = "Could not add walk";
         }
     } else if (props.source === "login") {
+      if (props.status === "fulfilled") {
+        color = "success.main";
+        message = "Login successful. Redirecting to User Home page...";
+      } else {
+        color = "error.main";
+        message = "Login failed";
+      }
+    } else if (props.source === "profile") {
         if (props.status === "fulfilled") {
-            color = "success.main";
-            message = "Login successful. Redirecting to User Home page...";
+          color = "success.main";
+          message = "Profile updated successfully";
         } else {
-            color = "error.main";
-            message = "Login failed";
+          color = "error.main";
+          message = "Profile not updated";
         }
     }
 
