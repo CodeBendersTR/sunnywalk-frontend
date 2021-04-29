@@ -83,6 +83,7 @@ function WalkerType() {
                 >
                     {WalkerTypeSettings.map((notification) => (
                         <MenuItem
+
                             key={notification}
                             value={notification}
                             style={getStyles(notification, notificationName, theme)}
@@ -112,6 +113,7 @@ function NotificationPreferenceSelect() {
                 <Select
                     labelId="demo-mutiple-notification-label"
                     id="demo-mutiple-notification"
+
                     multiple
                     value={notificationName}
                     onChange={handleChange}
@@ -149,6 +151,7 @@ function WeatherPreferenceSelect() {
                 <Select
                     labelId="demo-mutiple-weather-label"
                     id="demo-mutiple-weather"
+
                     multiple
                     value={weatherName}
                     onChange={handleChange}

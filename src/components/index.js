@@ -19,3 +19,4 @@ export { default as Marker } from "./GoogleMap/Marker";
 export { default as RequestConfirmation } from "./RequestConfirmation/RequestConfirmation";
 export { default as AddWalk } from "./AddWalk/AddWalk";
 export { default as SimpleRating } from "./SimpleRating/SimpleRating";
+export { default as ProfileConfirmation } from "./ProfileConfirmation/ProfileConfirmation";

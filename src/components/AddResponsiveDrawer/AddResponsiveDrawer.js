@@ -28,44 +28,41 @@ import { useHistory } from 'react-router-dom';
 
 const drawerWidth = 200;
 
-function handleClick() {
-}
+function handleClick() {}
 
 const useStyles = makeStyles((theme) => ({
-
-  root: {
-    display: 'flex',
-    flexGrow: 1,
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-      //marginTop: 80,
+    root: {
+        display: "flex",
+        flexGrow: 1,
     },
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: "#e8b633",
-    //marginTop: 80,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+    drawer: {
+        [theme.breakpoints.up("sm")]: {
+            width: drawerWidth,
+            flexShrink: 0,
+            //marginTop: 80,
+        },
     },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-    backgroundColor: "lightgrey",
-    //marginTop: 80,
-  },
-  content: {
-    padding: theme.spacing(12),
-  },
-
+    appBar: {
+        zIndex: theme.zIndex.drawer + 1,
+        backgroundColor: "#e8b633",
+        //marginTop: 80,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up("sm")]: {
+            display: "none",
+        },
+    },
+    // necessary for content to be below app bar
+    toolbar: theme.mixins.toolbar,
+    drawerPaper: {
+        width: drawerWidth,
+        backgroundColor: "lightgrey",
+        //marginTop: 80,
+    },
+    content: {
+        padding: theme.spacing(12),
+    },
 }));
 
 function ResponsiveDrawer(props) {
@@ -107,24 +104,25 @@ function ResponsiveDrawer(props) {
     }
 
     for (var i = 0; i < suggestionResponse.length; i++) {
-      const time = new Date(suggestionResponse[i].time * 1000);
-      if (!isNaN(time)) {
-        const hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours().toString();
-        const minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes().toString();
+        const time = new Date(suggestionResponse[i].time * 1000);
+        if (!isNaN(time)) {
+            const hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours().toString();
+            const minutes =
+                time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes().toString();
 
-        const now = new Date();
-        const day = time.getDate() === now.getDate() ? "Today" : "Tomorrow";
-        suggestionResponse[i].time = day + " at " + hours + ":" + minutes;
-      }
+            const now = new Date();
+            const day = time.getDate() === now.getDate() ? "Today" : "Tomorrow";
+            suggestionResponse[i].time = day + " at " + hours + ":" + minutes;
+        }
     }
 
     var location;
     if (suggestionStatus === "fulfilled") {
-      location = suggestionResponse[0].location
+        location = suggestionResponse[0].location;
     } else {
-      location = "-";
+        location = "-";
     }
-
+  
   function handleLogout() {
     const sessionId = localStorage.getItem("sessionId");
     if (sessionId !== null) {
@@ -284,8 +282,6 @@ function ResponsiveDrawer(props) {
             </Grid>
           </ul>
         </div>
-      </main>
-    </div>
     );
 }
 

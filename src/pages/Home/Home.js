@@ -8,6 +8,7 @@ function Home() {
     return (
         <div>
             <div class="parent">
+
                 <a href="https://www.who.int/uv/publications/en/UVIGuide.pdf" target="_blank" rel="noreferrer">                 
                     <img
                             class="image1"
@@ -17,19 +18,22 @@ function Home() {
 
                         ></img>
                 </a>
-            </div>          
+            </div>
             <UniversalHeader
-                // ButtonMain="Main"
-                // ButtonLogin="Login"
-                // ButtonRegister="Register"
-                // ButtonProfile="Main" FirstButton={"../Main"}
-                // ButtonUserHome="Profile" SecondButton={"../Profile"}
+            // ButtonMain="Main"
+            // ButtonLogin="Login"
+            // ButtonRegister="Register"
+            // ButtonProfile="Main" FirstButton={"../Main"}
+            // ButtonUserHome="Profile" SecondButton={"../Profile"}
             />
-            <AddResponsiveDrawer Greeting="User Home Page" ButtonProfile="Main" FirstButton={"../"}
-                                 ButtonUserHome="Profile" SecondButton={"../Profile"}/>                                
-
+            <AddResponsiveDrawer
+                Greeting="User Home Page"
+                ButtonProfile="Main"
+                FirstButton={"../"}
+                ButtonUserHome="Profile"
+                SecondButton={"../Profile"}
+            />
         </div>
-
     );
 }
 
