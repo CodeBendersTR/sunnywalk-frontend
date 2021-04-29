@@ -282,6 +282,8 @@ function ResponsiveDrawer(props) {
             </Grid>
           </ul>
         </div>
+      </main>
+    </div>
     );
 }
 
