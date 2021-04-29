@@ -12,7 +12,7 @@ import { Button, Container, Typography } from "@material-ui/core";
 
 import getConfig from "../../modules/Config";
 import axios from "axios";
-import { ProfileConfirmation } from "../../components";
+import { RequestConfirmation } from "../../components";
 
 
 function ProfileForm() {
@@ -30,7 +30,9 @@ function ProfileForm() {
                 weather: document.getElementById("demo-mutiple-weather").textContent
 
       };
-      let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/1359315414", profile);
+      const sessionId = "?sessionId=" + localStorage.getItem("sessionId");
+      let profilePromise = axios.put(getConfig("backend-url") + "/user/profile/" + sessionId, profile);
+
       setProfileStatus("loading");
       profilePromise.then(
           (response) => {
@@ -48,7 +50,7 @@ function ProfileForm() {
     return (
         <div>
             <Container className="profile-form-container" component="main" maxWidth="xs">
-              <ProfileConfirmation status={profileStatus} response={profileResponse}/>
+              <RequestConfirmation source="profile" status={ profileStatus } response={profileResponse}/>
                 <div className="paper">
                     <Typography component="h1" variant="h5">
                         Profile
