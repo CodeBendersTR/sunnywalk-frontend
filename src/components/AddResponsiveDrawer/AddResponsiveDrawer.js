@@ -122,7 +122,7 @@ function ResponsiveDrawer(props) {
     } else {
         location = "-";
     }
-  
+
   function handleLogout() {
     const sessionId = localStorage.getItem("sessionId");
     if (sessionId !== null) {
@@ -155,7 +155,8 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
         <List>
-            <ListItem button component={Link} to="/profile">
+            {/*<ListItem button component={Link} to="/profile">*/}
+            <ListItem>
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
               <ListItemText>My favourite walks</ListItemText>
             </ListItem>

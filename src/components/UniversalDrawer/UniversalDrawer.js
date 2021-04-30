@@ -68,9 +68,7 @@ function UniversalDrawer(props) {
             <div className={classes.toolbar} />
         {/* Lefthand side bar (grey) */}
             <List>
-                <ListItem button component={Link} to="/profile">
-                    {/*<ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>*/}
-                    {/*<ListItemText primary="My Favourite Walks"></ListItemText>*/}
+                <ListItem>
                     <ListItemIcon> { props.ListItem1Icon } </ListItemIcon>
                      <ListItemText> { props.ListItem1 } </ListItemText>
                 </ListItem>
