@@ -33,7 +33,6 @@ export default function SimpleCard(props) {
     const [notifyResponse, setNotifyResponse] = useState([]);
     const[notifyStatus, setNotifyStatus] = useState("waiting");
 
-
     let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
 
     if (props.status === "fulfilled") {
@@ -44,29 +43,37 @@ export default function SimpleCard(props) {
     }
 
     function notifyUser(){
-
-      const walk = {
-          //    weatherType: description,
-          //           time: time,
-          // weatherDetails: description,
-                  notify: true
-      };
-      const sessionId = "?sessionId=" + localStorage.getItem("sessionId");
-      console.log(sessionId);
-      let walkPromise = axios.put(getConfig("backend-url") + "/notify/walk" + sessionId, walk);
-
-      setNotifyStatus("loading");
-      walkPromise.then(
-          (response) => {
-            setNotifyResponse(response);
-            setNotifyStatus("fulfilled");
-          }
-        ).catch(
-        (err) => {
-            setNotifyResponse(err.responsive);
-            setNotifyStatus("Error");
+        if (time === "-") {
+            return
         }
-      );
+        let today = new Date();
+        const match = /(Today|Tomorrow) at (\d{2}):(\d{2})/.exec(time);
+        if (match[1] === "Tomorrow") {
+            today.setDate(today.getDate() + 1);
+        }
+        
+        today.setHours(parseInt(match[2]));
+        today.setMinutes(parseInt(match[3]));
+
+        const notifyTime = Math.round(today.getTime() / 1000);
+
+        const sessionId = localStorage.getItem("sessionId");
+        let notifyPromise = axios.post(getConfig("backend-url") + "/walk/notify?sessionId=" + sessionId, {"time": notifyTime});
+
+        setNotifyStatus("loading");
+        notifyPromise.then(
+            (response) => {
+                setNotifyResponse(response);
+                setNotifyStatus("fulfilled");
+                console.log("Success!!");
+            }
+            ).catch(
+            (err) => {
+                setNotifyResponse(err.responsive);
+                setNotifyStatus("Error");
+                console.log("Error!!");
+            }
+        );
     }
     return (
         <Card>
@@ -110,6 +117,7 @@ export default function SimpleCard(props) {
                             variant="contained"
                             size="small"
                             className={classes.margin}
+                            href="/mymap"
                         >
                             Log Feedback
                         </Button>
