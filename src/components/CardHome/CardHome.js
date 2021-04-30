@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { makeStyles, Grid, Card, CardActions, CardContent, Button, Typography } from "@material-ui/core";
 import getConfig from "../../modules/Config";
 import axios from "axios";
-import WalkConfirmation from "../WalkConfirmation/WalkConfirmation";
+import RequestConfirmation from "../RequestConfirmation/RequestConfirmation";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,9 +30,8 @@ function dispButton() {
 
 export default function SimpleCard(props) {
     const classes = useStyles();
-    const [walkResponse, setWalkResponse] = useState([]);
-    const[walkStatus, setWalkStatus] = useState("waiting");
-
+    const [notifyResponse, setNotifyResponse] = useState([]);
+    const[notifyStatus, setNotifyStatus] = useState("waiting");
 
     let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
 
@@ -43,27 +43,37 @@ export default function SimpleCard(props) {
     }
 
     function notifyUser(){
-
-      const walk = {
-             weatherType: description,
-                    time: time,
-          weatherDetails: description,
-                  notify: true
-      };
-
-      let walkPromise = axios.post(getConfig("backend-url") + "/walk/addWalk/userId", walk);
-      setWalkStatus("loading");
-      walkPromise.then(
-          (response) => {
-            setWalkResponse(response);
-            setWalkStatus("fulfilled");
-          }
-        ).catch(
-        (err) => {
-            setWalkResponse(err.responsive);
-            setWalkStatus("Error");
+        if (time === "-") {
+            return
         }
-      );
+        let today = new Date();
+        const match = /(Today|Tomorrow) at (\d{2}):(\d{2})/.exec(time);
+        if (match[1] === "Tomorrow") {
+            today.setDate(today.getDate() + 1);
+        }
+        
+        today.setHours(parseInt(match[2]));
+        today.setMinutes(parseInt(match[3]));
+
+        const notifyTime = Math.round(today.getTime() / 1000);
+
+        const sessionId = localStorage.getItem("sessionId");
+        let notifyPromise = axios.post(getConfig("backend-url") + "/walk/notify?sessionId=" + sessionId, {"time": notifyTime});
+
+        setNotifyStatus("loading");
+        notifyPromise.then(
+            (response) => {
+                setNotifyResponse(response);
+                setNotifyStatus("fulfilled");
+                console.log("Success!!");
+            }
+            ).catch(
+            (err) => {
+                setNotifyResponse(err.responsive);
+                setNotifyStatus("Error");
+                console.log("Error!!");
+            }
+        );
     }
     return (
         <Card>
@@ -107,13 +117,14 @@ export default function SimpleCard(props) {
                             variant="contained"
                             size="small"
                             className={classes.margin}
+                            href="/mymap"
                         >
                             Log Feedback
                         </Button>
                     </Grid>
                 </div>
             </CardActions>
-          <WalkConfirmation status={walkStatus} response={walkResponse}/>
+          <RequestConfirmation source="notify" status={ notifyStatus } response={ notifyResponse }/>
         </Card>
     );
 }
