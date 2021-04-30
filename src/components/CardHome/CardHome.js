@@ -1,5 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles, Grid, Card, CardActions, CardContent, Button, Typography } from "@material-ui/core";
+import getConfig from "../../modules/Config";
+import axios from "axios";
+import RequestConfirmation from "../RequestConfirmation/RequestConfirmation";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,10 +27,14 @@ function dispButton() {
     //window.alert("Hello there!!");
 }
 
+
 export default function SimpleCard(props) {
     const classes = useStyles();
+    const [notifyResponse, setNotifyResponse] = useState([]);
+    const[notifyStatus, setNotifyStatus] = useState("waiting");
 
-    let [time, temp, uvi, description] = ["-", "-", "-", "-"];
+    let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
+
     if (props.status === "fulfilled") {
         time = props.suggestion.time;
         temp = props.suggestion.temp;
@@ -34,6 +42,39 @@ export default function SimpleCard(props) {
         description = props.suggestion.weatherDescription;
     }
 
+    function notifyUser(){
+        if (time === "-") {
+            return
+        }
+        let today = new Date();
+        const match = /(Today|Tomorrow) at (\d{2}):(\d{2})/.exec(time);
+        if (match[1] === "Tomorrow") {
+            today.setDate(today.getDate() + 1);
+        }
+        
+        today.setHours(parseInt(match[2]));
+        today.setMinutes(parseInt(match[3]));
+
+        const notifyTime = Math.round(today.getTime() / 1000);
+
+        const sessionId = localStorage.getItem("sessionId");
+        let notifyPromise = axios.post(getConfig("backend-url") + "/walk/notify?sessionId=" + sessionId, {"time": notifyTime});
+
+        setNotifyStatus("loading");
+        notifyPromise.then(
+            (response) => {
+                setNotifyResponse(response);
+                setNotifyStatus("fulfilled");
+                console.log("Success!!");
+            }
+            ).catch(
+            (err) => {
+                setNotifyResponse(err.responsive);
+                setNotifyStatus("Error");
+                console.log("Error!!");
+            }
+        );
+    }
     return (
         <Card>
             <CardContent className={classes.root}>
@@ -52,7 +93,7 @@ export default function SimpleCard(props) {
                     <Grid container justify="center">
                         Weather will be&nbsp;<strong>{description}</strong>
                     </Grid>
-                    
+
                 </Typography>
             </CardContent>
             <CardActions className={classes.root}>
@@ -60,7 +101,7 @@ export default function SimpleCard(props) {
                     <Typography color="textSecondary">Would you like a notification?</Typography>
                     <Grid container justify="center">
                         <Button
-                            onClick={dispButton}
+                            onClick={notifyUser}
                             variant="contained"
                             size="small"
                             className={classes.margin}
@@ -76,12 +117,14 @@ export default function SimpleCard(props) {
                             variant="contained"
                             size="small"
                             className={classes.margin}
+                            href="/mymap"
                         >
                             Log Feedback
                         </Button>
                     </Grid>
                 </div>
             </CardActions>
+          <RequestConfirmation source="notify" status={ notifyStatus } response={ notifyResponse }/>
         </Card>
     );
 }

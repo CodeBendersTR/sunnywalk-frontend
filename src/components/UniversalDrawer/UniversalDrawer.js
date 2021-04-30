@@ -68,9 +68,7 @@ function UniversalDrawer(props) {
             <div className={classes.toolbar} />
         {/* Lefthand side bar (grey) */}
             <List>
-                <ListItem button component={Link} to="/profile">
-                    {/*<ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>*/}
-                    {/*<ListItemText primary="My Favourite Walks"></ListItemText>*/}
+                <ListItem>
                     <ListItemIcon> { props.ListItem1Icon } </ListItemIcon>
                      <ListItemText> { props.ListItem1 } </ListItemText>
                 </ListItem>
@@ -96,7 +94,7 @@ function UniversalDrawer(props) {
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                   <div className="container">
-                    <a href="https://github.com/CodeBendersTR">
+                    <a href="../">
                       <span className="navbar-brand mb-0 px-0 h1">
                         <img
                           src="images/sun.icon.TP.png"

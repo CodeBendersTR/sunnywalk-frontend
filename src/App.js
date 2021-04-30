@@ -20,10 +20,10 @@ function App() {
                         <Home />
                     </Route>
                     <Route exact path="/profile">
-                        <Profile/>
+                        <Profile />
                     </Route>
                     <Route exact path="/mymap">
-                        <MyMap/>
+                        <MyMap />
                     </Route>
 
                     {/* The last routing is for "Not found"; new pages must be added before this line*/}

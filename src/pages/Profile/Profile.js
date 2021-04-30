@@ -10,18 +10,23 @@ function Profile() {
     return (
         <div>
             <UniversalHeader
-                // ButtonMain="Main"
-                // ButtonLogin="Login"
-                // ButtonRegister="Register"
-                //ButtonProfile="Main" SecondButton={"../Home"}
-                //ButtonUserHome="User Home" SecondButton={"../Home"}
-
+            // ButtonMain="Main"
+            // ButtonLogin="Login"
+            // ButtonRegister="Register"
+            //ButtonProfile="Main" SecondButton={"../Home"}
+            //ButtonUserHome="User Home" SecondButton={"../Home"}
             />
-            <UniversalDrawer Greeting="Profile Page"  ListItem1Icon=<DirectionsWalkIcon /> ListItem1="My Favourite Walks"
-                                                      ListItem2Icon=<MapIcon />            ListItem2="My Map"
-                                                      ListItem3Icon=<AccountCircleIcon />  ListItem3="Logout"
-                                                      ButtonUserHome="User" SecondButton={"../Home"}
-                />
+            <UniversalDrawer
+                Greeting="Profile Page"
+                ListItem1Icon=<DirectionsWalkIcon />
+                ListItem1="My Favourite Walks"
+                ListItem2Icon=<MapIcon />
+                ListItem2="My Map"
+                ListItem3Icon=<AccountCircleIcon />
+                ListItem3="Logout"
+                ButtonUserHome="User"
+                SecondButton={"../Home"}
+            />
 
             <ProfileForm />
         </div>
