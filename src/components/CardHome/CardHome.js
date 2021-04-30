@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { makeStyles, Grid, Card, CardActions, CardContent, Button, Typography } from "@material-ui/core";
 import getConfig from "../../modules/Config";
 import axios from "axios";
-import WalkConfirmation from "../WalkConfirmation/WalkConfirmation";
+import RequestConfirmation from "../RequestConfirmation/RequestConfirmation";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,8 +30,8 @@ function dispButton() {
 
 export default function SimpleCard(props) {
     const classes = useStyles();
-    const [walkResponse, setWalkResponse] = useState([]);
-    const[walkStatus, setWalkStatus] = useState("waiting");
+    const [notifyResponse, setNotifyResponse] = useState([]);
+    const[notifyStatus, setNotifyStatus] = useState("waiting");
 
 
     let [time, location, temp, uvi, description] = ["-", "-", "-", "-", "-"];
@@ -45,23 +46,25 @@ export default function SimpleCard(props) {
     function notifyUser(){
 
       const walk = {
-             weatherType: description,
-                    time: time,
-          weatherDetails: description,
+          //    weatherType: description,
+          //           time: time,
+          // weatherDetails: description,
                   notify: true
       };
+      const sessionId = "?sessionId=" + localStorage.getItem("sessionId");
+      console.log(sessionId);
+      let walkPromise = axios.put(getConfig("backend-url") + "/notify/walk" + sessionId, walk);
 
-      let walkPromise = axios.post(getConfig("backend-url") + "/walk/addWalk/userId", walk);
-      setWalkStatus("loading");
+      setNotifyStatus("loading");
       walkPromise.then(
           (response) => {
-            setWalkResponse(response);
-            setWalkStatus("fulfilled");
+            setNotifyResponse(response);
+            setNotifyStatus("fulfilled");
           }
         ).catch(
         (err) => {
-            setWalkResponse(err.responsive);
-            setWalkStatus("Error");
+            setNotifyResponse(err.responsive);
+            setNotifyStatus("Error");
         }
       );
     }
@@ -113,7 +116,7 @@ export default function SimpleCard(props) {
                     </Grid>
                 </div>
             </CardActions>
-          <WalkConfirmation status={walkStatus} response={walkResponse}/>
+          <RequestConfirmation source="notify" status={ notifyStatus } response={ notifyResponse }/>
         </Card>
     );
 }
