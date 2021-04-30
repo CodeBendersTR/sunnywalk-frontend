@@ -14,6 +14,7 @@ import {
 import axios from 'axios';
 import getConfig from "../../modules/Config";
 import { RequestConfirmation } from "..";
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -33,10 +34,10 @@ const useStyles = makeStyles({
 });
 
 function AddWalk(props) {
-
   const [rating, setRating] = useState(0);
   const [addWalkResponse, setAddWalkResponse] = useState([]);
   const [addWalkStatus, setAddWalkStatus] = useState("waiting");
+  const history = useHistory();
 
   function handleSubmit() {
     const timeString = document.getElementById("addWalkTime").value;
@@ -56,19 +57,26 @@ function AddWalk(props) {
       "rating": rating
     };
     
-    let registerPromise = axios.post(getConfig("backend-url") + "/walk/add/1", addWalkDto);
-      setAddWalkStatus("loading");
-        registerPromise.then(
-            (response) => {
-                setAddWalkResponse(response);
-                setAddWalkStatus("fulfilled");
-            }
-        ).catch(
-            (err) => {
-                setAddWalkResponse(err.response);
-                setAddWalkStatus("error");
-            }
-        );
+    const sessionId = localStorage.getItem("sessionId");
+    if (sessionId !== null) {
+      let registerPromise = axios.post(getConfig("backend-url") + "/walk/add?sessionId=" + sessionId, addWalkDto);
+        setAddWalkStatus("loading");
+          registerPromise.then(
+              (response) => {
+                  setAddWalkResponse(response);
+                  setAddWalkStatus("fulfilled");
+              }
+          ).catch(
+              (err) => {
+                  setAddWalkResponse(err.response);
+                  setAddWalkStatus("error");
+              }
+          );
+      } else {
+        setAddWalkResponse("No session ID found (user is not logged in)")
+        setAddWalkStatus("error");
+        history.push("/login");
+      }
   }
 
   const classes = useStyles();
