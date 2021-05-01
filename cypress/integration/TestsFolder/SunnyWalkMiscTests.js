@@ -23,9 +23,6 @@ context('Starting', () => {
     cy.contains('Login').should('be.visible')
   })
  
-  
-  })
- 
 //this only checks if one image is colorblind friendly as other images on the front page are ImageLoad and therefor hides its accessibility.
   it('Check the images are colorblind friendly.', () => {
     cy.get('img').eq(1).should('have.attr','accessibility', 'colorblind')
