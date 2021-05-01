@@ -6,13 +6,6 @@ import {} from "@material-ui/core";
 function Login() {
     return (
         <div>
-            <UniversalHeader
-            // ButtonMain="Main"
-            // ButtonRegister="Register"
-            //ButtonLogin="Register"
-            // ButtonProfile="Main" FirstButton={"../Main"}
-            // ButtonUserHome="Register"   SecondButton={"../Register"}
-            />
             <UniversalDrawer
                 Greeting="Login Page"
                 ButtonProfile="Main"

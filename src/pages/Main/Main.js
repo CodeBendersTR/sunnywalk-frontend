@@ -8,10 +8,6 @@ function Main() {
         <div>
             {/* HeaderMain with sun icon, product name and buttons */}
             <UniversalHeader
-                // ButtonLogin="Login"
-                // ButtonRegister="Register"
-                // ButtonProfile="Profile"
-                // ButtonUserHome="User Home"
                 ButtonProfile="Login"
                 FirstButton={"../Login"}
                 ButtonUserHome="Register"
