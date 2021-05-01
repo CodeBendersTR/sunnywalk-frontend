@@ -5,44 +5,34 @@ import "@testing-library/jest-dom/extend-expect";
 
 describe('Testing UniversalHeader', () => {
     afterEach(() => jest.clearAllMocks())
-        test("Check Main Button renders", () => {
-            const requiredProps={
-                ButtonMain:"Main",
-                ButtonLogin:"Login", 
-                ButtonRegister:"Register",
-                ButtonProfile:"Profile"
-            }
-            render(<UniversalHeader {...requiredProps}/>);
-            expect(screen.getByText("Main")).toBeInTheDocument()
-        });
         test("Check Login Button renders", () => {
             const requiredProps={
-                ButtonMain:"Main",
-                ButtonLogin:"Login", 
-                ButtonRegister:"Register",
-                ButtonProfile:"Profile"
+                ButtonProfile:"Login",
+                FirstButton:"../Login",
+                ButtonUserHome:"Register",
+                SecondButton:"../Register"
             }
             render(<UniversalHeader {...requiredProps}/>);
             expect(screen.getByText("Login")).toBeInTheDocument()
         });
         test("Check Register Button renders", () => {
             const requiredProps={
-                ButtonMain:"Main",
-                ButtonLogin:"Login", 
-                ButtonRegister:"Register",
-                ButtonProfile:"Profile"
+                ButtonProfile:"Login",
+                FirstButton:"../Login",
+                ButtonUserHome:"Register",
+                SecondButton:"../Register"
             }
             render(<UniversalHeader {...requiredProps}/>);
             expect(screen.getByText("Register")).toBeInTheDocument()
         });
-        test("Check Profile Button renders", () => {
+        test("Check SUNNY WALK renders", () => {
             const requiredProps={
-                ButtonMain:"Main",
-                ButtonLogin:"Login", 
-                ButtonRegister:"Register",
-                ButtonProfile:"Profile"
+                ButtonProfile:"Login",
+                FirstButton:"../Login",
+                ButtonUserHome:"Register",
+                SecondButton:"../Register"
             }
             render(<UniversalHeader {...requiredProps}/>);
-            expect(screen.getByText("Profile")).toBeInTheDocument()
+            expect(screen.getByText("SUNNY WALK")).toBeInTheDocument()
         });
 })

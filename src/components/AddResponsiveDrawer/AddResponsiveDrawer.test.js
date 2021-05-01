@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 //     const input = screen.getByText("My favourite walks");
 //     expect(input).toBeInTheDocument();
 // });
-describe('Testing UniversalHeader', () => {
+describe('Testing AddResponsiveDrawer', () => {
     afterEach(() => jest.clearAllMocks())
         test("Check Sunny Walk renders", () => {
             const requiredProps={
@@ -50,7 +50,7 @@ describe('Testing UniversalHeader', () => {
                 </Router>
             );
             //this is because there are more than one my favorite walks.
-            expect(screen.getAllByText("My favourite walks")).toBeInTheDocument()
+            expect(screen.getAllByText("My favourite walks")[0]).toBeInTheDocument()
         });
         //<AddResponsiveDrawer {...requiredProps}/>
         

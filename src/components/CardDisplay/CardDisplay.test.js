@@ -8,9 +8,9 @@ test("Check the weather forecast and daylight hours text renders.", () => {
     expect(input).toBeInTheDocument();
 });
 
-test("Check Map Your Route text renders.", () => {
+test("Check Map Your Desitination text renders.", () => {
     render(<CardDisplay />);
-    const input = screen.getByText("Map Your Route");
+    const input = screen.getByText("Map Your Desitination");
     expect(input).toBeInTheDocument();
 });
 
