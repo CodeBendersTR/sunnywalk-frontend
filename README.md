@@ -64,6 +64,30 @@ npm start
 ```
 5. Test the application at http://localhost:3000
 
+# Instructions on how to run unit tests followed by above.
+0. Start the unit tests
+```sh
+npm test
+```
+# Instructions on how to run the end to end tests.
+0. Install cypress dependencies
+```sh
+npm cypress install --save-dev
+```
+1. Try to open cypress
+```sh
+node_modules/.bin/cypress open
+```
+2. If cypress gives an "Failed to deserialize the V8 snapshot blob" error you may need to install cypress to the computer itself. to do this type
+```sh
+npx cypress install
+```
+3. Now cypress should run, but if "npm start" stops working use the following
+```sh
+npm i react-scripts
+```
+4. Now you should be able to open cypress with no problems and click on "Run 6 integration specs" and watch the tests run.
+
 # About the team
 ## CodeBenders - because code bends at our will :)
 <table>
