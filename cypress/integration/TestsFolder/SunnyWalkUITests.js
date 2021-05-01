@@ -4,6 +4,7 @@ context('Starting', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
   })
+  
   //The following 8 tests are testing that links work with the buttons.
   it('Check if login button goes to login page.', () => {
     cy.contains('Login').click()
@@ -81,8 +82,10 @@ context('Starting', () => {
     cy.url().should('include', '/Login')
   })
   //check the link to the github page works. unfortuntly cypress doesnt allow for testing for websites that use other url ie going from google to facebook is not allowed all testing needs to be done in one space.
-  it('If i click the sunny walk logo and text i should go into the development github.', () => {
-    cy.get('a').should('have.attr','href', 'https://github.com/CodeBendersTR')
+  it('If i click the sunny walk logo and text i should go back to the main page.', () => {
+    cy.contains('Login').click()
+    cy.get('img').eq(1).click()
+    cy.url().should('include', '/localhost')
   })
   it('Check if all links under embrace the power of the sun go to the right places.', () => {
     cy.get('a').eq(3).should('have.attr','href','https://www.webmd.com/balance/ss/slideshow-health-benefits-nature')
@@ -116,7 +119,7 @@ context('Starting', () => {
     cy.get('.MuiListItem-root').eq(11).contains('Skater/Rollerblades')
 
   })
-  it('Check the select button for walker types have values assigned to them.', () => {
+  it('Check the select button for Notification settings have values assigned to them.', () => {
     cy.contains('Login').click()
     cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
     cy.get('[id=loginPassword]').type('codebenders')
@@ -127,7 +130,7 @@ context('Starting', () => {
     cy.get('.MuiListItem-root').eq(7).contains('Web Notification')
   })
 
-  it('Check the select button for walker types have values assigned to them.', () => {
+  it('Check the select button for weather preferences have values assigned to them.', () => {
     cy.contains('Login').click()
     cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
     cy.get('[id=loginPassword]').type('codebenders')
@@ -146,6 +149,24 @@ context('Starting', () => {
   it('Check the images are colorblind friendly.', () => {
     cy.get('img').eq(1).should('have.attr','accessibility', 'colorblind')
   })
-  //
-
+  // Check for a unsuccessful login.
+  it('check for something trying to log in with wrong credentials.',() =>{
+    cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codefenders')
+    cy.contains('LogIn').click()
+    cy.get('.MuiBox-root').contains('Login failed')
+  })
+  //as we already have a user with this email it wont allow the user to create another account.
+  it('Check if a user is already register does it show the failed message.', () => {
+    cy.contains('Register').click()
+    cy.get('[id=registerFirstName]').type('ci.cu5@gmail.com')
+    cy.get('[id=registerLastName]').type('codefenders')
+    cy.get('[id=registerCity]').type('London')
+    cy.get('[id=registerEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=registerPassword]').type('codefenders')
+    cy.get('.MuiButton-label').eq(4).click()
+    cy.get('.MuiBox-root').contains('Registration failed')
+  })
+  
 })
