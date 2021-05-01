@@ -9,7 +9,7 @@ function Home() {
         <div>
             <div class="parent">
 
-                <a href="https://www.who.int/uv/publications/en/UVIGuide.pdf" target="_blank" rel="noreferrer">                 
+                <a href="https://www.who.int/uv/publications/en/UVIGuide.pdf" target="_blank" rel="noreferrer">
                     <img
                             class="image1"
                             src="images/UVIndex.jpg"
@@ -19,13 +19,6 @@ function Home() {
                         ></img>
                 </a>
             </div>
-            <UniversalHeader
-            // ButtonMain="Main"
-            // ButtonLogin="Login"
-            // ButtonRegister="Register"
-            // ButtonProfile="Main" FirstButton={"../Main"}
-            // ButtonUserHome="Profile" SecondButton={"../Profile"}
-            />
             <AddResponsiveDrawer
                 Greeting="User Home Page"
                 ButtonProfile="Main"

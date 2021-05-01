@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function dispButton() {
-    //window.alert("Hello there!!");
 }
 
 
@@ -51,7 +50,7 @@ export default function SimpleCard(props) {
         if (match[1] === "Tomorrow") {
             today.setDate(today.getDate() + 1);
         }
-        
+
         today.setHours(parseInt(match[2]));
         today.setMinutes(parseInt(match[3]));
 
