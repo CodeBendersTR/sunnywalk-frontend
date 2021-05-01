@@ -9,14 +9,6 @@ import React from "react";
 function MyMap() {
     return (
         <div className="ud">
-            {/*<UniversalHeader*/}
-            {/*    ButtonMain="Main"*/}
-            {/*    ButtonLogin="Login"*/}
-            {/*    ButtonProfile="Profile"*/}
-            {/*    ButtonUserHome="User Home"*/}
-            {/*    ButtonRegister="Register"*/}
-
-            {/*/>*/}
             <UniversalDrawer
                 Greeting="My Map"
                 ListItem1Icon=<DirectionsWalkIcon />

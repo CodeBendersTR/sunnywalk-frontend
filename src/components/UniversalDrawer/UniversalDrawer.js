@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         backgroundColor: "#daa520",
-        //marginTop: 80,
 
     },
     menuButton: {
@@ -45,11 +44,9 @@ const useStyles = makeStyles((theme) => ({
     drawerPaper: {
         width: 265,
         backgroundColor: "lightgrey",
-        //marginTop: 80,
     },
     content: {
         flexGrow: 1,
-        //padding: theme.spacing(0),
     },
 }));
 function handleClick() {
@@ -73,14 +70,10 @@ function UniversalDrawer(props) {
                      <ListItemText> { props.ListItem1 } </ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/mymap">
-                    {/*<ListItemIcon>{<MapIcon />}</ListItemIcon>*/}
-                    {/*<ListItemText primary="My Map"></ListItemText>*/}
                     <ListItemIcon>{ props.ListItem2Icon }</ListItemIcon>
                     <ListItemText> { props.ListItem2 } </ListItemText>
                 </ListItem>
                 <ListItem button component={Link} to="/">
-                    {/*<ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>*/}
-                    {/*<ListItemText primary="Logout"></ListItemText>*/}
                     <ListItemIcon>{ props.ListItem3Icon }</ListItemIcon>
                     <ListItemText> { props.ListItem3 } </ListItemText>
                 </ListItem>
@@ -124,7 +117,6 @@ function UniversalDrawer(props) {
                     <Button onClick={handleClick}
                             variant="text"
                             color="default"
-                      // href="../Profile"
                             href={props.FirstButton}
                             alt="Profile button"
                             my={1}
@@ -135,7 +127,6 @@ function UniversalDrawer(props) {
                     <Button onClick={handleClick}
                             variant="text"
                             color="default"
-                      // href="../Home"
                             href={props.SecondButton}
                             alt="Home User button"
                             my={1}
@@ -143,9 +134,6 @@ function UniversalDrawer(props) {
                     >
                       { props.ButtonUserHome }
                     </Button>
-                    {/*<Typography variant="h6" noWrap>*/}
-                    {/*     { props.Greeting }*/}
-                    {/*</Typography>*/}
                   </div>
                 </Toolbar>
             </AppBar>
@@ -181,10 +169,6 @@ function UniversalDrawer(props) {
                 </Hidden>
             </nav>
             <main className={classes.content}>
-                {/*/!*<div className={classes.toolbar} />*!/*/}
-                {/*<Typography paragraph></Typography>*/}
-                {/*{ props.Greeting1 }*/}
-                {/*<Typography paragraph></Typography>*/}
                 { props.MapView }
             </main>
         </div>

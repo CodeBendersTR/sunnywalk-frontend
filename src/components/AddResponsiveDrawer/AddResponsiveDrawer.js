@@ -39,13 +39,11 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up("sm")]: {
             width: drawerWidth,
             flexShrink: 0,
-            //marginTop: 80,
         },
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         backgroundColor: "#e8b633",
-        //marginTop: 80,
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -58,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     drawerPaper: {
         width: drawerWidth,
         backgroundColor: "lightgrey",
-        //marginTop: 80,
     },
     content: {
         padding: theme.spacing(12),
@@ -155,14 +152,13 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
         <List>
-            {/*<ListItem button component={Link} to="/profile">*/}
             <ListItem>
               <ListItemIcon>{<DirectionsWalkIcon />}</ListItemIcon>
               <ListItemText>My favourite walks</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/mymap">
               <ListItemIcon>{<MapIcon />}</ListItemIcon>
-              <ListItemText primary="My Map"></ListItemText>
+              <ListItemText>My Map</ListItemText>
             </ListItem>
             <ListItem button onClick={handleLogout}>
               <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
@@ -210,7 +206,6 @@ function ResponsiveDrawer(props) {
             <Button onClick={handleClick}
                     variant="text"
                     color="default"
-              // href="../Profile"
                     href={props.FirstButton}
                     alt="Profile button"
                     my={1}
@@ -221,7 +216,6 @@ function ResponsiveDrawer(props) {
             <Button onClick={handleClick}
                     variant="text"
                     color="default"
-              // href="../Home"
                     href={props.SecondButton}
                     alt="Home User button"
                     my={1}

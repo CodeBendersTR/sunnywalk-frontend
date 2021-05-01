@@ -9,13 +9,6 @@ import MapIcon from "@material-ui/icons/Map";
 function Profile() {
     return (
         <div>
-            <UniversalHeader
-            // ButtonMain="Main"
-            // ButtonLogin="Login"
-            // ButtonRegister="Register"
-            //ButtonProfile="Main" SecondButton={"../Home"}
-            //ButtonUserHome="User Home" SecondButton={"../Home"}
-            />
             <UniversalDrawer
                 Greeting="Profile Page"
                 ListItem1Icon=<DirectionsWalkIcon />
