@@ -21,11 +21,15 @@ context('Starting', () => {
   
   it('When logged in send user to their home page.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.url().should('include', '/home')
   })
   it('When logged in i should be able to access the map page with the myMap button.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('My Map').click()
     cy.url().should('include', '/mymap')
@@ -33,12 +37,16 @@ context('Starting', () => {
   
   it('Check that the map is rendering in the map page.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('My Map').click()
     cy.get('div').should('have.class', 'map')
   })
   it('When logged in and click logout send user back to main page.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Logout').click()
     cy.url().should('include', '/localhost')
@@ -46,6 +54,8 @@ context('Starting', () => {
   
   it('When logged in click profile page to go to editing profile.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Profile').click()
     cy.url().should('include', '/Profile')
@@ -53,6 +63,8 @@ context('Starting', () => {
   //check that a button is visible if if the user has been logged out.
   it('When logged in and click logout check if user can log back in.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Logout').click()
     cy.contains('Login').should('be.visible')
@@ -80,6 +92,8 @@ context('Starting', () => {
   //test that the typing in editing profile page works.
   it('Check the text boxes in the profile button works.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Profile').click()
     cy.get('.MuiInputBase-input').eq(0).type('FakePassword').should('have.value', 'FakePassword')
@@ -89,6 +103,8 @@ context('Starting', () => {
   //Next three tests check the values that are in the select boxes within the the edit profile page.
   it('Check the select button for walker types have values assigned to them.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Profile').click()
     cy.get('.MuiSelect-select').eq(0).click()
@@ -102,6 +118,8 @@ context('Starting', () => {
   })
   it('Check the select button for walker types have values assigned to them.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Profile').click()
     cy.get('.MuiSelect-select').eq(1).click()
@@ -111,6 +129,8 @@ context('Starting', () => {
 
   it('Check the select button for walker types have values assigned to them.', () => {
     cy.contains('Login').click()
+    cy.get('[id=loginEmail]').type('ci.cu5@gmail.com')
+    cy.get('[id=loginPassword]').type('codebenders')
     cy.contains('LogIn').click()
     cy.contains('Profile').click()
     cy.get('.MuiSelect-select').eq(2).click()

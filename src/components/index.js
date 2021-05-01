@@ -2,6 +2,7 @@
 /* ex: export {default as MyComponent} from './MyComponent/Component'; */
 
 export {default as CardDisplay} from './CardDisplay/CardDisplay';
+export {default as CardHome} from './CardHome/CardHome';
 export { default as AutoCompleteText } from './AutoCompleteText/AutoCompleteText';
 export { default as UkCities } from './AutoCompleteText/UKCities';
 export { default as LoginForm } from "./LoginForm/LoginForm";
