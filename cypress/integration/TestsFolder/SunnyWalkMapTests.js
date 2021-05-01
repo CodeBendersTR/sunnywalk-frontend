@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Starting', () => {
+context('Tests revolving around the map page', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
     })
@@ -21,7 +21,7 @@ context('Starting', () => {
         cy.contains('My Map').click()
         cy.wait(500)
         cy.get('.gm-style').click('center')
-        cy.get('.MuiInputBase-input').eq(1).should('have.value','Walthamstow (51.586981,-0.015762)')
+        cy.get('.MuiInputBase-input').eq(1).should('have.value','Walthamstow (51.586981,-0.015761)')
     
       })
       it('check if add walk adds a walk to be used later.', () => {

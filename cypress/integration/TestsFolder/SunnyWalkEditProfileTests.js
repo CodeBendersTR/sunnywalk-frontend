@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Starting', () => {
+context('Tests around the profile page and editing', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
     })

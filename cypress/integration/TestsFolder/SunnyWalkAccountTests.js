@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Starting', () => {
+context('Tests for logging in and creating an account', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
     })

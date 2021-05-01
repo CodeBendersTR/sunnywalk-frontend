@@ -1,4 +1,4 @@
-context('Starting', () => {
+context('Tests around links within the front page', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
     })
