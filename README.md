@@ -14,6 +14,9 @@ Features:
 
 ![image](https://user-images.githubusercontent.com/78167908/115697011-15525200-a35b-11eb-9dcb-f6c096788c03.png)
 
+![SunnyWalk ProjectQR Code](https://user-images.githubusercontent.com/78167908/117130620-3a51b680-ad98-11eb-8659-27d2269d999f.jpg)
+
+
 
 
 
