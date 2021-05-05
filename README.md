@@ -1,13 +1,13 @@
-# Front-end project for SunnyWalk application
+# Front-end for SunnyWalk Web Application
 
 ## Introduction
 SunnyWalk is an inovative application that can advise the user on the best times to take a daily walk to maximise their intake of sunshine.
 
 
 Features:
-* Suggest a walk based on likelihood of exposure to sunshine; incorporating UV-Index guidelines
-* Track a walk on the map
-* View previous walks
+* Receive 3 walk recommendations based on time of day and exposure to sunshine; incorporating UV-Index guidelines
+* Map a walk
+* Receive a reminder for 1 to 3 walks
 * Provide feedback on previous walks
 
 ![image](https://user-images.githubusercontent.com/78167908/115695581-d7a0f980-a359-11eb-8e4b-e6995e4066b3.png)
